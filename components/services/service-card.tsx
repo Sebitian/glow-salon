@@ -1,20 +1,28 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Clock, IndianRupee } from "lucide-react"
+import { Clock, DollarSign } from "lucide-react"
 
 interface ServiceProps {
   service: {
     id: string
     name: string
     description: string
-    price: number
+    price: number | string
+    priceNote?: string
     duration: string
     image: string
   }
 }
 
 export default function ServiceCard({ service }: ServiceProps) {
+  const formatPrice = () => {
+    if (typeof service.price === "string") {
+      return service.price
+    }
+    return `$${service.price}${service.priceNote || ""}`
+  }
+
   return (
     <div className="salon-card overflow-hidden shadow-salon hover:shadow-salon-hover transition-all group">
       <div className="relative h-48">
@@ -29,12 +37,12 @@ export default function ServiceCard({ service }: ServiceProps) {
 
       <div className="p-6">
         <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">{service.name}</h3>
-        <p className="text-gray-600 mb-4">{service.description}</p>
+        <p className="text-gray-600 mb-4 text-sm leading-relaxed">{service.description}</p>
 
         <div className="flex justify-between items-center mb-4">
           <div className="flex items-center text-primary font-semibold">
-            <IndianRupee className="h-4 w-4 mr-1" />
-            <span>{service.price}</span>
+            <DollarSign className="h-4 w-4 mr-1" />
+            <span>{formatPrice()}</span>
           </div>
 
           <div className="flex items-center text-gray-500 text-sm">

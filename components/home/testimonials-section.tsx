@@ -2,48 +2,23 @@
 
 import { useState, useEffect } from "react"
 import Image from "next/image"
-import { ChevronLeft, ChevronRight, Star } from "lucide-react"
+import { ChevronLeft, ChevronRight } from "lucide-react"
 
 const testimonials = [
   {
     id: 1,
-    name: "Priya Sharma",
-    role: "Regular Customer",
-    image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=faces&auto=format&q=60",
-    quote:
-      "I've been coming to Glow Salon for over a year now, and I'm always impressed with their hair coloring services. The stylists understand exactly what I want!",
-    rating: 5,
+    image: "/images/review-1.png",
+    alt: "5-star review from Yoshio J about professional haircut and beard service by David Venegas",
   },
   {
     id: 2,
-    name: "Rohan Mehta",
-    role: "First-time Customer",
-    image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=faces&auto=format&q=60",
-    quote:
-      "Best haircut ever! The stylist took time to understand what I wanted and gave great suggestions. Will definitely be coming back.",
-    rating: 5,
+    image: "/images/review-2.png",
+    alt: "5-star review from Alex D about consistent quality haircuts over 7 years",
   },
   {
     id: 3,
-    name: "Ananya Patel",
-    role: "Regular Customer",
-    image:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=faces&auto=format&q=60",
-    quote:
-      "Loved the nail art! The technicians are so creative and detail-oriented. My nails have never looked better.",
-    rating: 4,
-  },
-  {
-    id: 4,
-    name: "Vikram Singh",
-    role: "Monthly Customer",
-    image:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=faces&auto=format&q=60",
-    quote:
-      "As a man who cares about grooming, I appreciate that this salon caters to both men and women. Great beard trimming and facial services!",
-    rating: 5,
+    image: "/images/review-3.png",
+    alt: "5-star review from Rafael F about friendly service and comfortable experience",
   },
 ]
 
@@ -83,10 +58,17 @@ export default function TestimonialsSection() {
       <div className="container-custom relative z-10">
         <div className="salon-section-title">
           <h2 className="heading-lg">What Our Customers Say</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Don't just take our word for it. Here's what our clients have to say about their experiences at Glow Unisex
-            Salon.
+          <p className="text-gray-600 max-w-2xl mx-auto mb-4">
+            Real reviews from our valued clients on Booksy. See why we maintain a 5.0/5 star rating.
           </p>
+          <div className="flex items-center justify-center space-x-4 text-lg">
+            <div className="flex items-center">
+              <span className="text-yellow-400 mr-2 text-2xl">★★★★★</span>
+              <span className="font-semibold">5.0/5 stars</span>
+            </div>
+            <span>•</span>
+            <span>250+ reviews on Booksy</span>
+          </div>
         </div>
 
         <div className="relative max-w-4xl mx-auto">
@@ -98,29 +80,13 @@ export default function TestimonialsSection() {
               {testimonials.map((testimonial) => (
                 <div key={testimonial.id} className="w-full flex-shrink-0 px-4">
                   <div className="salon-card p-8 shadow-salon">
-                    <div className="flex flex-col md:flex-row md:items-center mb-6">
-                      <div className="relative w-16 h-16 rounded-full overflow-hidden mb-4 md:mb-0 md:mr-4">
-                        <Image
-                          src={testimonial.image || "/placeholder.svg"}
-                          alt={testimonial.name}
-                          fill
-                          className="object-cover"
-                        />
-                      </div>
-                      <div>
-                        <h3 className="font-bold text-lg">{testimonial.name}</h3>
-                        <p className="text-gray-600 text-sm">{testimonial.role}</p>
-                        <div className="flex text-secondary mt-1">
-                          {[...Array(5)].map((_, i) => (
-                            <Star key={i} className="w-4 h-4" fill={i < testimonial.rating ? "currentColor" : "none"} />
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                    <div className="relative">
-                      <div className="absolute -top-2 -left-2 text-5xl text-primary opacity-20">"</div>
-                      <blockquote className="text-gray-700 italic relative z-10 pl-4">{testimonial.quote}</blockquote>
-                      <div className="absolute -bottom-4 -right-2 text-5xl text-primary opacity-20">"</div>
+                    <div className="relative w-full h-64 md:h-48 rounded-lg overflow-hidden">
+                      <Image
+                        src={testimonial.image || "/placeholder.svg"}
+                        alt={testimonial.alt}
+                        fill
+                        className="object-contain"
+                      />
                     </div>
                   </div>
                 </div>

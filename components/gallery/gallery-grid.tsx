@@ -6,80 +6,98 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog"
 import { Scissors, Palette, Sparkles, Users } from "lucide-react"
 
-// Gallery data
+// Gallery data with real salon images
 const galleryItems = {
   all: [
     {
       id: 1,
-      src: "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800&h=600&fit=crop&crop=focalpoint&auto=format&q=80",
-      alt: "Salon interior",
-      category: "interior",
+      src: "/images/haircut-1.jpeg",
+      alt: "Professional men's fade haircut with beard styling",
+      category: "hair",
     },
     {
       id: 2,
-      src: "https://images.unsplash.com/photo-1562322140-8baeececf3df?w=800&h=600&fit=crop&crop=focalpoint&auto=format&q=80",
-      alt: "Hairstyling",
+      src: "/images/haircut-2.jpeg",
+      alt: "Men's curly hair fade cut",
       category: "hair",
     },
     {
       id: 3,
-      src: "https://images.unsplash.com/photo-1610992015732-2449b76344bc?w=800&h=600&fit=crop&crop=focalpoint&auto=format&q=80",
-      alt: "Nail art design",
-      category: "nails",
+      src: "/images/haircut-3.jpeg",
+      alt: "Clean men's fade with beard trim",
+      category: "hair",
     },
     {
       id: 4,
+      src: "/images/haircut-4.jpeg",
+      alt: "Kids haircut with modern fade",
+      category: "hair",
+    },
+    {
+      id: 5,
+      src: "/images/womens-cut.jpeg",
+      alt: "Women's layered haircut",
+      category: "hair",
+    },
+    {
+      id: 6,
+      src: "/images/bob-highlights.jpeg",
+      alt: "Sleek bob with highlights and balayage",
+      category: "hair",
+    },
+    {
+      id: 7,
+      src: "/images/updo-styling.jpeg",
+      alt: "Elegant updo with pearl accessories",
+      category: "hair",
+    },
+    {
+      id: 8,
+      src: "/images/mens-braids.jpeg",
+      alt: "Intricate men's braiding patterns",
+      category: "hair",
+    },
+    {
+      id: 9,
+      src: "/images/locs-styling.jpeg",
+      alt: "Professional loc maintenance and styling",
+      category: "hair",
+    },
+    {
+      id: 10,
       src: "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=800&h=600&fit=crop&crop=focalpoint&auto=format&q=80",
       alt: "Makeup look",
       category: "makeup",
     },
     {
-      id: 5,
-      src: "https://images.unsplash.com/photo-1621607750233-795db0a5c655?w=800&h=600&fit=crop&crop=focalpoint&auto=format&q=80",
-      alt: "Beard trimming",
-      category: "hair",
+      id: 11,
+      src: "https://images.unsplash.com/photo-1610992015732-2449b76344bc?w=800&h=600&fit=crop&crop=focalpoint&auto=format&q=80",
+      alt: "Nail art design",
+      category: "nails",
     },
     {
-      id: 6,
+      id: 12,
       src: "https://images.unsplash.com/photo-1594051843789-db9e5cdcd4b8?w=800&h=600&fit=crop&crop=focalpoint&auto=format&q=80",
       alt: "Bridal makeup",
       category: "makeup",
     },
     {
-      id: 7,
+      id: 13,
       src: "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?w=800&h=600&fit=crop&crop=focalpoint&auto=format&q=80",
       alt: "Nail art design",
       category: "nails",
     },
     {
-      id: 8,
-      src: "https://images.unsplash.com/photo-1630406897653-6309fc2288b7?w=800&h=600&fit=crop&crop=focalpoint&auto=format&q=80",
-      alt: "Men's hair coloring",
-      category: "hair",
-    },
-    {
-      id: 9,
+      id: 14,
       src: "https://images.unsplash.com/photo-1617896848219-5ebc11ac2376?w=800&h=600&fit=crop&crop=focalpoint&auto=format&q=80",
-      alt: "Women's hair coloring",
+      alt: "Hair coloring service",
       category: "hair",
     },
     {
-      id: 10,
-      src: "https://images.unsplash.com/photo-1632345031435-8727f6897d53?w=800&h=600&fit=crop&crop=focalpoint&auto=format&q=80",
-      alt: "Pedicure",
-      category: "nails",
-    },
-    {
-      id: 11,
+      id: 15,
       src: "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=800&h=600&fit=crop&crop=focalpoint&auto=format&q=80",
       alt: "Party makeup",
       category: "makeup",
-    },
-    {
-      id: 12,
-      src: "https://images.unsplash.com/photo-1620331311520-246422fd82f9?w=800&h=600&fit=crop&crop=focalpoint&auto=format&q=80",
-      alt: "Women's haircut",
-      category: "hair",
     },
   ],
   get hair() {

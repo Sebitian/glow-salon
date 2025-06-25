@@ -34,17 +34,10 @@ export default function Header() {
     >
       <div className="container-custom">
         <div className="flex items-center justify-between">
-          <Link href="/" className="flex items-center space-x-2 transition-transform hover:scale-105">
-            <div className="w-10 h-10 rounded-full overflow-hidden">
-              <Image
-                src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=100&h=100&fit=crop&crop=faces&auto=format&q=60"
-                alt="Glow Salon Logo"
-                width={40}
-                height={40}
-                className="rounded-full object-cover"
-              />
+          <Link href="/" className="flex items-center space-x-3 transition-transform hover:scale-105">
+            <div className="w-12 h-8 relative">
+              <Image src="/images/venegas-logo.jpeg" alt="Venegas Salon & Spa Logo" fill className="object-contain" />
             </div>
-            <span className="text-2xl font-bold gradient-text">Glow Salon</span>
           </Link>
 
           <nav className="hidden lg:flex items-center space-x-1">
@@ -61,9 +54,7 @@ export default function Header() {
                 {item.name}
               </Link>
             ))}
-            <Button
-              className="ml-8 bg-indigo-500 text-white shadow-md  hover:bg-indigo-900 hover:shadow-lg rounded-sm"
-            >
+            <Button className="ml-8 bg-indigo-500 text-white shadow-md  hover:bg-indigo-900 hover:shadow-lg rounded-sm">
               <Link href="/booking">Book Now</Link>
             </Button>
           </nav>
@@ -96,8 +87,10 @@ export default function Header() {
               </Link>
             ))}
             <Button asChild variant="default" className="w-full mt-4 animate-pulse hover:animate-none">
-              <Link href="/booking" 
-              className="flex items-center justify-center bg-indigo-500 text-white shadow-md  hover:bg-indigo-700 hover:shadow-lg rounded-sm">
+              <Link
+                href="/booking"
+                className="flex items-center justify-center bg-indigo-500 text-white shadow-md  hover:bg-indigo-700 hover:shadow-lg rounded-sm"
+              >
                 <span>Book Now</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

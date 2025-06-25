@@ -13,39 +13,65 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Checkbox } from "@/components/ui/checkbox"
 import { Clock, Check } from "lucide-react"
 
-// Service categories for the form
+// Real Venegas Salon & Spa service categories for the booking form
 const serviceCategories = [
   {
-    label: "Hair Services",
+    label: "Styling Services",
     options: [
-      { value: "men-haircut", label: "Men's Haircut - ₹300" },
-      { value: "women-haircut", label: "Women's Haircut - ₹500" },
-      { value: "men-color", label: "Men's Hair Color - ₹800" },
-      { value: "women-color", label: "Women's Hair Color - ₹1200" },
-      { value: "hair-spa", label: "Hair Spa Treatment - ₹800" },
+      { value: "blow-out", label: "Blow Out - $40.00 (1h)" },
+      { value: "blow-out-xl", label: "Blow Out XL - $55.00 (1h 30min)" },
+      { value: "updo", label: "Updo - $60.00 (1h)" },
+      { value: "silk-press", label: "Silk Press - $80.00 (1h)" },
+      { value: "wig-braid-down", label: "Wig Braid Down - $60.00 (1h)" },
     ],
   },
   {
-    label: "Beauty Services",
+    label: "Haircuts",
     options: [
-      { value: "men-facial", label: "Men's Facial - ₹600" },
-      { value: "basic-facial", label: "Basic Facial - ₹500" },
-      { value: "threading", label: "Eyebrow Threading - ₹100" },
-      { value: "bridal-makeup", label: "Bridal Makeup - ₹3000" },
+      { value: "mens-cut", label: "Men's Cut - $35.00 (45min)" },
+      { value: "womens-cut", label: "Women's Cut - $60.00 (1h)" },
+      { value: "kids-cut", label: "Kids Cut - $30.00 (1h)" },
     ],
   },
   {
-    label: "Nail Services",
+    label: "Hair Treatments",
     options: [
-      { value: "manicure", label: "Manicure - ₹300" },
-      { value: "pedicure", label: "Pedicure - ₹400" },
-      { value: "nail-art", label: "Nail Art - ₹500" },
+      { value: "scalp-treatment", label: "Scalp Treatment Add On - $20.00 (30min)" },
+      { value: "deep-conditioning", label: "Deep Conditioning Add On - $25.00 (30min)" },
+      { value: "keratin-treatment", label: "Keratin Treatment - $300.00+ (2h 30min)" },
+    ],
+  },
+  {
+    label: "Hair Color",
+    options: [
+      { value: "all-over-color", label: "All Over Color - $100.00+ (2h)" },
+      { value: "root-touch-up", label: "Root Touch Up - $65.00 (1h 30min)" },
+      { value: "full-foil", label: "Full Foil - $200.00+ (2h)" },
+      { value: "partial-foil", label: "Partial Foil - $100.00+ (1h 30min)" },
+      { value: "balayage", label: "Balayage - $150.00+ (2h)" },
+      { value: "fashion-color", label: "Fashion Color - $50.00+ (1h 30min)" },
+      { value: "toner-gloss", label: "Toner/Gloss - $30.00+ (30min)" },
+      { value: "color-correction", label: "Color Correction - Varies (30min+)" },
+    ],
+  },
+  {
+    label: "Natural Hair Services",
+    options: [
+      { value: "retwist-no-style", label: "Retwist No Style - $100.00 (1h 30min)" },
+      { value: "retwist-basic", label: "Retwist Basic Style - $120.00 (2h)" },
+      { value: "retwist-specialty", label: "Retwist Specialty Style - $140.00 (2h 30min)" },
+      { value: "natural-twist", label: "Natural Twist Style - $80.00+ (3h)" },
+      { value: "box-braids", label: "Box Braids - $80.00+ (2h 30min)" },
+      { value: "stitch-braids", label: "Stitch Braids - $60.00+ (2h)" },
+      { value: "starter-locs", label: "Starter Locs - $160.00+ (3h)" },
     ],
   },
 ]
 
 // Time slots
 const timeSlots = [
+  "9:00 AM",
+  "9:30 AM",
   "10:00 AM",
   "10:30 AM",
   "11:00 AM",
@@ -64,8 +90,6 @@ const timeSlots = [
   "5:30 PM",
   "6:00 PM",
   "6:30 PM",
-  "7:00 PM",
-  "7:30 PM",
 ]
 
 export default function BookingForm() {
@@ -124,7 +148,7 @@ export default function BookingForm() {
       <CardHeader className="bg-gradient-to-r from-primary to-primary/80 text-white rounded-t-lg">
         <CardTitle>Book Your Appointment</CardTitle>
         <CardDescription className="text-white/90">
-          Fill out the form below to schedule your visit to Glow Unisex Salon.
+          Schedule your visit to Venegas Salon & Spa. We operate by appointment only to ensure personalized service.
         </CardDescription>
       </CardHeader>
       <CardContent className="p-8">
@@ -135,7 +159,7 @@ export default function BookingForm() {
             </div>
             <h3 className="text-xl font-bold mb-2">Booking Confirmed!</h3>
             <p className="text-gray-600 mb-4">
-              Your appointment has been scheduled successfully. We've sent a confirmation to your phone.
+              Your appointment has been scheduled successfully. We'll contact you to confirm your appointment details.
             </p>
             <Button
               onClick={() => setIsSuccess(false)}
@@ -253,7 +277,7 @@ export default function BookingForm() {
                   htmlFor="whatsapp"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                 >
-                  Send confirmation via WhatsApp
+                  Send confirmation via text message
                 </label>
               </div>
             </div>

@@ -3,122 +3,247 @@
 import { useState } from "react"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import ServiceCard from "@/components/services/service-card"
-import { UserIcon as Male, UserIcon as Female, Users } from "lucide-react"
+import { Scissors, Palette, Sparkles, Users, Waves } from "lucide-react"
 
-// Service data
+// Real Venegas Salon & Spa service data with actual images
 const services = {
-  men: [
+  styling: [
     {
-      id: "m1",
-      name: "Men's Haircut",
-      description: "Precision cutting and styling tailored to your face shape and preferences.",
-      price: 300,
-      duration: "30 min",
-      image:
-        "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=500&h=350&fit=crop&crop=focalpoint&auto=format&q=80",
+      id: "s1",
+      name: "Blow Out",
+      description: "Professional blow dry styling for smooth, voluminous hair that lasts.",
+      price: 40,
+      duration: "1h",
+      image: "/images/womens-cut.jpeg",
     },
     {
-      id: "m2",
-      name: "Beard Trim & Styling",
-      description: "Expert beard shaping and grooming to enhance your facial features.",
-      price: 200,
-      duration: "20 min",
-      image:
-        "https://images.unsplash.com/photo-1461799821556-055545cf32dc?w=500&h=350&fit=crop&crop=focalpoint&auto=format&q=80",
+      id: "s2",
+      name: "Blow Out XL",
+      description: "Extended blow out service for longer or thicker hair with extra styling time.",
+      price: 55,
+      duration: "1h 30min",
+      image: "/images/bob-highlights.jpeg",
     },
     {
-      id: "m3",
-      name: "Hair Color",
-      description: "Natural-looking color to cover grays or try a new look.",
-      price: 800,
-      duration: "60 min",
-      image:
-        "https://images.unsplash.com/photo-1737042126375-10c79e59c55c?w=500&h=350&fit=crop&crop=focalpoint&auto=format&q=80",
+      id: "s3",
+      name: "Updo",
+      description: "Elegant updo styling perfect for special occasions and formal events.",
+      price: 60,
+      duration: "1h",
+      image: "/images/updo-styling.jpeg",
     },
     {
-      id: "m4",
-      name: "Men's Facial",
-      description: "Deep cleansing facial designed specifically for men's skin needs.",
-      price: 600,
-      duration: "45 min",
-      image:
-        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=500&h=350&fit=crop&crop=focalpoint&auto=format&q=80",
-    },
-  ],
-  women: [
-    {
-      id: "w1",
-      name: "Women's Haircut",
-      description: "Precision cutting and styling to enhance your natural beauty.",
-      price: 500,
-      duration: "45 min",
-      image:
-        "https://images.unsplash.com/photo-1620331311520-246422fd82f9?w=500&h=350&fit=crop&crop=focalpoint&auto=format&q=80",
+      id: "s4",
+      name: "Silk Press",
+      description: "Smooth, silky straight hair achieved through professional heat styling techniques.",
+      price: 80,
+      duration: "1h",
+      image: "/images/bob-highlights.jpeg",
     },
     {
-      id: "w2",
-      name: "Hair Coloring",
-      description: "From highlights to full color, our stylists create the perfect look for you.",
-      price: 1200,
-      duration: "90 min",
+      id: "s5",
+      name: "Wig Braid Down",
+      description: "Professional wig preparation and braid down service for secure wig application.",
+      price: 60,
+      duration: "1h",
       image:
-        "https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=500&h=350&fit=crop&crop=focalpoint&auto=format&q=80",
-    },
-    {
-      id: "w3",
-      name: "Bridal Makeup",
-      description: "Complete bridal makeup package to make you look stunning on your special day.",
-      price: 3000,
-      duration: "120 min",
-      image:
-        "https://images.unsplash.com/photo-1594140700520-8afea3283e2c?w=500&h=350&fit=crop&crop=focalpoint&auto=format&q=80",
-    },
-    {
-      id: "w4",
-      name: "Manicure & Nail Art",
-      description: "Pamper your hands with our luxurious manicure and creative nail art.",
-      price: 500,
-      duration: "60 min",
-      image:
-        "https://images.unsplash.com/photo-1610992015732-2449b76344bc?w=500&h=350&fit=crop&crop=focalpoint&auto=format&q=80",
+        "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=500&h=350&fit=crop&crop=focalpoint&auto=format&q=80",
     },
   ],
-  unisex: [
+  haircuts: [
     {
-      id: "u1",
-      name: "Hair Spa Treatment",
-      description: "Revitalize your hair with our nourishing spa treatment.",
-      price: 800,
-      duration: "60 min",
+      id: "h1",
+      name: "Men's Cut",
+      description: "Professional men's haircut tailored to your style and face shape.",
+      price: 35,
+      duration: "45min",
+      image: "/images/haircut-1.jpeg",
+    },
+    {
+      id: "h2",
+      name: "Women's Cut",
+      description: "Expert women's haircut with consultation and precision styling.",
+      price: 60,
+      duration: "1h",
+      image: "/images/womens-cut.jpeg",
+    },
+    {
+      id: "h3",
+      name: "Kids Cut",
+      description: "Gentle and patient haircut service designed specifically for children.",
+      price: 30,
+      duration: "1h",
+      image: "/images/haircut-4.jpeg",
+    },
+  ],
+  treatments: [
+    {
+      id: "t1",
+      name: "Scalp Treatment Add On",
+      description: "Nourishing scalp treatment to promote healthy hair growth and scalp health.",
+      price: 20,
+      duration: "30min",
+      image:
+        "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?w=500&h=350&fit=crop&crop=focalpoint&auto=format&q=80",
+    },
+    {
+      id: "t2",
+      name: "Deep Conditioning Add On",
+      description: "Intensive conditioning treatment to restore moisture and strengthen hair.",
+      price: 25,
+      duration: "30min",
       image:
         "https://images.unsplash.com/photo-1582095133179-bfd08e2fc6b3?w=500&h=350&fit=crop&crop=focalpoint&auto=format&q=80",
     },
     {
-      id: "u2",
-      name: "Eyebrow Threading",
-      description: "Perfect your brows with our precise threading technique.",
-      price: 100,
-      duration: "15 min",
-      image:
-        "https://images.unsplash.com/photo-1535637603896-07c179d71103?w=500&h=350&fit=crop&crop=focalpoint&auto=format&q=80",
-    },
-    {
-      id: "u3",
-      name: "Basic Facial",
-      description: "Refresh and rejuvenate your skin with our classic facial.",
-      price: 500,
-      duration: "45 min",
+      id: "t3",
+      name: "Keratin Treatment",
+      description: "Professional keratin treatment for smooth, frizz-free hair that lasts months.",
+      price: 300,
+      priceNote: "+",
+      duration: "2h 30min",
       image:
         "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=500&h=350&fit=crop&crop=focalpoint&auto=format&q=80",
     },
+  ],
+  color: [
     {
-      id: "u4",
-      name: "Head Massage",
-      description: "Relieve stress and tension with our therapeutic head massage.",
-      price: 300,
-      duration: "30 min",
+      id: "c1",
+      name: "All Over Color",
+      description: "Complete hair color transformation with professional color application.",
+      price: 100,
+      priceNote: "+",
+      duration: "2h",
+      image: "/images/bob-highlights.jpeg",
+    },
+    {
+      id: "c2",
+      name: "Root Touch Up",
+      description: "Refresh your color with professional root touch up service.",
+      price: 65,
+      duration: "1h 30min",
       image:
-        "https://images.unsplash.com/photo-1519415387722-a1c3bbef716c?w=500&h=350&fit=crop&crop=focalpoint&auto=format&q=80",
+        "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=500&h=350&fit=crop&crop=focalpoint&auto=format&q=80",
+    },
+    {
+      id: "c3",
+      name: "Full Foil",
+      description: "Complete foil highlighting for dramatic color and dimension.",
+      price: 200,
+      priceNote: "+",
+      duration: "2h",
+      image: "/images/bob-highlights.jpeg",
+    },
+    {
+      id: "c4",
+      name: "Partial Foil",
+      description: "Strategic foil placement for subtle highlights and natural-looking dimension.",
+      price: 100,
+      priceNote: "+",
+      duration: "1h 30min",
+      image:
+        "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=500&h=350&fit=crop&crop=focalpoint&auto=format&q=80",
+    },
+    {
+      id: "c5",
+      name: "Balayage",
+      description: "Hand-painted highlights for a natural, sun-kissed look.",
+      price: 150,
+      priceNote: "+",
+      duration: "2h",
+      image: "/images/bob-highlights.jpeg",
+    },
+    {
+      id: "c6",
+      name: "Fashion Color",
+      description: "Bold, creative color applications for unique and trendy looks.",
+      price: 50,
+      priceNote: "+",
+      duration: "1h 30min",
+      image:
+        "https://images.unsplash.com/photo-1594051843789-db9e5cdcd4b8?w=500&h=350&fit=crop&crop=focalpoint&auto=format&q=80",
+    },
+    {
+      id: "c7",
+      name: "Toner/Gloss",
+      description: "Color toning and glossing service for enhanced shine and color correction.",
+      price: 30,
+      priceNote: "+",
+      duration: "30min",
+      image:
+        "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?w=500&h=350&fit=crop&crop=focalpoint&auto=format&q=80",
+    },
+    {
+      id: "c8",
+      name: "Color Correction",
+      description: "Expert color correction service to fix and perfect previous color work.",
+      price: "Varies",
+      duration: "30min+",
+      image:
+        "https://images.unsplash.com/photo-1630406897653-6309fc2288b7?w=500&h=350&fit=crop&crop=focalpoint&auto=format&q=80",
+    },
+  ],
+  natural: [
+    {
+      id: "n1",
+      name: "Retwist No Style",
+      description: "Professional loc retwist service to maintain healthy, neat locs.",
+      price: 100,
+      duration: "1h 30min",
+      image: "/images/locs-styling.jpeg",
+    },
+    {
+      id: "n2",
+      name: "Retwist Basic Style",
+      description: "Loc retwist with basic styling for a polished, finished look.",
+      price: 120,
+      duration: "2h",
+      image: "/images/locs-styling.jpeg",
+    },
+    {
+      id: "n3",
+      name: "Retwist Specialty Style",
+      description: "Loc retwist with advanced styling techniques for special occasions.",
+      price: 140,
+      duration: "2h 30min",
+      image: "/images/locs-styling.jpeg",
+    },
+    {
+      id: "n4",
+      name: "Natural Twist Style",
+      description: "Beautiful twist styling for natural hair with various pattern options.",
+      price: 80,
+      priceNote: "+",
+      duration: "3h",
+      image:
+        "https://images.unsplash.com/photo-1610992015732-2449b76344bc?w=500&h=350&fit=crop&crop=focalpoint&auto=format&q=80",
+    },
+    {
+      id: "n5",
+      name: "Box Braids",
+      description: "Classic box braid installation with various size and length options.",
+      price: 80,
+      priceNote: "+",
+      duration: "2h 30min",
+      image: "/images/mens-braids.jpeg",
+    },
+    {
+      id: "n6",
+      name: "Stitch Braids",
+      description: "Precise stitch braid technique for clean, long-lasting protective styles.",
+      price: 60,
+      priceNote: "+",
+      duration: "2h",
+      image: "/images/mens-braids.jpeg",
+    },
+    {
+      id: "n7",
+      name: "Starter Locs",
+      description: "Professional loc installation service to begin your loc journey.",
+      price: 160,
+      priceNote: "+",
+      duration: "3h",
+      image: "/images/locs-styling.jpeg",
     },
   ],
 }
@@ -129,7 +254,7 @@ export default function ServicesTabs() {
   // Filter services based on active tab
   const getFilteredServices = () => {
     if (activeTab === "all") {
-      return [...services.men, ...services.women, ...services.unisex]
+      return [...services.styling, ...services.haircuts, ...services.treatments, ...services.color, ...services.natural]
     }
     return services[activeTab as keyof typeof services] || []
   }
@@ -138,22 +263,48 @@ export default function ServicesTabs() {
     <>
       <Tabs defaultValue="all" onValueChange={setActiveTab} className="w-full">
         <div className="flex justify-center mb-8">
-          <TabsList className="bg-muted/50">
-            <TabsTrigger value="all" className="flex items-center gap-2">
+          <TabsList className="bg-white shadow-md border border-gray-200 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 w-full max-w-4xl gap-2 p-2 h-auto">
+            <TabsTrigger
+              value="all"
+              className="flex items-center gap-2 bg-gray-50 hover:bg-gray-100 data-[state=active]:bg-primary data-[state=active]:text-white rounded-md px-3 py-2 text-sm font-medium transition-all duration-200 min-h-[44px]"
+            >
               <Users className="h-4 w-4" />
-              <span>All</span>
+              <span className="hidden sm:inline">All</span>
             </TabsTrigger>
-            <TabsTrigger value="men" className="flex items-center gap-2">
-              <Male className="h-4 w-4" />
-              <span>Men's</span>
+            <TabsTrigger
+              value="styling"
+              className="flex items-center gap-2 bg-gray-50 hover:bg-gray-100 data-[state=active]:bg-primary data-[state=active]:text-white rounded-md px-3 py-2 text-sm font-medium transition-all duration-200 min-h-[44px]"
+            >
+              <Waves className="h-4 w-4" />
+              <span className="hidden sm:inline">Styling</span>
             </TabsTrigger>
-            <TabsTrigger value="women" className="flex items-center gap-2">
-              <Female className="h-4 w-4" />
-              <span>Women's</span>
+            <TabsTrigger
+              value="haircuts"
+              className="flex items-center gap-2 bg-gray-50 hover:bg-gray-100 data-[state=active]:bg-primary data-[state=active]:text-white rounded-md px-3 py-2 text-sm font-medium transition-all duration-200 min-h-[44px]"
+            >
+              <Scissors className="h-4 w-4" />
+              <span className="hidden sm:inline">Haircuts</span>
             </TabsTrigger>
-            <TabsTrigger value="unisex" className="flex items-center gap-2">
+            <TabsTrigger
+              value="treatments"
+              className="flex items-center gap-2 bg-gray-50 hover:bg-gray-100 data-[state=active]:bg-primary data-[state=active]:text-white rounded-md px-3 py-2 text-sm font-medium transition-all duration-200 min-h-[44px]"
+            >
+              <Sparkles className="h-4 w-4" />
+              <span className="hidden sm:inline">Treatments</span>
+            </TabsTrigger>
+            <TabsTrigger
+              value="color"
+              className="flex items-center gap-2 bg-gray-50 hover:bg-gray-100 data-[state=active]:bg-primary data-[state=active]:text-white rounded-md px-3 py-2 text-sm font-medium transition-all duration-200 min-h-[44px]"
+            >
+              <Palette className="h-4 w-4" />
+              <span className="hidden sm:inline">Color</span>
+            </TabsTrigger>
+            <TabsTrigger
+              value="natural"
+              className="flex items-center gap-2 bg-gray-50 hover:bg-gray-100 data-[state=active]:bg-primary data-[state=active]:text-white rounded-md px-3 py-2 text-sm font-medium transition-all duration-200 min-h-[44px]"
+            >
               <Users className="h-4 w-4" />
-              <span>Unisex</span>
+              <span className="hidden sm:inline text-center">Natural Hair</span>
             </TabsTrigger>
           </TabsList>
         </div>
@@ -166,25 +317,41 @@ export default function ServicesTabs() {
           </div>
         </TabsContent>
 
-        <TabsContent value="men" className="mt-0">
+        <TabsContent value="styling" className="mt-0">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.men.map((service) => (
+            {services.styling.map((service) => (
               <ServiceCard key={service.id} service={service} />
             ))}
           </div>
         </TabsContent>
 
-        <TabsContent value="women" className="mt-0">
+        <TabsContent value="haircuts" className="mt-0">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.women.map((service) => (
+            {services.haircuts.map((service) => (
               <ServiceCard key={service.id} service={service} />
             ))}
           </div>
         </TabsContent>
 
-        <TabsContent value="unisex" className="mt-0">
+        <TabsContent value="treatments" className="mt-0">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.unisex.map((service) => (
+            {services.treatments.map((service) => (
+              <ServiceCard key={service.id} service={service} />
+            ))}
+          </div>
+        </TabsContent>
+
+        <TabsContent value="color" className="mt-0">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {services.color.map((service) => (
+              <ServiceCard key={service.id} service={service} />
+            ))}
+          </div>
+        </TabsContent>
+
+        <TabsContent value="natural" className="mt-0">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {services.natural.map((service) => (
               <ServiceCard key={service.id} service={service} />
             ))}
           </div>
