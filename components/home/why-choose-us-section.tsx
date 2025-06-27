@@ -4,7 +4,7 @@ import { Users, Award, Sparkles } from "lucide-react"
 const features = [
   {
     icon: <Users className="h-8 w-8 text-primary" />,
-    title: "Expert Stylists",
+    title: "Expert Barbers & Stylists",
     description: "Our team of certified professionals brings years of experience and creativity to every service.",
     image:
       "https://images.unsplash.com/photo-1562322140-8baeececf3df?w=600&h=400&fit=crop&crop=focalpoint&auto=format&q=80",
@@ -21,7 +21,7 @@ const features = [
     title: "Personalized Experience",
     description: "Enjoy a tailored approach to beauty, with services customized to your unique style and needs.",
     image:
-      "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&h=400&fit=crop&crop=focalpoint&auto=format&q=80",
+      "images/spa.png",
   },
 ]
 
@@ -30,7 +30,7 @@ export default function WhyChooseUsSection() {
     <section className="section-padding bg-white">
       <div className="container-custom">
         <div className="text-center mb-16">
-          <h2 className="heading-lg mb-4">Why Choose Glow Salon?</h2>
+          <h2 className="heading-lg mb-4">Why Choose Venegas Salon ?</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Experience the difference with our commitment to excellence, luxury, and personalized care.
           </p>
@@ -39,7 +39,7 @@ export default function WhyChooseUsSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <div key={index} className="salon-card overflow-hidden group hover-lift">
-              <div className="relative h-48">
+              <div className="relative h-72">
                 <Image
                   src={feature.image || "/placeholder.svg"}
                   alt={feature.title}

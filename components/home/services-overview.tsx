@@ -8,8 +8,8 @@ const services = [
       <Image
         src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=100&h=100&fit=crop&crop=faces&auto=format&q=60"
         alt="Hairstyling"
-        width={32}
-        height={32}
+        width={64}
+        height={64}
         className="rounded-full object-cover"
       />
     ),
@@ -20,10 +20,10 @@ const services = [
   {
     icon: (
       <Image
-        src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?w=100&h=100&fit=crop&crop=faces&auto=format&q=60"
+        src="images/all-over-color-2.jpeg"
         alt="Hair Color"
-        width={32}
-        height={32}
+        width={64}
+        height={64}
         className="rounded-full object-cover"
       />
     ),
@@ -34,10 +34,10 @@ const services = [
   {
     icon: (
       <Image
-        src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=100&h=100&fit=crop&crop=faces&auto=format&q=60"
+        src="images/box-braids-3.jpeg"
         alt="Natural Hair"
-        width={32}
-        height={32}
+        width={64}
+        height={64}
         className="rounded-full object-cover"
       />
     ),
