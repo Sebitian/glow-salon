@@ -7,7 +7,7 @@ export default function HeroSection() {
     <section className="relative min-h-screen flex items-center pt-16 overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1920&h=1080&fit=crop&crop=focalpoint&auto=format&q=80"
+          src="images/salon.jpg"
           alt="Luxurious salon interior"
           fill
           className="object-cover"
