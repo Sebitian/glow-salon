@@ -15,27 +15,27 @@ const services = [
     ),
     title: "Expert Haircuts & Styling",
     description: "Precision cuts and trendsetting styles for all hair types.",
-    link: "/services#hair",
+    link: "/services#haircuts",
   },
   {
     icon: (
       <Image
         src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?w=100&h=100&fit=crop&crop=faces&auto=format&q=60"
-        alt="Nail Art"
+        alt="Hair Color"
         width={32}
         height={32}
         className="rounded-full object-cover"
       />
     ),
     title: "Hair Treatment & Coloring",
-    description: "Express yourself with our creative nail designs and treatments.",
-    link: "/services#nails",
+    description: "Professional color services including highlights, balayage, and fashion colors.",
+    link: "/services#color",
   },
   {
     icon: (
       <Image
         src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=100&h=100&fit=crop&crop=faces&auto=format&q=60"
-        alt="Makeup"
+        alt="Natural Hair"
         width={32}
         height={32}
         className="rounded-full object-cover"
@@ -43,7 +43,7 @@ const services = [
     ),
     title: "Natural Hair",
     description: "Specialized care for natural hair textures including locs, braids, twists, and protective styling.",
-    link: "/services#beauty",
+    link: "/services#natural",
   },
 ]
 

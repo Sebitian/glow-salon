@@ -1,6 +1,7 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import { useSearchParams } from "next/navigation"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import ServiceCard from "@/components/services/service-card"
 import { Scissors, Palette, Sparkles, Users, Waves } from "lucide-react"
@@ -22,7 +23,7 @@ const services = {
       description: "Blow dry with brush PLUS iron or Flat iron or Curling iron included",
       price: 55,
       duration: "1h 30min",
-      images: ["/images/bob-highlights.jpeg"],
+      images: ["/images/womens-cut.jpeg"],
     },
     {
       id: "s3",
@@ -46,9 +47,7 @@ const services = {
       description: "Wash and Blowdry included",
       price: 60,
       duration: "1h",
-      images: [
-        "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=500&h=350&fit=crop&crop=focalpoint&auto=format&q=80",
-      ],
+      images: ["/images/wig-braid-down.png"],
     },
   ],
   haircuts: [
@@ -84,9 +83,7 @@ const services = {
       description: "Nourishing scalp treatment to promote healthy hair growth",
       price: 20,
       duration: "30min",
-      images: [
-        "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?w=500&h=350&fit=crop&crop=focalpoint&auto=format&q=80",
-      ],
+      images: ["/images/deep-conditioning-treatment.png"],
     },
     {
       id: "t2",
@@ -94,9 +91,7 @@ const services = {
       description: "Intensive conditioning treatment to restore moisture and strength",
       price: 25,
       duration: "30min",
-      images: [
-        "https://images.unsplash.com/photo-1582095133179-bfd08e2fc6b3?w=500&h=350&fit=crop&crop=focalpoint&auto=format&q=80",
-      ],
+      images: ["/images/deep-conditioning-treatment.png"],
     },
     {
       id: "t3",
@@ -106,9 +101,7 @@ const services = {
       price: 300,
       priceNote: "+",
       duration: "2h 30min",
-      images: [
-        "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=500&h=350&fit=crop&crop=focalpoint&auto=format&q=80",
-      ],
+      images: ["/images/keratin-treatment-before-after.jpeg"],
     },
   ],
   color: [
@@ -119,7 +112,7 @@ const services = {
       price: 100,
       priceNote: "+",
       duration: "2h",
-      images: ["/images/bob-highlights.jpeg"],
+      images: ["/images/all-over-color-1.jpeg", "/images/all-over-color-2.jpeg", "/images/all-over-color-3.jpeg"],
     },
     {
       id: "c2",
@@ -127,9 +120,7 @@ const services = {
       description: "Color on Roots Only",
       price: 65,
       duration: "1h 30min",
-      images: [
-        "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=500&h=350&fit=crop&crop=focalpoint&auto=format&q=80",
-      ],
+      images: ["/images/root-touch-up-1.jpeg"],
     },
     {
       id: "c3",
@@ -140,33 +131,13 @@ const services = {
       images: ["/images/haircut-3.jpeg"],
     },
     {
-      id: "c4",
-      name: "Full Foil",
-      description: "Can be done as a Highlight, lowlight or both",
-      price: 200,
-      priceNote: "+",
-      duration: "2h",
-      images: ["/images/bob-highlights.jpeg"],
-    },
-    {
-      id: "c5",
-      name: "Partial Foil",
-      description: "Can be done as a Highlight, lowlight or both",
-      price: 100,
-      priceNote: "+",
-      duration: "1h 30min",
-      images: [
-        "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=500&h=350&fit=crop&crop=focalpoint&auto=format&q=80",
-      ],
-    },
-    {
       id: "c6",
       name: "Balayage",
       description: "Balayage Hand Painting Balayage",
       price: 150,
       priceNote: "+",
       duration: "2h",
-      images: ["/images/bob-highlights.jpeg"],
+      images: ["/images/balayage-1.jpeg", "/images/bob-highlights.jpeg"],
     },
     {
       id: "c7",
@@ -175,30 +146,7 @@ const services = {
       price: 50,
       priceNote: "+",
       duration: "1h 30min",
-      images: [
-        "https://images.unsplash.com/photo-1594051843789-db9e5cdcd4b8?w=500&h=350&fit=crop&crop=focalpoint&auto=format&q=80",
-      ],
-    },
-    {
-      id: "c8",
-      name: "Toner/Gloss",
-      description: "Toner can be used after a lightening service or to enhance your current color",
-      price: 30,
-      priceNote: "+",
-      duration: "30min",
-      images: [
-        "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?w=500&h=350&fit=crop&crop=focalpoint&auto=format&q=80",
-      ],
-    },
-    {
-      id: "c9",
-      name: "Color Correction",
-      description: "Consult will be needed first",
-      price: "Varies",
-      duration: "30min",
-      images: [
-        "https://images.unsplash.com/photo-1630406897653-6309fc2288b7?w=500&h=350&fit=crop&crop=focalpoint&auto=format&q=80",
-      ],
+      images: ["/images/fashion-color-1.jpeg", "/images/fashion-color-2.jpeg"],
     },
   ],
   natural: [
@@ -274,7 +222,37 @@ const services = {
 }
 
 export default function ServicesTabs() {
+  const searchParams = useSearchParams()
   const [activeTab, setActiveTab] = useState("all")
+
+  // Handle URL hash navigation
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash.replace("#", "")
+      if (hash && ["all", "styling", "haircuts", "treatments", "color", "natural"].includes(hash)) {
+        setActiveTab(hash)
+      }
+    }
+
+    // Set initial tab from URL hash
+    handleHashChange()
+
+    // Listen for hash changes
+    window.addEventListener("hashchange", handleHashChange)
+
+    return () => {
+      window.removeEventListener("hashchange", handleHashChange)
+    }
+  }, [])
+
+  // Update URL when tab changes
+  const handleTabChange = (value: string) => {
+    setActiveTab(value)
+    // Update URL hash without triggering page reload
+    if (typeof window !== "undefined") {
+      window.history.replaceState(null, "", `#${value}`)
+    }
+  }
 
   // Filter services based on active tab
   const getFilteredServices = () => {
@@ -286,7 +264,7 @@ export default function ServicesTabs() {
 
   return (
     <>
-      <Tabs defaultValue="all" onValueChange={setActiveTab} className="w-full">
+      <Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">
         <div className="flex justify-center mb-8">
           <TabsList className="bg-white shadow-md border border-gray-200 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 w-full max-w-4xl gap-2 p-2 h-auto">
             <TabsTrigger

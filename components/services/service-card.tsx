@@ -38,7 +38,7 @@ export default function ServiceCard({ service }: ServiceProps) {
 
   return (
     <div className="salon-card overflow-hidden shadow-salon hover:shadow-salon-hover transition-all group">
-      <div className="relative h-48">
+      <div className="relative h-72">
         <Image
           src={service.images[currentImageIndex] || "/placeholder.svg"}
           alt={`${service.name} - Image ${currentImageIndex + 1}`}
