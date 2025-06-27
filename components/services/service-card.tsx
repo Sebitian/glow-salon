@@ -98,13 +98,6 @@ export default function ServiceCard({ service }: ServiceProps) {
           </div>
         </div>
 
-        {/* Show image count if multiple images */}
-        {service.images.length > 1 && (
-          <div className="text-xs text-gray-500 mb-3 text-center">
-            {currentImageIndex + 1} of {service.images.length} photos
-          </div>
-        )}
-
         <Button
           asChild
           className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90 rounded-full shadow-md"
