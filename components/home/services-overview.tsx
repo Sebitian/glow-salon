@@ -27,7 +27,7 @@ const services = [
         className="rounded-full object-cover"
       />
     ),
-    title: "Nail Art & Care",
+    title: "Hair Treatment & Coloring",
     description: "Express yourself with our creative nail designs and treatments.",
     link: "/services#nails",
   },
@@ -41,8 +41,8 @@ const services = [
         className="rounded-full object-cover"
       />
     ),
-    title: "Makeup & Skincare",
-    description: "Enhance your natural beauty with our expert makeup and skincare services.",
+    title: "Natural Hair",
+    description: "Specialized care for natural hair textures including locs, braids, twists, and protective styling.",
     link: "/services#beauty",
   },
 ]

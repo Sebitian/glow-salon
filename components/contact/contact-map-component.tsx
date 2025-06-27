@@ -9,8 +9,8 @@ export default function ContactMapComponent() {
         </div>
         <h3 className="text-xl font-bold mb-2">Visit Our Salon</h3>
         <p className="text-gray-600 mb-2">123 Beauty Lane</p>
-        <p className="text-gray-600 mb-2">Mumbai, Maharashtra 400001</p>
-        <p className="text-gray-600 mb-4">India</p>
+        <p className="text-gray-600 mb-2">297 Peterson Rd</p>
+        <p className="text-gray-600 mb-4">Libertyville, IL</p>
         <a
           href="https://maps.google.com/?q=Mumbai,Maharashtra,India"
           target="_blank"

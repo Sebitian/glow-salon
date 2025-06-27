@@ -13,7 +13,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Checkbox } from "@/components/ui/checkbox"
 import { Clock, Check } from "lucide-react"
 
-// Real Venegas Salon & Spa service categories for the booking form
+// Updated service categories matching Booksy system
 const serviceCategories = [
   {
     label: "Styling Services",
@@ -30,7 +30,7 @@ const serviceCategories = [
     options: [
       { value: "mens-cut", label: "Men's Cut - $35.00 (45min)" },
       { value: "womens-cut", label: "Women's Cut - $60.00 (1h)" },
-      { value: "kids-cut", label: "Kids Cut - $30.00 (1h)" },
+      { value: "kids-cut", label: "Kids Cut - $30.00 (45min)" },
     ],
   },
   {
@@ -46,12 +46,13 @@ const serviceCategories = [
     options: [
       { value: "all-over-color", label: "All Over Color - $100.00+ (2h)" },
       { value: "root-touch-up", label: "Root Touch Up - $65.00 (1h 30min)" },
+      { value: "mens-color-gray", label: "Men's Color Gray Coverage - $65.00 (1h)" },
       { value: "full-foil", label: "Full Foil - $200.00+ (2h)" },
       { value: "partial-foil", label: "Partial Foil - $100.00+ (1h 30min)" },
       { value: "balayage", label: "Balayage - $150.00+ (2h)" },
       { value: "fashion-color", label: "Fashion Color - $50.00+ (1h 30min)" },
       { value: "toner-gloss", label: "Toner/Gloss - $30.00+ (30min)" },
-      { value: "color-correction", label: "Color Correction - Varies (30min+)" },
+      { value: "color-correction", label: "Color Correction - Varies (30min)" },
     ],
   },
   {
@@ -63,7 +64,7 @@ const serviceCategories = [
       { value: "natural-twist", label: "Natural Twist Style - $80.00+ (3h)" },
       { value: "box-braids", label: "Box Braids - $80.00+ (2h 30min)" },
       { value: "stitch-braids", label: "Stitch Braids - $60.00+ (2h)" },
-      { value: "starter-locs", label: "Starter Locs - $160.00+ (3h)" },
+      { value: "starter-locs", label: "Starter Locs - $140.00+ (3h)" },
     ],
   },
 ]

@@ -7,19 +7,9 @@ import { Button } from "@/components/ui/button"
 // Define salon locations
 const locations = [
   {
-    name: "Glow Salon - Bandra",
-    address: "123 Bandra West, Mumbai 400050",
-    phone: "+91 98765 43210",
-  },
-  {
-    name: "Glow Salon - Andheri",
-    address: "456 Andheri East, Mumbai 400069",
-    phone: "+91 98765 43211",
-  },
-  {
-    name: "Glow Salon - Powai",
-    address: "789 Powai, Mumbai 400076",
-    phone: "+91 98765 43212",
+    name: "Venegas Salon & Spa",
+    address: "297 Peterson Rd, Libertyville, 60048",
+    phone: "+1 (224) 688-7650",
   },
 ]
 
