@@ -5,9 +5,9 @@ import BookingBanner from "@/components/booking/booking-banner"
 import { Card, CardContent } from "@/components/ui/card"
 
 export const metadata: Metadata = {
-  title: "Book an Appointment - Glow Unisex Salon",
+  title: "Book an Appointment - Venegas Salon & Spa",
   description:
-    "Book your appointment at Glow Unisex Salon. Choose from our range of services and select a convenient time slot.",
+    "Book your appointment at Venegas Salon & Spa. Choose from our range of services and select a convenient time slot.",
 }
 
 function BookingFormFallback() {

@@ -13,7 +13,7 @@ export default function ContactInfo() {
           <MapPin className="h-6 w-6 text-primary shrink-0 mt-0.5 mr-3" />
           <div>
             <h3 className="font-semibold mb-1">Address</h3>
-            <p className="text-gray-600">123 Beauty Lane, Mumbai, Maharashtra 400001, India</p>
+            <p className="text-gray-600">297 Peterson Rd Libertyville,IL 60048</p>
           </div>
         </div>
 
@@ -21,7 +21,7 @@ export default function ContactInfo() {
           <Phone className="h-6 w-6 text-primary shrink-0 mt-0.5 mr-3" />
           <div>
             <h3 className="font-semibold mb-1">Phone</h3>
-            <p className="text-gray-600">+91 98765 43210</p>
+            <p className="text-gray-600">+1 (224) 504-2113</p>
           </div>
         </div>
 

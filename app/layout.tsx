@@ -14,14 +14,14 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: "Glow Unisex Salon - Beauty for All",
+  title: "Venegas Salon & Spa",
   description:
-    "Premier unisex salon in India offering haircuts, styling, nail care, beauty treatments, and makeup services for men and women.",
+    "Premier salon in Libertyville, IL offering haircuts, styling, nail care, beauty treatments, and makeup services for men and women.",
   keywords: "unisex salon, beauty salon India, haircuts, hairstyling, nail care, beauty treatments, makeup services",
   openGraph: {
-    title: "Glow Unisex Salon - Beauty for All",
+    title: "Venegas Salon & Spa",
     description:
-      "Premier unisex salon in India offering haircuts, styling, nail care, beauty treatments, and makeup services for men and women.",
+      "Premier salon in Libertyville, IL offering haircuts, styling, hair care, beauty treatments, and other services for men and women.",
     images: ["/images/og-image.jpg"],
     type: "website",
     locale: "en_IN",
@@ -41,7 +41,7 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
-        <WhatsAppWidget />
+        {/* <WhatsAppWidget /> */}
       </body>
     </html>
   )

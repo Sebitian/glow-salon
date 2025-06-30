@@ -38,13 +38,13 @@ export default function HeroSection() {
               asChild
               variant="outline"
               size="lg"
-              className="text-lg px-8 py-4 text-white border-white hover:bg-white/10"
+              className="text-lg px-8 py-4 text-purple-500 font-bold border-white hover:shadow"
             >
               <Link href="/services">Explore Our Services</Link>
             </Button>
           </div>
 
-          <div className="mt-12 flex items-center space-x-4">
+          {/* <div className="mt-12 flex items-center space-x-4">
             <div className="flex -space-x-2">
               {[1, 2, 3, 4].map((i) => (
                 <div key={i} className="w-12 h-12 rounded-full border-2 border-white overflow-hidden">
@@ -62,7 +62,7 @@ export default function HeroSection() {
               <div className="text-yellow-400 flex text-2xl">{"★★★★★"}</div>
               <p className="text-sm text-gray-300">Trusted by 10,000+ happy clients</p>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 

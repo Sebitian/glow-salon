@@ -8,7 +8,7 @@ export default function ContactMap() {
         style={{ border: 0 }}
         allowFullScreen
         loading="lazy"
-        title="Glow Unisex Salon Location"
+        title="Venegas Salon & Spa Location"
       ></iframe>
     </div>
   )

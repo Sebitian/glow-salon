@@ -3,8 +3,8 @@ import GalleryGrid from "@/components/gallery/gallery-grid"
 import GalleryBanner from "@/components/gallery/gallery-banner"
 
 export const metadata: Metadata = {
-  title: "Gallery - Glow Unisex Salon",
-  description: "View our gallery of hairstyles, nail art, makeup looks, and more from Glow Unisex Salon.",
+  title: "Gallery - Venegas Salon & Spa",
+  description: "View our gallery of hairstyles, treatments, braids, and more from Venegas Salon & Spa.",
 }
 
 export default function GalleryPage() {

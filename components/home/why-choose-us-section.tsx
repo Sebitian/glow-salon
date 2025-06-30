@@ -7,7 +7,7 @@ const features = [
     title: "Expert Barbers & Stylists",
     description: "Our team of certified professionals brings years of experience and creativity to every service.",
     image:
-      "https://images.unsplash.com/photo-1562322140-8baeececf3df?w=600&h=400&fit=crop&crop=focalpoint&auto=format&q=80",
+      "images/pumba.jpg",
   },
   {
     icon: <Award className="h-8 w-8 text-primary" />,

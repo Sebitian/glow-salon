@@ -1,15 +1,32 @@
-import { Instagram } from "lucide-react"
+"use client"
+
+import { useState } from "react"
+import { Instagram, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { Dialog, DialogContent } from "@/components/ui/dialog"
 import Image from "next/image"
 
 const instagramPosts = [
-  "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=300&h=300&fit=crop&crop=focalpoint&auto=format&q=80",
-  "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=300&h=300&fit=crop&crop=focalpoint&auto=format&q=80",
-  "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=300&h=300&fit=crop&crop=focalpoint&auto=format&q=80",
-  "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?w=300&h=300&fit=crop&crop=focalpoint&auto=format&q=80",
-]
+  "images/opening.png",
+  "images/ig.png",
+  "images/ig2.png",
+  "images/ig3.png",
+  ]
 
 export default function InstagramSection() {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null)
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null)
+
+  const openLightbox = (imageSrc: string, index: number) => {
+    setSelectedImage(imageSrc)
+    setSelectedIndex(index)
+  }
+
+  const closeLightbox = () => {
+    setSelectedImage(null)
+    setSelectedIndex(null)
+  }
+
   return (
     <section className="section-padding bg-gradient-to-r from-primary/5 to-primary/10">
       <div className="container-custom">
@@ -18,33 +35,71 @@ export default function InstagramSection() {
           <p className="text-xl text-gray-600 mb-8">
             Follow us on Instagram for daily inspiration, behind-the-scenes content, and exclusive offers.
           </p>
-          <div className="flex items-center justify-center mb-8">
+          {/* <div className="flex items-center justify-center mb-8">
             <Instagram className="w-12 h-12 text-primary mr-4" />
             <span className="text-4xl font-bold gradient-text">35K+ Followers</span>
-          </div>
+          </div> */}
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
           {instagramPosts.map((post, index) => (
-            <div key={index} className="relative aspect-square overflow-hidden rounded-lg">
+            <div 
+              key={index} 
+              className="relative aspect-square overflow-hidden rounded-lg cursor-pointer hover-lift group"
+              onClick={() => openLightbox(post, index)}
+            >
               <Image
                 src={post || "/placeholder.svg"}
                 alt={`Instagram post ${index + 1}`}
                 fill
-                className="object-cover"
+                className="object-cover transition-transform duration-300 group-hover:scale-110"
               />
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
+                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="w-8 h-8 bg-white/90 rounded-full flex items-center justify-center">
+                    <Instagram className="w-4 h-4 text-gray-800" />
+                  </div>
+                </div>
+              </div>
             </div>
           ))}
         </div>
 
         <div className="text-center">
           <Button asChild size="lg">
-            <a href="https://www.instagram.com/glowsalon" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/venegassalonspa/" target="_blank" rel="noopener noreferrer">
               Follow Us on Instagram
             </a>
           </Button>
         </div>
       </div>
+
+      {/* Lightbox Modal */}
+      <Dialog open={selectedImage !== null} onOpenChange={closeLightbox}>
+        <DialogContent className="max-w-4xl w-full p-0 bg-transparent border-none">
+          <div className="relative">
+            <button
+              onClick={closeLightbox}
+              className="absolute -top-12 right-0 z-50 w-10 h-10 bg-white/90 hover:bg-white rounded-full flex items-center justify-center transition-colors"
+              aria-label="Close lightbox"
+            >
+              <X className="w-5 h-5 text-gray-800" />
+            </button>
+            
+            {selectedImage && (
+              <div className="relative w-full h-[80vh] rounded-lg overflow-hidden bg-white">
+                <Image
+                  src={selectedImage}
+                  alt={`Instagram post ${(selectedIndex ?? 0) + 1} - enlarged view`}
+                  fill
+                  className="object-contain"
+                  priority
+                />
+              </div>
+            )}
+          </div>
+        </DialogContent>
+      </Dialog>
     </section>
   )
 }

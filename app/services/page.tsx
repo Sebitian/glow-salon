@@ -4,7 +4,7 @@ import ServicesBanner from "@/components/services/services-banner"
 import { Suspense } from "react"
 
 export const metadata: Metadata = {
-  title: "Our Services - Glow Unisex Salon",
+  title: "Our Services - Venegas Salon & Spa",
   description:
     "Explore our wide range of beauty and grooming services for men and women, including haircuts, styling, nail care, and makeup.",
 }

@@ -45,10 +45,12 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors hover:scale-105 transform ${
+                className={`px-4 py-2 rounded-full text-sm font-semibold transition-colors hover:scale-105 transform ${
                   pathname === item.href
                     ? "text-white bg-primary shadow-md"
-                    : "text-gray-700 hover:text-white hover:bg-primary/80"
+                    : isScrolled 
+                      ? "text-gray-900 hover:text-white hover:bg-primary/80"
+                      : "text-white drop-shadow-md hover:text-white hover:bg-primary/80"
                 }`}
               >
                 {item.name}
@@ -76,10 +78,10 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`block px-4 py-3 rounded-full text-base font-medium mb-2 ${
+                className={`block px-4 py-3 rounded-full text-base font-semibold mb-2 ${
                   pathname === item.href
                     ? "text-white bg-primary shadow-md"
-                    : "text-gray-700 hover:text-white hover:bg-primary/80"
+                    : "text-gray-900 hover:text-white hover:bg-primary/80"
                 }`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >

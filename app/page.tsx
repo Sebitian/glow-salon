@@ -7,18 +7,18 @@ import InstagramSection from "@/components/home/instagram-section"
 import CTASection from "@/components/home/cta-section"
 
 export const metadata: Metadata = {
-  title: "Glow Unisex Salon - Beauty for All",
+  title: "Venegas Salon & Spa",
   description:
-    "Premier unisex salon in India offering haircuts, styling, nail care, beauty treatments, and makeup services for men and women.",
+    "Premier salon in Libertyville, IL offering haircuts, styling, hair treatments, and other services for men and women.",
 }
 
 export default function Home() {
   return (
     <>
       <HeroSection />
+      <TestimonialsSection />
       <ServicesOverview />
       <WhyChooseUsSection />
-      <TestimonialsSection />
       <InstagramSection />
       <CTASection />
     </>

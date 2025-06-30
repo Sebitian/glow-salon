@@ -4,8 +4,8 @@ import ContactInfo from "@/components/contact/contact-info"
 import LocationMap from "@/components/contact/location-map"
 
 export const metadata: Metadata = {
-  title: "Contact Us - Glow Unisex Salon",
-  description: "Get in touch with Glow Unisex Salon. Find our location, contact information, and business hours.",
+  title: "Contact Us - Venegas Salon & Spa",
+  description: "Get in touch with Venegas Salon & Spa. Find our location, contact information, and business hours.",
 }
 
 export default function ContactPage() {

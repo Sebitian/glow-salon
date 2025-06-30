@@ -19,7 +19,7 @@ export default function BookingBanner() {
         <div className="max-w-2xl text-white">
           <h1 className="heading-xl mb-4">Book Your Appointment</h1>
           <p className="text-lg md:text-xl text-white/90">
-            Schedule your visit to Glow Unisex Salon and experience our premium services.
+            Schedule your visit to Venegas Salon & Spa and experience our premium services.
           </p>
         </div>
       </div>
