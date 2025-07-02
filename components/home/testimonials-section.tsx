@@ -94,8 +94,8 @@ export default function TestimonialsSection() {
               <span className="font-semibold text-gray-900">5.0/5 stars</span>
             </div>
             <span className="text-gray-400">•</span>
-            <span className="text-gray-600">250+ reviews on Booksy</span>
-          </div>
+            <span className="text-gray-600">500+ reviews across platforms</span>
+           </div>
         </div>
 
         <div className="relative">

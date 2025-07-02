@@ -13,7 +13,7 @@ export default function AboutPage() {
     <>
       <div className="bg-gradient-to-r from-primary to-primary-light py-20 mb-12">
         <div className="container-custom">
-          <h1 className="heading-xl text-white text-center mb-4">About Glow Salon</h1>
+          <h1 className="heading-xl text-white text-center mb-4">About Venegas Salon & Spa</h1>
           <p className="text-xl text-white/90 text-center max-w-2xl mx-auto">
             Discover our story, our passion for beauty, and our commitment to excellence.
           </p>
@@ -24,7 +24,7 @@ export default function AboutPage() {
           <div>
             <h2 className="heading-lg mb-6">Our Story</h2>
             <p className="text-gray-600 mb-4">
-              Founded in 2025, Glow Salon has been at the forefront of beauty and style in Libertyville. Our journey began
+              Founded in 2025, Venegas Salon & Spa has been at the forefront of beauty and style in Libertyville. Our journey began
               with a simple vision: to provide top-quality beauty services in a welcoming, luxurious environment.
             </p>
             <p className="text-gray-600 mb-4">
@@ -37,8 +37,8 @@ export default function AboutPage() {
           </div>
           <div className="relative h-[400px] rounded-lg overflow-hidden">
             <Image
-              src="images/salon.jpg"
-              alt="Glow Salon Interior"
+              src="images/salon2.jpg"
+              alt="Venegas Salon Interior"
               fill
               className="object-cover"
             />
@@ -64,33 +64,69 @@ export default function AboutPage() {
               <h3 className="text-xl font-semibold mb-2">David</h3>
               <p className="text-gray-600 mb-1">Owner & Barber</p>
               <p className="text-gray-600 mb-4">15+ years of unmatched customer satisfaction</p>
-              <Link href="/booking" className="text-primary hover:text-primary-dark transition-colors">
+              <a 
+                href="https://booksy.com/en-us/481608_ds-cuts_barber-shop_18695_libertyville?do=invite&_branch_match_id=1410311065173934361&utm_medium=invite_from_share_profile&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FVdzLJLg5yzw8uDEyyrytKTUstKsrMS49PKsovL04tsnXOKMrPTQUANPssMTwAAAA%3D" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-4 py-2 bg-[#00D4AA] hover:bg-[#00B894] text-white font-medium rounded-lg transition-colors duration-200 shadow-md hover:shadow-lg"
+              >
+                <Image 
+                  src="/images/booksy_logo.png" 
+                  alt="Booksy" 
+                  width={20} 
+                  height={20} 
+                  className="mr-2"
+                />
                 Book with David
-              </Link>
+              </a>
             </div>
 
             <div className="salon-card text-center p-6">
               <div className="relative w-40 h-40 rounded-full overflow-hidden mx-auto mb-4">
-                <Image src="/images/luis.jpg" alt="Luis (Pumba) - Barber" fill className="object-cover" />
+                <Image src="/images/pumba2.png" alt="Luis (Pumba) - Barber" fill className="object-cover" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Luis (Pumba)</h3>
               <p className="text-gray-600 mb-1">Barber</p>
               <p className="text-gray-600 mb-4">Specializing in fades and modern styles</p>
-              <Link href="/booking" className="text-primary hover:text-primary-dark transition-colors">
+              <a 
+                href="https://booksy.com/en-us/1409092_pumba-cuts_barber-shop_18695_libertyville?do=invite&_branch_match_id=1410311065173934361&utm_medium=profile_share_from_profile&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FV9zF1igjJNki0DEyyrytKTUstKsrMS49PKsovL04tsnXOKMrPTQUAIQzrHjwAAAA%3D" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-4 py-2 bg-[#00D4AA] hover:bg-[#00B894] text-white font-medium rounded-lg transition-colors duration-200 shadow-md hover:shadow-lg"
+              >
+                <Image 
+                  src="/images/booksy_logo.png" 
+                  alt="Booksy" 
+                  width={20} 
+                  height={20} 
+                  className="mr-2"
+                />
                 Book with Luis
-              </Link>
+              </a>
             </div>
 
             <div className="salon-card text-center p-6">
               <div className="relative w-40 h-40 rounded-full overflow-hidden mx-auto mb-4">
-                <Image src="/images/alex.jpg" alt="Alex - Barber" fill className="object-cover" />
+                <Image src="/images/ig3.png" alt="Alex - Barber" fill className="object-cover" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Alex</h3>
               <p className="text-gray-600 mb-1">Barber</p>
               <p className="text-gray-600 mb-4">Master of classic and contemporary cuts</p>
-              <Link href="/booking" className="text-primary hover:text-primary-dark transition-colors">
+              <a 
+                href="https://booksy.com/en-us/1404532_ar-fadez_barber-shop_18695_libertyville?do=invite&_branch_match_id=1410311065173934361&utm_medium=profile_share_from_profile&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FVLy5w8vIzLXcsDUyyrytKTUstKsrMS49PKsovL04tsnXOKMrPTQUAhomW8TwAAAA%3D" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-4 py-2 bg-[#00D4AA] hover:bg-[#00B894] text-white font-medium rounded-lg transition-colors duration-200 shadow-md hover:shadow-lg"
+              >
+                <Image 
+                  src="/images/booksy_logo.png" 
+                  alt="Booksy" 
+                  width={20} 
+                  height={20} 
+                  className="mr-2"
+                />
                 Book with Alex
-              </Link>
+              </a>
             </div>
 
             {/* Stylists */}
@@ -101,9 +137,21 @@ export default function AboutPage() {
               <h3 className="text-xl font-semibold mb-2">Bita</h3>
               <p className="text-gray-600 mb-1">Hair Stylist</p>
               <p className="text-gray-600 mb-4">Expert in coloring and styling</p>
-              <Link href="/booking" className="text-primary hover:text-primary-dark transition-colors">
+              <a 
+                href="https://booksy.com/en-us/1500556_venegas-salon-spa_hair-salon_18695_libertyville?do=invite&_branch_match_id=1410311065173934361&utm_medium=invite_from_share_profile&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FVL64wMwqrMgz1CUmyrytKTUstKsrMS49PKsovL04tsnXOKMrPTQUAixInkzwAAAA%3D" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-4 py-2 bg-[#00D4AA] hover:bg-[#00B894] text-white font-medium rounded-lg transition-colors duration-200 shadow-md hover:shadow-lg"
+              >
+                <Image 
+                  src="/images/booksy_logo.png" 
+                  alt="Booksy" 
+                  width={20} 
+                  height={20} 
+                  className="mr-2"
+                />
                 Book with Bita
-              </Link>
+              </a>
             </div>
 
             <div className="salon-card text-center p-6">
@@ -113,9 +161,21 @@ export default function AboutPage() {
               <h3 className="text-xl font-semibold mb-2">Izzy</h3>
               <p className="text-gray-600 mb-1">Hair Stylist</p>
               <p className="text-gray-600 mb-4">Specializing in cuts and treatments</p>
-              <Link href="/booking" className="text-primary hover:text-primary-dark transition-colors">
+              <a 
+                href="https://booksy.com/en-us/1500556_venegas-salon-spa_hair-salon_18695_libertyville?do=invite&_branch_match_id=1410311065173934361&utm_medium=invite_from_share_profile&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FVL64wMwqrMgz1CUmyrytKTUstKsrMS49PKsovL04tsnXOKMrPTQUAixInkzwAAAA%3D" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-4 py-2 bg-[#00D4AA] hover:bg-[#00B894] text-white font-medium rounded-lg transition-colors duration-200 shadow-md hover:shadow-lg"
+              >
+                <Image 
+                  src="/images/booksy_logo.png" 
+                  alt="Booksy" 
+                  width={20} 
+                  height={20} 
+                  className="mr-2"
+                />
                 Book with Izzy
-              </Link>
+              </a>
             </div>
 
             {/* Spa Specialist */}
@@ -126,9 +186,21 @@ export default function AboutPage() {
               <h3 className="text-xl font-semibold mb-2">Ashley</h3>
               <p className="text-gray-600 mb-1">Spa Specialist</p>
               <p className="text-gray-600 mb-4">Expert in skincare and spa treatments</p>
-              <Link href="/booking" className="text-primary hover:text-primary-dark transition-colors">
+              <a 
+                href="https://ashleysanchez6.glossgenius.com/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-4 py-2 bg-[#00D4AA] hover:bg-[#00B894] text-white font-medium rounded-lg transition-colors duration-200 shadow-md hover:shadow-lg"
+              >
+                <Image 
+                  src="/images/booksy_logo.png" 
+                  alt="Booksy" 
+                  width={20} 
+                  height={20} 
+                  className="mr-2"
+                />
                 Book with Ashley
-              </Link>
+              </a>
             </div>
           </div>
         </div>

@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, Clock, Instagram, Facebook, Twitter } from "lucide-react"
+import { MapPin, Phone, Mail, Clock, Instagram, Facebook } from "lucide-react"
 
 export default function ContactInfo() {
   return (
@@ -13,7 +13,7 @@ export default function ContactInfo() {
           <MapPin className="h-6 w-6 text-primary shrink-0 mt-0.5 mr-3" />
           <div>
             <h3 className="font-semibold mb-1">Address</h3>
-            <p className="text-gray-600">297 Peterson Rd Libertyville,IL 60048</p>
+            <p className="text-gray-600">297 Peterson Rd, Libertyville, IL 60048</p>
           </div>
         </div>
 
@@ -21,25 +21,31 @@ export default function ContactInfo() {
           <Phone className="h-6 w-6 text-primary shrink-0 mt-0.5 mr-3" />
           <div>
             <h3 className="font-semibold mb-1">Phone</h3>
-            <p className="text-gray-600">+1 (224) 504-2113</p>
+            <a 
+              href="tel:+12245042113" 
+              className="text-gray-600 hover:text-primary transition-colors"
+            >
+              (224) 504-2113
+            </a>
           </div>
         </div>
 
-        <div className="flex items-start">
+        {/* <div className="flex items-start">
           <Mail className="h-6 w-6 text-primary shrink-0 mt-0.5 mr-3" />
           <div>
             <h3 className="font-semibold mb-1">Email</h3>
             <p className="text-gray-600">info@glowsalon.in</p>
           </div>
-        </div>
+        </div> */}
 
         <div className="flex items-start">
           <Clock className="h-6 w-6 text-primary shrink-0 mt-0.5 mr-3" />
           <div>
             <h3 className="font-semibold mb-1">Business Hours</h3>
-            <div className="text-gray-600">
-              <p>Monday - Saturday: 10:00 AM - 8:00 PM</p>
-              <p>Sunday: 11:00 AM - 6:00 PM</p>
+            <div className="text-gray-600 space-y-1">
+              <p>Monday - Friday: 9:00 AM - 7:00 PM</p>
+              <p>Saturday: 9:00 AM - 6:00 PM</p>
+              <p>Sunday: Closed</p>
             </div>
           </div>
         </div>
@@ -49,31 +55,40 @@ export default function ContactInfo() {
         <h3 className="font-semibold mb-3">Connect With Us</h3>
         <div className="flex space-x-4">
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/venegassalonspa/"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-gray-100 p-2 rounded-full hover:bg-primary hover:text-white transition-colors"
+            className="bg-gray-100 p-2 rounded-full hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:text-white transition-all duration-200"
             aria-label="Instagram"
           >
             <Instagram className="h-5 w-5" />
           </a>
           <a
-            href="https://facebook.com"
+            href="https://www.facebook.com/profile.php?id=61576609551054"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-gray-100 p-2 rounded-full hover:bg-primary hover:text-white transition-colors"
+            className="bg-gray-100 p-2 rounded-full hover:bg-blue-600 hover:text-white transition-colors"
             aria-label="Facebook"
           >
             <Facebook className="h-5 w-5" />
           </a>
           <a
-            href="https://twitter.com"
-            target="_blank"
+            href="https://www.tiktok.com/@venegassalon"
+            target="_blank" 
             rel="noopener noreferrer"
-            className="bg-gray-100 p-2 rounded-full hover:bg-primary hover:text-white transition-colors"
-            aria-label="Twitter"
+            className="bg-gray-100 p-2 rounded-full hover:bg-black hover:text-white transition-colors"
+            aria-label="TikTok"
           >
-            <Twitter className="h-5 w-5" />
+            <img src="/images/tiktok.png" alt="TikTok" className="h-5 w-5" />
+          </a>
+          <a
+            href="https://g.page/venegassalon"
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="bg-gray-100 p-2 rounded-full hover:bg-red-500 hover:text-white transition-colors"
+            aria-label="Google"
+          >
+            <img src="/images/google.png" alt="Google" className="h-5 w-5" />
           </a>
         </div>
       </div>

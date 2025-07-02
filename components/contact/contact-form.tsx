@@ -1,125 +1,82 @@
 "use client"
 
-import type React from "react"
-
-import { useState } from "react"
+import { MapPin, Navigation, Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Textarea } from "@/components/ui/textarea"
-import { Check } from "lucide-react"
 
 export default function ContactForm() {
-  const [name, setName] = useState("")
-  const [email, setEmail] = useState("")
-  const [phone, setPhone] = useState("")
-  const [message, setMessage] = useState("")
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSuccess, setIsSuccess] = useState(false)
+  const salonAddress = "297 Peterson Rd, Libertyville, IL 60048"
+  const encodedAddress = encodeURIComponent(salonAddress)
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
+  const handleDirections = () => {
+    window.open(`https://maps.google.com/maps?daddr=${encodedAddress}`, '_blank')
+  }
 
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitting(false)
-      setIsSuccess(true)
+  const handleViewOnMaps = () => {
+    window.open(`https://maps.google.com/maps?q=${encodedAddress}`, '_blank')
+  }
 
-      // Reset form after 3 seconds
-      setTimeout(() => {
-        setIsSuccess(false)
-        setName("")
-        setEmail("")
-        setPhone("")
-        setMessage("")
-      }, 3000)
-    }, 1500)
+  const handleCall = () => {
+    window.open('tel:+12245042113', '_self')
   }
 
   return (
     <div className="salon-card p-8 shadow-salon">
       <h2 className="heading-md mb-6 flex items-center">
         <span className="w-8 h-0.5 bg-primary mr-2"></span>
-        Send Us a Message
+        Find Our Salon
       </h2>
 
-      {isSuccess ? (
-        <div className="text-center py-8">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-100 mb-4">
-            <Check className="h-8 w-8 text-green-600" />
+      {/* Google Maps Embed - No API Key Required */}
+      <div className="rounded-lg overflow-hidden shadow-md h-[400px] mb-6">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2962.8254234567!2d-87.9528!3d42.2737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fcc5e12345678%3A0x1234567890abcdef!2s297%20Peterson%20Rd%2C%20Libertyville%2C%20IL%2060048%2C%20USA!5e0!3m2!1sen!2sus!4v1640123456789!5m2!1sen!2sus"
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          title="Venegas Salon & Spa Location"
+        />
+      </div>
+
+      {/* Address and Action Buttons */}
+      <div className="space-y-4">
+        <div className="flex items-start">
+          <MapPin className="h-5 w-5 text-primary shrink-0 mt-1 mr-3" />
+          <div>
+            <h3 className="font-semibold text-lg mb-1">Venegas Salon & Spa</h3>
+            <p className="text-gray-600">{salonAddress}</p>
           </div>
-          <h3 className="text-xl font-bold mb-2">Message Sent!</h3>
-          <p className="text-gray-600 mb-4">Thank you for contacting us. We'll get back to you as soon as possible.</p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <Button
-            onClick={() => setIsSuccess(false)}
-            className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full shadow-md"
+            onClick={handleDirections}
+            className="flex items-center justify-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 rounded-full"
           >
-            Send Another Message
+            <Navigation className="h-4 w-4" />
+            Get Directions
+          </Button>
+          
+          <Button
+            onClick={handleCall}
+            variant="outline"
+            className="flex items-center justify-center gap-2 rounded-full"
+          >
+            <Phone className="h-4 w-4" />
+            Call Now
           </Button>
         </div>
-      ) : (
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div>
-            <Label htmlFor="name">Full Name</Label>
-            <Input
-              id="name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              placeholder="Enter your full name"
-              required
-              className="border-gray-300 focus:border-primary focus:ring-primary"
-            />
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
-              <Label htmlFor="email">Email</Label>
-              <Input
-                id="email"
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your email address"
-                required
-                className="border-gray-300 focus:border-primary focus:ring-primary"
-              />
-            </div>
-            <div>
-              <Label htmlFor="phone">Phone Number</Label>
-              <Input
-                id="phone"
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}
-                placeholder="Enter your phone number"
-                required
-                className="border-gray-300 focus:border-primary focus:ring-primary"
-              />
-            </div>
-          </div>
-
-          <div>
-            <Label htmlFor="message">Message</Label>
-            <Textarea
-              id="message"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              placeholder="Enter your message"
-              rows={5}
-              required
-              className="border-gray-300 focus:border-primary focus:ring-primary"
-            />
-          </div>
-
-          <Button
-            type="submit"
-            className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90 rounded-full shadow-md"
-            disabled={isSubmitting}
-          >
-            {isSubmitting ? "Sending..." : "Send Message"}
-          </Button>
-        </form>
-      )}
+        <Button
+          onClick={handleViewOnMaps}
+          variant="outline"
+          className="w-full rounded-full"
+        >
+          View on Google Maps
+        </Button>
+      </div>
     </div>
   )
 }

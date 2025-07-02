@@ -1,32 +1,48 @@
 "use client"
 
+import { MapPin, Navigation, Phone } from "lucide-react"
+
 export default function ContactMapComponent() {
+  const salonAddress = "297 Peterson Rd, Libertyville, IL 60048"
+  const encodedAddress = encodeURIComponent(salonAddress)
+
+  const handleDirections = () => {
+    window.open(`https://maps.google.com/maps?daddr=${encodedAddress}`, '_blank')
+  }
+
+  const handleCall = () => {
+    window.open('tel:+12245042113', '_self')
+  }
+
   return (
     <div className="rounded-lg overflow-hidden shadow-md h-[400px] bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center">
       <div className="text-center p-8">
         <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mb-6 mx-auto">
-          <span className="text-3xl">📍</span>
+          <MapPin className="h-10 w-10 text-white" />
         </div>
         <h3 className="text-xl font-bold mb-2">Visit Our Salon</h3>
-        <p className="text-gray-600 mb-2">123 Beauty Lane</p>
-        <p className="text-gray-600 mb-2">297 Peterson Rd</p>
-        <p className="text-gray-600 mb-4">Libertyville, IL</p>
-        <a
-          href="https://maps.google.com/?q=Mumbai,Maharashtra,India"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center text-primary hover:text-primary/80 font-medium"
-        >
-          View on Google Maps
-          <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-            ></path>
-          </svg>
-        </a>
+        <p className="text-gray-600 mb-2 font-medium">Venegas Salon & Spa</p>
+        <p className="text-gray-600 mb-4">{salonAddress}</p>
+        
+        <div className="space-y-3">
+          <button
+            onClick={handleDirections}
+            className="inline-flex items-center justify-center gap-2 bg-primary text-white px-6 py-2 rounded-full hover:bg-primary/90 transition-colors font-medium"
+          >
+            <Navigation className="h-4 w-4" />
+            Get Directions
+          </button>
+          
+          <div className="flex gap-2 justify-center">
+            <button
+              onClick={handleCall}
+              className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium text-sm"
+            >
+              <Phone className="h-4 w-4" />
+              (224) 504-2113
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   )
