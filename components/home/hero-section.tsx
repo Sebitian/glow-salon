@@ -17,29 +17,24 @@ export default function HeroSection() {
       </div>
 
       <div className="container-custom relative z-10">
-        <div className="max-w-2xl text-white">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight">
+        <div className="max-w-2xl">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight text-transparent bg-clip-text bg-gradient-to-r from-amber-500 via-amber-200 to-amber-500">
             Discover Your{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 via-amber-200 to-amber-500">
               Radiant Beauty
             </span>
           </h1>
-
+    
           <p className="text-xl md:text-2xl mb-8 text-gray-200 leading-relaxed">
             Indulge in premium beauty services tailored for you. Where style meets excellence and confidence is born.
           </p>
 
           <div className="flex flex-wrap gap-4">
-            <Button asChild size="lg" className="text-lg px-8 py-4">
+            <Button asChild size="lg" className="text-lg font-bold px-8 py-4 bg-black hover:bg-yellow-600 text-amber-400 border border-amber-400">
               <Link href="/booking">Book Your Experience</Link>
             </Button>
-
-            <Button
-              asChild
-              variant="outline"
-              size="lg"
-              className="text-lg px-8 py-4 text-purple-500 font-bold border-white hover:shadow"
-            >
+            
+            <Button asChild size="lg" className="text-lg px-8 py-4 bg-black hover:bg-gray-900 text-amber-400 font-semibold border border-amber-400">
               <Link href="/services">Explore Our Services</Link>
             </Button>
           </div>
@@ -66,7 +61,7 @@ export default function HeroSection() {
         </div>
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black to-transparent"></div>
     </section>
   )
 }

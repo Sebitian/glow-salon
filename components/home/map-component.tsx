@@ -37,7 +37,7 @@ export default function MapComponent() {
             <div
               key={index}
               className={`p-3 rounded-lg mb-3 cursor-pointer transition-colors ${
-                activeLocation === index ? "bg-primary text-white" : "bg-gray-50 hover:bg-gray-100"
+                activeLocation === index ? "bg-yellow-400 text-black" : "bg-gray-50 hover:bg-gray-100"
               }`}
               onClick={() => setActiveLocation(index)}
             >
@@ -50,7 +50,7 @@ export default function MapComponent() {
           <div className="mt-6 space-y-2">
             <Button 
               onClick={handleMapClick}
-              className="w-full bg-primary hover:bg-primary/90 text-white text-sm"
+              className="w-full bg-yellow-400 hover:bg-yellow-500 text-black text-sm"
               size="sm"
             >
               <ExternalLink className="w-4 h-4 mr-2" />
@@ -63,40 +63,41 @@ export default function MapComponent() {
         </div>
 
         {/* Map Display Area */}
-        <div className="flex-1 relative bg-gradient-to-br from-primary/5 to-secondary/5">
+        <div className="flex-1 relative bg-gradient-to-br from-yellow-400/10 to-yellow-500/10">
           <div 
-            className="h-full flex flex-col items-center justify-center cursor-pointer hover:bg-primary/10 transition-colors p-6"
+            className="h-full flex flex-col items-center justify-center cursor-pointer hover:bg-yellow-400/20 transition-colors p-6"
             onClick={handleMapClick}
           >
-            <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mb-4 shadow-lg hover:shadow-xl transition-shadow">
-              <MapPin className="w-10 h-10 text-white" />
+            <div className="w-20 h-20 bg-yellow-400 rounded-full flex items-center justify-center mb-4 shadow-lg hover:shadow-xl transition-shadow">
+              <MapPin className="w-10 h-10 text-black" />
             </div>
             <h4 className="font-bold text-xl mb-2 text-center text-gray-900">{currentLocation.name}</h4>
             <p className="text-gray-600 mb-2 text-center">{currentLocation.address}</p>
             <p className="text-gray-600 mb-4 text-center">{currentLocation.phone}</p>
             <div className="text-center">
-              <p className="text-sm text-primary font-semibold mb-2">Click to open in Google Maps</p>
+              <p className="text-sm text-yellow-400 font-semibold mb-2">Click to open in Google Maps</p>
               <div className="flex space-x-2">
-                <Button 
-                  onClick={(e) => {
-                    e.stopPropagation()
-                    window.open(directionsUrl, '_blank')
-                  }}
-                  size="sm"
-                  className="bg-primary hover:bg-primary/90"
-                >
-                  Get Directions
-                </Button>
-                <Button 
-                  onClick={(e) => {
-                    e.stopPropagation()
-                    window.open(searchUrl, '_blank')
-                  }}
-                  variant="outline"
-                  size="sm"
-                >
-                  View on Map
-                </Button>
+                                  <Button 
+                    onClick={(e) => {
+                      e.stopPropagation()
+                      window.open(directionsUrl, '_blank')
+                    }}
+                    size="sm"
+                    className="bg-yellow-400 hover:bg-yellow-500 text-black"
+                  >
+                    Get Directions
+                  </Button>
+                                  <Button 
+                    onClick={(e) => {
+                      e.stopPropagation()
+                      window.open(searchUrl, '_blank')
+                    }}
+                    variant="outline"
+                    size="sm"
+                    className="border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black"
+                  >
+                    View on Map
+                  </Button>
               </div>
             </div>
           </div>

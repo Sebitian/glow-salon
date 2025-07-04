@@ -48,7 +48,7 @@ export default function Footer() {
           {/* Quick Links */}
           <div>
             <h3 className="text-lg font-semibold mb-6 flex items-center">
-              <span className="w-8 h-0.5 bg-primary mr-3"></span>
+              <span className="w-8 h-0.5 bg-primary bg-yellow-400 mr-3"></span>
               Quick Links
             </h3>
             <ul className="space-y-3">
@@ -83,20 +83,20 @@ export default function Footer() {
           {/* Contact Information */}
           <div>
             <h3 className="text-lg font-semibold mb-6 flex items-center">
-              <span className="w-8 h-0.5 bg-primary mr-3"></span>
+              <span className="w-8 h-0.5 bg-primary mr-3 bg-yellow-400"></span>
               Contact Us
             </h3>
             <ul className="space-y-4">
               <li className="flex items-start">
-                <MapPin className="h-6 w-6 text-primary shrink-0 mt-0.5 mr-3" />
+                <MapPin className="h-6 w-6 text-yellow-400  shrink-0 mt-0.5 mr-3" />
                 <span className="text-gray-400">297 Peterson Rd, Libertyville, IL 60048</span>
               </li>
               <li className="flex items-center">
-                <Phone className="h-6 w-6 text-primary mr-3" />
+                <Phone className="h-6 w-6 text-green-600 mr-3" />
                 <span className="text-gray-400">+1 (224) 504-2113</span>
               </li>
               <li className="flex items-center">
-                <Mail className="h-6 w-6 text-primary mr-3" />
+                <Mail className="h-6 w-6 text-blue-500 mr-3" />
                 <span className="text-gray-400">info@venagassalon.com</span>
               </li>
             </ul>
@@ -105,19 +105,19 @@ export default function Footer() {
           {/* Business Hours */}
           <div>
             <h3 className="text-lg font-semibold mb-6 flex items-center">
-              <span className="w-8 h-0.5 bg-primary mr-3"></span>
+              <span className="w-8 h-0.5 bg-yellow-400 mr-3"></span>
               Business Hours
             </h3>
             <ul className="space-y-3">
               <li className="flex items-start">
-                <Clock className="h-6 w-6 text-primary shrink-0 mt-0.5 mr-3" />
+                <Clock className="h-6 w-6 text-yellow-400 shrink-0 mt-0.5 mr-3" />
                 <div>
                   <p className="text-gray-400">Monday - Saturday:</p>
                   <p className="font-semibold text-white">9:00 AM - 7:00 PM</p>
                 </div>
               </li>
               <li className="flex items-start">
-                <Clock className="h-6 w-6 text-primary shrink-0 mt-0.5 mr-3" />
+                <Clock className="h-6 w-6 text-yellow-400 shrink-0 mt-0.5 mr-3" />
                 <div>
                   <p className="text-gray-400">Sunday:</p>
                   <p className="font-semibold text-white">By Appointment Only</p>

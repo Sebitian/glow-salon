@@ -113,10 +113,34 @@ html {
   @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-600;
 }
 
+.gradient-background {
+  @apply bg-gradient-to-r from-yellow-600 via-red-600 to-red-800;
+}
+
+.gradient-gold-red {
+  @apply bg-gradient-to-r from-amber-500 via-yellow-600 to-red-700;
+}
+
 .section-padding {
   @apply py-16 sm:py-24 lg:py-32;
 }
 
 .hover-lift {
   @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
+}
+
+.shadow-salon {
+  @apply shadow-lg shadow-black/10;
+}
+
+.text-gold {
+  @apply text-yellow-600;
+}
+
+.bg-gold {
+  @apply bg-yellow-600;
+}
+
+.border-gold {
+  @apply border-yellow-600;
 }

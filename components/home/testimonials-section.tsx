@@ -84,17 +84,17 @@ export default function TestimonialsSection() {
   const duplicatedTestimonials = [...testimonials, ...testimonials]
 
   return (
-    <section className="section-padding bg-background relative overflow-hidden">
+    <section className="section-padding bg-black relative overflow-hidden">
       <div className="container-custom relative z-20">
         <div className="text-center mb-16">
-          <h2 className="heading-lg mb-6">What Our Customers Say</h2>
+          <h2 className="heading-lg mb-6 text-white">What Our Customers Say</h2>
           <div className="flex items-center justify-center space-x-4 text-lg mb-2">
             <div className="flex items-center">
               <span className="text-yellow-400 mr-2 text-2xl">★★★★★</span>
-              <span className="font-semibold text-gray-900">5.0/5 stars</span>
+              <span className="font-semibold text-gray-200">5.0/5 stars</span>
             </div>
             <span className="text-gray-400">•</span>
-            <span className="text-gray-600">500+ reviews across platforms</span>
+            <span className="text-gray-400">500+ reviews across platforms</span>
            </div>
         </div>
 
@@ -107,7 +107,7 @@ export default function TestimonialsSection() {
             {duplicatedTestimonials.map((testimonial, index) => (
               <div
                 key={`${testimonial.id}-${index}`}
-                className="flex-shrink-0 w-80 salon-card p-6 hover-lift"
+                className="flex-shrink-0 w-80 salon-card p-6 hover-lift bg-white shadow-lg"
               >
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex text-yellow-400 text-lg">
@@ -120,7 +120,7 @@ export default function TestimonialsSection() {
                 <p className="text-gray-900 text-base leading-relaxed mb-4 font-medium">
                   "{testimonial.text}"
                 </p>
-                <p className="text-primary font-semibold text-sm">
+                <p className="text-yellow-400 font-semibold text-sm">
                   — {testimonial.author}
                 </p>
               </div>
@@ -128,8 +128,8 @@ export default function TestimonialsSection() {
           </div>
           
           {/* Gradient overlays to fade edges */}
-          <div className="absolute top-0 left-0 bottom-0 w-16 bg-gradient-to-r from-background to-transparent pointer-events-none z-10"></div>
-          <div className="absolute top-0 right-0 bottom-0 w-16 bg-gradient-to-l from-background to-transparent pointer-events-none z-10"></div>
+          <div className="absolute top-0 left-0 bottom-0 w-16 bg-gradient-to-r from-black to-transparent pointer-events-none z-10"></div>
+          <div className="absolute top-0 right-0 bottom-0 w-16 bg-gradient-to-l from-black to-transparent pointer-events-none z-10"></div>
         </div>
       </div>
     </section>

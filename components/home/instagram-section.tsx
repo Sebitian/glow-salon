@@ -28,11 +28,11 @@ export default function InstagramSection() {
   }
 
   return (
-    <section className="section-padding bg-gradient-to-r from-primary/5 to-primary/10">
+    <section className="section-padding bg-black">
       <div className="container-custom">
         <div className="text-center mb-12">
-          <h2 className="heading-lg mb-6">Join Our Instagram Community</h2>
-          <p className="text-xl text-gray-600 mb-8">
+          <h2 className="heading-lg mb-6 text-yellow-400">Join Our Instagram Community</h2>
+          <p className="text-xl text-white mb-8">
             Follow us on Instagram for daily inspiration, behind-the-scenes content, and exclusive offers.
           </p>
           {/* <div className="flex items-center justify-center mb-8">
@@ -66,8 +66,9 @@ export default function InstagramSection() {
         </div>
 
         <div className="text-center">
-          <Button asChild size="lg">
+          <Button asChild size="lg" className="bg-yellow-400 hover:bg-gray-100 text-black items-center gap-2 px-8">
             <a href="https://www.instagram.com/venegassalonspa/" target="_blank" rel="noopener noreferrer">
+              <Instagram className="w-5 h-5" />
               Follow Us on Instagram
             </a>
           </Button>

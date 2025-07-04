@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import Image from "next/image"
+import { Phone } from "lucide-react"
 
 const services = [
   {
@@ -49,12 +50,22 @@ const services = [
 
 export default function ServicesOverview() {
   return (
-    <section className="section-padding bg-gray-50">
-      <div className="container-custom">
+    <section className="section-padding relative">
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/images/bggold4.jpg"
+          alt="Gold background texture"
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-black/40"></div>
+      </div>
+      
+      <div className="container-custom relative z-10">
         <div className="text-center mb-16">
-          <h2 className="heading-lg mb-4">Our Premium Services</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Indulge in our wide range of luxury beauty treatments, tailored to enhance your unique style.
+          <h2 className="heading-lg mb-4 text-white">Our Premium Services</h2>
+          <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+            Indulge in our wide range of <span className="text-amber-400">luxury</span> beauty treatments, tailored to enhance your unique style.
           </p>
         </div>
 
@@ -62,16 +73,16 @@ export default function ServicesOverview() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="salon-card p-8 text-center hover-lift transition-all duration-300 hover:bg-primary/5"
+              className="salon-card p-8 text-center hover-lift transition-all duration-300 hover:bg-black/50 bg-black/30 backdrop-blur-sm"
             >
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-6">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-amber-400/20 mb-6">
                 {service.icon}
               </div>
-              <h3 className="text-xl font-bold mb-3">{service.title}</h3>
-              <p className="text-gray-600 mb-6">{service.description}</p>
+              <h3 className="text-xl font-bold mb-3 text-white">{service.title}</h3>
+              <p className="text-gray-300 mb-6">{service.description}</p>
               <Link
                 href={service.link}
-                className="text-primary font-medium hover:text-primary/80 transition-colors inline-flex items-center"
+                className="text-amber-400 font-medium hover:text-amber-300 transition-colors inline-flex items-center"
               >
                 Learn More
                 <svg
@@ -89,14 +100,59 @@ export default function ServicesOverview() {
                   ></path>
                 </svg>
               </Link>
+              
             </div>
           ))}
         </div>
 
-        <div className="text-center mt-16">
-          <Button asChild size="lg" className="btn-primary">
+        <div className="text-center mt-12">
+          <Button asChild size="lg" className="bg-amber-400 hover:bg-amber-500 text-black font-bold px-8 py-6 text-lg border-2 border-black">
             <Link href="/services">View All Services</Link>
           </Button>
+        </div>
+        
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16 max-w-2xl mx-auto">
+          {/* Green Phone Button */}
+          <Button
+            size="lg"
+            className="h-24 bg-green-500 hover:bg-green-600 text-white font-bold text-xl transition-all duration-300 hover:scale-110 hover:shadow-2xl transform"
+            asChild
+          >
+            <a href="tel:5042113" className="flex flex-col items-center justify-center space-y-2">
+              <Phone className="h-8 w-8" />
+              <div className="text-center">
+                <div className="text-sm font-normal">(224) 504-2113</div>
+              </div>
+            </a>
+          </Button>
+
+          {/* Booksy Button */}
+          <Button
+            size="lg"
+            className="h-24 bg-teal-500 hover:bg-teal-600 text-white font-bold text-xl transition-all duration-300 hover:scale-110 hover:shadow-2xl transform"
+            asChild
+          >
+            <a 
+              href="#" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center space-x-3"
+            >
+              <Image
+                src="/images/booksy_logo.png"
+                alt="Booksy Logo"
+                width={32}
+                height={32}
+                className="object-contain"
+              />
+              <span>Book Now</span>
+            </a>
+          </Button>
+        </div>
+
+        <div className="text-center mt-8">
+          
         </div>
       </div>
     </section>

@@ -27,11 +27,21 @@ const features = [
 
 export default function WhyChooseUsSection() {
   return (
-    <section className="section-padding bg-white">
-      <div className="container-custom">
+    <section className="section-padding relative">
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/images/bggold5.jpg"
+          alt="Gold background texture"
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-black/40"></div>
+      </div>
+      
+      <div className="container-custom relative z-10">
         <div className="text-center mb-16">
-          <h2 className="heading-lg mb-4">Why Choose Venegas Salon ?</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <h2 className="heading-lg mb-4 text-white">Why Choose Venegas Salon ?</h2>
+          <p className="text-xl text-gray-200 max-w-3xl mx-auto">
             Experience the difference with our commitment to excellence, luxury, and personalized care.
           </p>
         </div>
@@ -61,10 +71,10 @@ export default function WhyChooseUsSection() {
           ))}
         </div>
 
-        <div className="mt-16 text-center">
+        <div className="text-center mt-16">
           <a
             href="/about"
-            className="inline-flex items-center text-primary font-semibold hover:text-primary/80 transition-colors"
+            className="inline-flex items-center text-amber-400 font-semibold hover:text-amber-300 transition-colors"
           >
             Learn More About Us
             <svg
