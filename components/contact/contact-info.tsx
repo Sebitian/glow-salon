@@ -58,16 +58,25 @@ export default function ContactInfo() {
             href="https://www.instagram.com/venegassalonspa/"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-gray-100 p-2 rounded-full hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:text-white transition-all duration-200"
+            className="hover:bg-gray-100 text-white p-2 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 hover:text-black transition-all duration-200"
             aria-label="Instagram"
           >
             <Instagram className="h-5 w-5" />
           </a>
           <a
+            href="https://linktr.ee/venegassalonnspa?utm_source=linktree_admin_share&fbclid=PAZXh0bgNhZW0CMTEAAacMAXslrw4GF2lYztAu4K_gbvYKmgUnfzhopGzIMfwcpSyGwYD-KHNczJqjMg_aem_2djK2MogFLrIrjffXZxoQA"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-gray-100 p-2 rounded-full hover:bg-green-500 hover:text-white transition-colors"
+            aria-label="Linktree"
+          >
+            <img src="/images/linktree.png" alt="Linktree" className="h-5 w-5" />
+          </a>
+          <a
             href="https://www.facebook.com/profile.php?id=61576609551054"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-gray-100 p-2 rounded-full hover:bg-blue-600 hover:text-white transition-colors"
+            className="bg-blue-600 text-white p-2 rounded-full hover:bg-white hover:text-blue-600 transition-colors"
             aria-label="Facebook"
           >
             <Facebook className="h-5 w-5" />
