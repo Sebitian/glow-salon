@@ -54,8 +54,8 @@ export default function Header() {
                   pathname === item.href
                     ? "text-yellow-400 font-bold"
                     : isScrolled 
-                      ? "text-black hover:text-yellow-400"
-                      : "text-black drop-shadow-md hover:text-yellow-400"
+                      ? "text-white hover:text-yellow-400"
+                      : "text-white drop-shadow-md hover:text-yellow-400"
                 }`}
               >
                 {item.name}
