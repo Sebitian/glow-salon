@@ -342,7 +342,7 @@ const staffData = {
       id: "izzy",
       name: "Izzy",
       title: "Hair Stylist",
-      image: "/images/izzy.jpeg",
+      image: "/images/izzy.JPEG",
       phoneNumber: "+12245042113",
       booksyUrl: "https://booksy.com/en-us/1500556_venegas-salon-spa_hair-salon_18695_libertyville/staffer/1432902#ba_s=dl_1",
       specialties: ["Cuts", "Treatments", "Natural Hair"],
