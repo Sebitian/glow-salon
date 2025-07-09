@@ -122,7 +122,7 @@ export default function ServicesOverview() {
             <a href="tel:5042113" className="flex flex-col items-center justify-center space-y-2">
               <Phone className="h-8 w-8" />
               <div className="text-center">
-                <div className="text-sm font-normal">(224) 504-2113</div>
+                <div className="text-sm font-normal"> (224) 504-2113</div>
               </div>
             </a>
           </Button>
@@ -140,13 +140,13 @@ export default function ServicesOverview() {
               className="flex items-center justify-center space-x-3"
             >
               <Image
-                src="/images/booksy_logo.png"
+                src="/images/linktree.png"
                 alt="Booksy Logo"
                 width={32}
                 height={32}
                 className="object-contain"
               />
-              <span>Book Now</span>
+              <span>Book through Linktr.ee</span>
             </a>
           </Button>
         </div>

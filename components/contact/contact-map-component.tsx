@@ -15,9 +15,9 @@ export default function ContactMapComponent() {
   }
 
   return (
-    <div className="rounded-lg overflow-hidden shadow-md h-[400px] bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center">
+    <div className="rounded-lg overflow-hidden shadow-md h-[400px] bg-gradient-to-br from-amber-400/10 to-secondary/10 flex items-center justify-center">
       <div className="text-center p-8">
-        <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mb-6 mx-auto">
+        <div className="w-20 h-20 bg-amber-400 rounded-full flex items-center justify-center mb-6 mx-auto">
           <MapPin className="h-10 w-10 text-white" />
         </div>
         <h3 className="text-xl font-bold mb-2">Visit Our Salon</h3>
@@ -27,7 +27,7 @@ export default function ContactMapComponent() {
         <div className="space-y-3">
           <button
             onClick={handleDirections}
-            className="inline-flex items-center justify-center gap-2 bg-primary text-white px-6 py-2 rounded-full hover:bg-primary/90 transition-colors font-medium"
+            className="inline-flex items-center justify-center gap-2 bg-amber-400 text-white px-6 py-2 rounded-full hover:bg-amber-500 transition-colors font-medium"
           >
             <Navigation className="h-4 w-4" />
             Get Directions
@@ -36,7 +36,7 @@ export default function ContactMapComponent() {
           <div className="flex gap-2 justify-center">
             <button
               onClick={handleCall}
-              className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium text-sm"
+              className="inline-flex items-center gap-2 text-amber-400 hover:text-amber-500 font-medium text-sm"
             >
               <Phone className="h-4 w-4" />
               (224) 504-2113

@@ -10,7 +10,7 @@ export default function ContactInfo() {
 
       <div className="space-y-6">
         <div className="flex items-start">
-          <MapPin className="h-6 w-6 text-primary shrink-0 mt-0.5 mr-3" />
+          <MapPin className="h-6 w-6 text-amber-400 shrink-0 mt-0.5 mr-3" />
           <div>
             <h3 className="font-semibold mb-1">Address</h3>
             <p className="text-gray-600">297 Peterson Rd, Libertyville, IL 60048</p>
@@ -18,12 +18,12 @@ export default function ContactInfo() {
         </div>
 
         <div className="flex items-start">
-          <Phone className="h-6 w-6 text-primary shrink-0 mt-0.5 mr-3" />
+          <Phone className="h-6 w-6 text-amber-400 shrink-0 mt-0.5 mr-3" />
           <div>
             <h3 className="font-semibold mb-1">Phone</h3>
             <a 
               href="tel:+12245042113" 
-              className="text-gray-600 hover:text-primary transition-colors"
+              className="text-gray-600 hover:text-amber-400 transition-colors"
             >
               (224) 504-2113
             </a>
@@ -39,7 +39,7 @@ export default function ContactInfo() {
         </div> */}
 
         <div className="flex items-start">
-          <Clock className="h-6 w-6 text-primary shrink-0 mt-0.5 mr-3" />
+          <Clock className="h-6 w-6 text-amber-400 shrink-0 mt-0.5 mr-3" />
           <div>
             <h3 className="font-semibold mb-1">Business Hours</h3>
             <div className="text-gray-600 space-y-1">

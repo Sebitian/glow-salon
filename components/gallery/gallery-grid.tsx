@@ -272,19 +272,19 @@ export default function GalleryGrid() {
       <Tabs defaultValue="all" className="w-full">
         <div className="flex justify-center mb-8">
           <TabsList className="bg-white/90 backdrop-blur-sm shadow-md border">
-            <TabsTrigger value="all" className="flex items-center gap-2 data-[state=active]:bg-primary data-[state=active]:text-white">
+            <TabsTrigger value="all" className="flex items-center gap-2 data-[state=active]:bg-black te data-[state=active]:text-yellow-400">
               <Users className="h-4 w-4" />
               <span>All</span>
             </TabsTrigger>
-            <TabsTrigger value="hair" className="flex items-center gap-2 data-[state=active]:bg-primary data-[state=active]:text-white">
+            <TabsTrigger value="hair" className="flex items-center gap-2 data-[state=active]:bg-black data-[state=active]:text-yellow-400">
               <Scissors className="h-4 w-4" />
               <span>Hair Services</span>
             </TabsTrigger>
-            <TabsTrigger value="spa" className="flex items-center gap-2 data-[state=active]:bg-primary data-[state=active]:text-white">
+            <TabsTrigger value="spa" className="flex items-center gap-2 data-[state=active]:bg-black data-[state=active]:text-yellow-400">
               <Sparkles className="h-4 w-4" />
               <span>Spa</span>
             </TabsTrigger>
-            <TabsTrigger value="salon" className="flex items-center gap-2 data-[state=active]:bg-primary data-[state=active]:text-white">
+            <TabsTrigger value="salon" className="flex items-center gap-2 data-[state=active]:bg-black data-[state=active]:text-yellow-400">
               <Palette className="h-4 w-4" />
               <span>Our Salon</span>
             </TabsTrigger>

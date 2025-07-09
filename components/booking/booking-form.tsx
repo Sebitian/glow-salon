@@ -5,7 +5,7 @@ import { useState } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { Calendar, Clock, User, ExternalLink, Phone, MapPin, Instagram, Facebook, Video, Globe } from "lucide-react"
+import { Calendar, Clock, User, ExternalLink, Phone, MapPin, Instagram, Facebook, Video, Globe, Link } from "lucide-react"
 
 // Staff data organized by categories with real Booksy URLs
 const staffCategories = [
@@ -52,7 +52,7 @@ const staffCategories = [
       {
         name: "Izzy",
         title: "Hair Stylist",
-        image: "/images/izzy.jpg",
+        image: "/images/izzy.jpeg",
         booksyUrl: "https://booksy.com/en-us/1500556_venegas-salon-spa_hair-salon_18695_libertyville?do=invite&_branch_match_id=1410311065173934361&utm_medium=invite_from_share_profile&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FVL64wMwqrMgz1CUmyrytKTUstKsrMS49PKsovL04tsnXOKMrPTQUAixInkzwAAAA%3D",
         specialties: ["Cuts", "Treatments", "Styling"],
         description: "Specializing in cuts and treatments"
@@ -106,8 +106,8 @@ export default function BookingForm() {
     <div className="max-w-4xl mx-auto space-y-6">
       {/* Header Card */}
       <Card className="shadow-salon border-0 hover:shadow-lg transition-all duration-300">
-        <CardHeader className="bg-gradient-to-r from-primary to-primary/80 text-white rounded-t-lg text-center">
-          <CardTitle className="text-2xl md:text-3xl">Venegas Salon & Spa</CardTitle>
+        <CardHeader className="bg-gradient-to-r from-amber-400 primary to-yellow-400/80 text-white rounded-t-lg text-center">
+          <CardTitle className="text-2xl md:text-3xl ">Venegas Salon & Spa</CardTitle>
           <CardDescription className="text-white/90 text-lg">
             Book with our professional team
           </CardDescription>
@@ -115,6 +115,13 @@ export default function BookingForm() {
         <CardContent className="p-6">
           {/* Contact Info */}
           <div className="flex flex-col md:flex-row justify-center items-center gap-4 mb-6">
+            <Button 
+              onClick={() => window.open('https://linktr.ee/venegassalonnspa?utm_source=linktree_admin_share&fbclid=PAZXh0bgNhZW0CMTEAAacMAXslrw4GF2lYztAu4K_gbvYKmgUnfzhopGzIMfwcpSyGwYD-KHNczJqjMg_aem_2djK2MogFLrIrjffXZxoQA', '_blank')}
+              className="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white rounded-full px-6 py-3"
+            >
+              <img src="/images/linktree.png" alt="Linktree" className="h-8 w-8" />
+              Linktr.ee
+            </Button>
             <Button 
               onClick={handleCallNow}
               className="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white rounded-full px-6 py-3"
@@ -210,7 +217,7 @@ export default function BookingForm() {
                         {/* Book Now Button - Always at bottom */}
                         <Button 
                           onClick={() => handleBookNow(staff)}
-                          className="w-full bg-primary text-primary-foreground hover:bg-primary/90 rounded-full shadow-md flex items-center justify-center gap-2 mt-auto"
+                          className="w-full bg-black text-yellow-400 border-4 border-yellow-400"
                         >
                           <Calendar className="h-4 w-4" />
                           Book with {staff.name.split(' ')[0]}

@@ -25,7 +25,7 @@ export default function CTASection() {
           <Button
             asChild
             size="lg"
-            className="bg-secondary text-secondary-foreground hover:bg-secondary/90 rounded-full shadow-md"
+            className="bg-yellow-400 animate-pulse duration-2500 text-secondary-foreground hover:bg-secondary/90 rounded-full shadow-md"
           >
             <Link href="/booking">Book Your Appointment Now</Link>
           </Button>

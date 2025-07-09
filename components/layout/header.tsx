@@ -50,25 +50,25 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`px-4 py-2 rounded-full text-sm font-semibold transition-colors hover:scale-105 transform ${
+                className={`px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 hover:scale-105 transform ${
                   pathname === item.href
-                    ? "text-yellow-400 font-bold border-yellow-400 border-2 bg-black shadow-md"
+                    ? "text-yellow-400 font-bold"
                     : isScrolled 
-                      ? "text-white hover:text-white hover:bg-primary/80"
-                      : "text-white drop-shadow-md hover:text-white hover:bg-black hover:border-2 hover:border-yellow-400"
+                      ? "text-black hover:text-yellow-400"
+                      : "text-black drop-shadow-md hover:text-yellow-400"
                 }`}
               >
                 {item.name}
               </Link>
             ))}
-            <Button className="ml-8 bg-yellow-400 text-black border-black border-2 shadow-md  hover:bg-yellow-300 hover:shadow-lg rounded-sm">
+            <Button className="ml-8 bg-black text-yellow-400 border-yellow-400 border-2 shadow-md hover:bg-yellow-400 hover:text-black hover:shadow-lg rounded-sm transition-all duration-300">
               <Link href="/booking">Book Now</Link>
             </Button>
           </nav>
 
           <Button
             size="icon"
-            className="lg:hidden bg-yellow-500 text-white hover:bg-primary-dark"
+            className="lg:hidden bg-black text-yellow-400 border-2 border-yellow-400 hover:bg-yellow-400 hover:text-black transition-all duration-300"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -83,32 +83,18 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`block px-4 py-3 rounded-full text-base font-semibold mb-2 ${
+                className={`block px-4 py-3 rounded-full text-base font-semibold mb-2 transition-all duration-300 ${
                   pathname === item.href
-                    ? "text-white bg-yellow-400 shadow-md"
-                    : "text-gray-900 hover:text-white hover:bg-primary/80"
+                    ? "text-yellow-400 font-bold"
+                    : "text-black hover:text-yellow-400"
                 }`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item.name}
               </Link>
             ))}
-            <Button asChild variant="default" className="w-full mt-4 animate-pulse hover:animate-none">
-              <Link
-                href="/booking"
-                className="flex items-center justify-center bg-indigo-500 text-white shadow-md  hover:bg-indigo-700 hover:shadow-lg rounded-sm"
-              >
-                <span>Book Now</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5 ml-2"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </Link>
+            <Button className="w-full mt-4 text-yellow-400 border-yellow-400 border-2 shadow-md hover:bg-yellow-400 hover:text-black hover:shadow-lg rounded-sm transition-all duration-300">
+              <Link href="/booking">Book Now</Link>
             </Button>
           </div>
         )}

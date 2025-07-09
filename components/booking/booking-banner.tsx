@@ -17,7 +17,9 @@ export default function BookingBanner() {
 
       <div className="container-custom relative z-10">
         <div className="max-w-2xl text-white">
-          <h1 className="heading-xl mb-4">Book Your Appointment</h1>
+          <h1 className="heading-xl mb-4 text-yellow-400">
+            Book Your Appointment
+          </h1>
           <p className="text-lg md:text-xl text-white/90">
             Schedule your visit to Venegas Salon & Spa and experience our premium services.
           </p>

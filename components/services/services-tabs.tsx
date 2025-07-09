@@ -269,42 +269,42 @@ export default function ServicesTabs() {
           <TabsList className="bg-white shadow-md border border-gray-200 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 w-full max-w-4xl gap-2 p-2 h-auto">
             <TabsTrigger
               value="all"
-              className="flex items-center gap-2 bg-gray-50 hover:bg-gray-100 data-[state=active]:bg-primary data-[state=active]:text-white rounded-md px-3 py-2 text-sm font-medium transition-all duration-200 min-h-[44px]"
+              className="flex items-center gap-2 bg-gray-50 hover:bg-gray-100 data-[state=active]:bg-yellow-400 data-[state=active]:text-white rounded-md px-3 py-2 text-sm font-medium transition-all duration-200 min-h-[44px]"
             >
               <Users className="h-4 w-4" />
               <span className="hidden sm:inline">All</span>
             </TabsTrigger>
             <TabsTrigger
               value="styling"
-              className="flex items-center gap-2 bg-gray-50 hover:bg-gray-100 data-[state=active]:bg-primary data-[state=active]:text-white rounded-md px-3 py-2 text-sm font-medium transition-all duration-200 min-h-[44px]"
+              className="flex items-center gap-2 bg-gray-50 hover:bg-gray-100 data-[state=active]:bg-yellow-400 data-[state=active]:text-white rounded-md px-3 py-2 text-sm font-medium transition-all duration-200 min-h-[44px]"
             >
               <Waves className="h-4 w-4" />
               <span className="hidden sm:inline">Styling</span>
             </TabsTrigger>
             <TabsTrigger
               value="haircuts"
-              className="flex items-center gap-2 bg-gray-50 hover:bg-gray-100 data-[state=active]:bg-primary data-[state=active]:text-white rounded-md px-3 py-2 text-sm font-medium transition-all duration-200 min-h-[44px]"
+              className="flex items-center gap-2 bg-gray-50 hover:bg-gray-100 data-[state=active]:bg-yellow-400 data-[state=active]:text-white rounded-md px-3 py-2 text-sm font-medium transition-all duration-200 min-h-[44px]"
             >
               <Scissors className="h-4 w-4" />
               <span className="hidden sm:inline">Haircuts</span>
             </TabsTrigger>
             <TabsTrigger
               value="treatments"
-              className="flex items-center gap-2 bg-gray-50 hover:bg-gray-100 data-[state=active]:bg-primary data-[state=active]:text-white rounded-md px-3 py-2 text-sm font-medium transition-all duration-200 min-h-[44px]"
+              className="flex items-center gap-2 bg-gray-50 hover:bg-gray-100 data-[state=active]:bg-yellow-400 data-[state=active]:text-white rounded-md px-3 py-2 text-sm font-medium transition-all duration-200 min-h-[44px]"
             >
               <Sparkles className="h-4 w-4" />
               <span className="hidden sm:inline">Treatments</span>
             </TabsTrigger>
             <TabsTrigger
               value="color"
-              className="flex items-center gap-2 bg-gray-50 hover:bg-gray-100 data-[state=active]:bg-primary data-[state=active]:text-white rounded-md px-3 py-2 text-sm font-medium transition-all duration-200 min-h-[44px]"
+              className="flex items-center gap-2 bg-gray-50 hover:bg-gray-100 data-[state=active]:bg-yellow-400 data-[state=active]:text-white rounded-md px-3 py-2 text-sm font-medium transition-all duration-200 min-h-[44px]"
             >
               <Palette className="h-4 w-4" />
               <span className="hidden sm:inline">Color</span>
             </TabsTrigger>
             <TabsTrigger
               value="natural"
-              className="flex items-center gap-2 bg-gray-50 hover:bg-gray-100 data-[state=active]:bg-primary data-[state=active]:text-white rounded-md px-3 py-2 text-sm font-medium transition-all duration-200 min-h-[44px]"
+              className="flex items-center gap-2 bg-gray-50 hover:bg-gray-100 data-[state=active]:bg-yellow-400 data-[state=active]:text-white rounded-md px-3 py-2 text-sm font-medium transition-all duration-200 min-h-[44px]"
             >
               <Users className="h-4 w-4" />
               <span className="hidden sm:inline text-center">Natural Hair</span>

@@ -3,21 +3,21 @@ import { Users, Award, Sparkles } from "lucide-react"
 
 const features = [
   {
-    icon: <Users className="h-8 w-8 text-primary" />,
+    icon: <Users className="h-8 w-8 text-yellow-400" />,
     title: "Expert Barbers & Stylists",
     description: "Our team of certified professionals brings years of experience and creativity to every service.",
     image:
       "images/pumba.jpg",
   },
   {
-    icon: <Award className="h-8 w-8 text-primary" />,
+    icon: <Award className="h-8 w-8 text-yellow-400" />,
     title: "Premium Products",
     description: "We use only the highest quality, luxurious products to ensure the best results for our clients.",
     image:
       "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&h=400&fit=crop&crop=focalpoint&auto=format&q=80",
   },
   {
-    icon: <Sparkles className="h-8 w-8 text-primary" />,
+    icon: <Sparkles className="h-8 w-8 text-yellow-400" />,
     title: "Personalized Experience",
     description: "Enjoy a tailored approach to beauty, with services customized to your unique style and needs.",
     image:
@@ -59,8 +59,8 @@ export default function WhyChooseUsSection() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
                 <div className="absolute bottom-4 left-4 right-4">
                   <div className="flex items-center">
-                    <div className="p-2 bg-white/90 rounded-full mr-3">{feature.icon}</div>
-                    <h3 className="text-xl font-bold text-white">{feature.title}</h3>
+                    <div className="p-2 rounded-full mr-3 backdrop-blur-md bg-black/10 ring-1 ring-white/30">{feature.icon}</div>
+                    <h3 className="text-xl font-bold text-white/90">{feature.title}</h3>
                   </div>
                 </div>
               </div>

@@ -75,29 +75,28 @@ export default function MapComponent() {
             <p className="text-gray-600 mb-2 text-center">{currentLocation.address}</p>
             <p className="text-gray-600 mb-4 text-center">{currentLocation.phone}</p>
             <div className="text-center">
-              <p className="text-sm text-yellow-400 font-semibold mb-2">Click to open in Google Maps</p>
               <div className="flex space-x-2">
-                                  <Button 
-                    onClick={(e) => {
-                      e.stopPropagation()
-                      window.open(directionsUrl, '_blank')
-                    }}
-                    size="sm"
-                    className="bg-yellow-400 hover:bg-yellow-500 text-black"
-                  >
-                    Get Directions
-                  </Button>
-                                  <Button 
-                    onClick={(e) => {
-                      e.stopPropagation()
-                      window.open(searchUrl, '_blank')
-                    }}
-                    variant="outline"
-                    size="sm"
-                    className="border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black"
-                  >
-                    View on Map
-                  </Button>
+                <Button 
+                  onClick={(e) => {
+                    e.stopPropagation()
+                    window.open(directionsUrl, '_blank')
+                  }}
+                  size="sm"
+                  className="bg-yellow-400 hover:bg-yellow-500 text-black"
+                >
+                  Get Directions
+                </Button>
+                <Button 
+                  onClick={(e) => {
+                    e.stopPropagation()
+                    window.open(searchUrl, '_blank')
+                  }}
+                  variant="outline"
+                  size="sm"
+                    className="border-yellow-400 bg-black text-yellow-400 hover:bg-yellow-400 hover:text-black"
+                >
+                  View on Map
+                </Button>
               </div>
             </div>
           </div>

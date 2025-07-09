@@ -43,7 +43,7 @@ export default function ContactForm() {
       {/* Address and Action Buttons */}
       <div className="space-y-4">
         <div className="flex items-start">
-          <MapPin className="h-5 w-5 text-primary shrink-0 mt-1 mr-3" />
+          <MapPin className="h-5 w-5 text-yellow-400 shrink-0 mt-1 mr-3" />
           <div>
             <h3 className="font-semibold text-lg mb-1">Venegas Salon & Spa</h3>
             <p className="text-gray-600">{salonAddress}</p>
@@ -53,7 +53,7 @@ export default function ContactForm() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <Button
             onClick={handleDirections}
-            className="flex items-center justify-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 rounded-full"
+            className="flex items-center justify-center gap-2 bg-amber-400 text-primary-foreground hover:bg-amber-400/90 rounded-full"
           >
             <Navigation className="h-4 w-4" />
             Get Directions
