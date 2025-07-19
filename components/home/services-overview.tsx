@@ -63,9 +63,9 @@ export default function ServicesOverview() {
       
       <div className="container-custom relative z-10">
         <div className="text-center mb-16">
-          <h2 className="heading-lg mb-4 text-white">Our Premium Services</h2>
+          <h2 className="heading-lg mb-4 text-transparent bg-clip-text bg-gradient-to-r from-amber-500 via-amber-200 to-amber-500">Our <span className="text-amber-400 font-bold drop-shadow-[0_0_15px_rgba(251,191,36,0.8)]">Premium</span> Services</h2>
           <p className="text-xl text-gray-200 max-w-3xl mx-auto">
-            Indulge in our wide range of <span className="text-amber-400">luxury</span> beauty treatments, tailored to enhance your unique style.
+            Indulge in our wide range of luxury beauty treatments, tailored to enhance your unique style.
           </p>
         </div>
 
@@ -106,31 +106,33 @@ export default function ServicesOverview() {
         </div>
 
         <div className="text-center mt-12">
-          <Button asChild size="lg" className="bg-amber-400 hover:bg-amber-500 text-black font-bold px-8 py-6 text-lg border-2 border-black">
-            <Link href="/services">View All Services</Link>
-          </Button>
+          <div className="inline-block p-0.5 rounded-lg bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500">
+            <div className="bg-white px-8 py-4 rounded-lg">
+              <Link href="/services" className="text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-500 via-amber-300 to-amber-500 hover:from-amber-600 hover:via-amber-400 hover:to-amber-600 transition-all duration-300">
+                View All Services
+              </Link>
+            </div>
+          </div>
         </div>
         
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16 max-w-2xl mx-auto">
+        <div className="flex flex-col sm:flex-row gap-4 mt-16 justify-center items-center">
           {/* Green Phone Button */}
           <Button
             size="lg"
-            className="h-24 bg-green-500 hover:bg-green-600 text-white font-bold text-xl transition-all duration-300 hover:scale-110 hover:shadow-2xl transform"
+            className="h-16 w-64 bg-green-500 hover:bg-green-600 text-white font-bold text-lg transition-all duration-300 hover:scale-110 hover:shadow-2xl transform"
             asChild
           >
-            <a href="tel:5042113" className="flex flex-col items-center justify-center space-y-2">
-              <Phone className="h-8 w-8" />
-              <div className="text-center">
-                <div className="text-sm font-normal"> (224) 504-2113</div>
-              </div>
+            <a href="tel:5042113" className="flex items-center justify-center space-x-3">
+              <Phone className="h-6 w-6" />
+              <span>(224) 504-2113</span>
             </a>
           </Button>
 
           {/* Booksy Button */}
           <Button
             size="lg"
-            className="h-24 bg-teal-500 hover:bg-teal-600 text-white font-bold text-xl transition-all duration-300 hover:scale-110 hover:shadow-2xl transform"
+            className="h-16 w-64 bg-teal-500 hover:bg-teal-600 text-white font-bold text-lg transition-all duration-300 hover:scale-110 hover:shadow-2xl transform"
             asChild
           >
             <a 
@@ -142,11 +144,11 @@ export default function ServicesOverview() {
               <Image
                 src="/images/linktree.png"
                 alt="Booksy Logo"
-                width={32}
-                height={32}
+                width={24}
+                height={24}
                 className="object-contain"
               />
-              <span>Book through Linktr.ee</span>
+              <span>Book Now</span>
             </a>
           </Button>
         </div>

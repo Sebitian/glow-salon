@@ -50,32 +50,25 @@ export default function ContactForm() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <Button
-            onClick={handleDirections}
-            className="flex items-center justify-center gap-2 bg-amber-400 text-primary-foreground hover:bg-amber-400/90 rounded-full"
-          >
-            <Navigation className="h-4 w-4" />
-            Get Directions
-          </Button>
-          
-          <Button
-            onClick={handleCall}
-            variant="outline"
-            className="flex items-center justify-center gap-2 rounded-full"
-          >
-            <Phone className="h-4 w-4" />
-            Call Now
-          </Button>
-        </div>
+        <div className="flex flex-wrap justify-center gap-3">
+          <div className="p-0.5 rounded-lg bg-gradient-to-r from-green-500 via-green-400 to-green-500">
+            <div className="bg-green-500 hover:bg-green-600 px-4 py-2 rounded-lg transition-all duration-300">
+              <button onClick={handleCall} className="flex items-center gap-2 text-sm font-bold text-white">
+                <Phone className="h-4 w-4 text-white" />
+                Call Now
+              </button>
+            </div>
+          </div>
 
-        <Button
-          onClick={handleViewOnMaps}
-          variant="outline"
-          className="w-full rounded-full"
-        >
-          View on Google Maps
-        </Button>
+          <div className="p-0.5 rounded-lg bg-gradient-to-r from-blue-500 via-blue-400 to-blue-500">
+            <div className="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-lg transition-all duration-300">
+              <button onClick={handleViewOnMaps} className="flex items-center gap-2 text-sm font-bold text-white">
+                <MapPin className="h-4 w-4 text-white" />
+                View on Google Maps
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   )

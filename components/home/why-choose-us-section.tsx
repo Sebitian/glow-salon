@@ -40,7 +40,7 @@ export default function WhyChooseUsSection() {
       
       <div className="container-custom relative z-10">
         <div className="text-center mb-16">
-          <h2 className="heading-lg mb-4 text-white">Why Choose Venegas Salon ?</h2>
+          <h2 className="heading-lg mb-4 text-transparent bg-clip-text bg-white">Why Choose Venegas Salon & Spa?</h2>
           <p className="text-xl text-gray-200 max-w-3xl mx-auto">
             Experience the difference with our commitment to excellence, luxury, and personalized care.
           </p>

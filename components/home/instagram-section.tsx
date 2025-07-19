@@ -61,7 +61,7 @@ export default function InstagramSection() {
     <section className="section-padding bg-black">
       <div className="container-custom">
         <div className="text-center mb-12">
-          <h2 className="heading-lg mb-6 text-yellow-400">Join Our Instagram Community</h2>
+          <h2 className="heading-lg mb-6 text-transparent bg-clip-text bg-gradient-to-r from-amber-500 via-amber-200 to-amber-500">Join Our Instagram Community</h2>
           <p className="text-xl text-white mb-8">
             Follow us on Instagram for daily inspiration, behind-the-scenes content, and exclusive offers.
           </p>
@@ -143,12 +143,14 @@ export default function InstagramSection() {
 
         {/* Instagram Follow Button */}
         <div className="text-center">
-          <Button asChild size="lg" className="bg-yellow-400 hover:bg-gray-100 text-black items-center gap-2 px-8">
-            <a href="https://www.instagram.com/venegassalonspa/" target="_blank" rel="noopener noreferrer">
-              <Instagram className="w-5 h-5" />
-              Follow Us on Instagram
-            </a>
-          </Button>
+          <div className="inline-block p-0.5 rounded-lg bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400">
+            <div className="bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 hover:from-purple-600 hover:via-pink-600 hover:to-orange-500 px-6 py-3 rounded-lg transition-all duration-300">
+              <a href="https://www.instagram.com/venegassalonspa/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-base font-bold text-white">
+                <Instagram className="w-5 h-5 text-white" />
+                Follow Us on Instagram
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 

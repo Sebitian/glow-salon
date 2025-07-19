@@ -30,34 +30,22 @@ export default function HeroSection() {
           </p>
 
           <div className="flex flex-wrap gap-4">
-            <Button asChild size="lg" className="text-lg font-bold px-8 py-4 bg-black hover:bg-yellow-600 text-amber-400 border border-amber-400">
-              <Link href="/booking">Book Your Experience</Link>
-            </Button>
+            <div className="p-0.5 rounded-lg bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500">
+              <div className="bg-white hover:bg-gray-100 px-8 py-4 rounded-lg transition-all duration-300">
+                <Link href="/booking" className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500">
+                  Book Now
+                </Link>
+              </div>
+            </div>
             
-            <Button asChild size="lg" className="text-lg px-8 py-4 bg-black hover:bg-gray-900 text-amber-400 font-semibold border border-amber-400">
-              <Link href="/services">Explore Our Services</Link>
-            </Button>
+            <div className="p-0.5 rounded-lg bg-gradient-to-r from-amber-500 via-amber-300 to-amber-500">
+              <div className="bg-white hover:bg-gray-100 px-8 py-4 rounded-lg transition-all duration-300">
+                <Link href="/services" className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500">
+                  Explore Services
+                </Link>
+              </div>
+            </div>
           </div>
-
-          {/* <div className="mt-12 flex items-center space-x-4">
-            <div className="flex -space-x-2">
-              {[1, 2, 3, 4].map((i) => (
-                <div key={i} className="w-12 h-12 rounded-full border-2 border-white overflow-hidden">
-                  <Image
-                    src={`https://randomuser.me/api/portraits/${i % 2 === 0 ? "women" : "men"}/${i + 60}.jpg`}
-                    alt={`Happy customer ${i}`}
-                    width={48}
-                    height={48}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              ))}
-            </div>
-            <div>
-              <div className="text-yellow-400 flex text-2xl">{"★★★★★"}</div>
-              <p className="text-sm text-gray-300">Trusted by 10,000+ happy clients</p>
-            </div>
-          </div> */}
         </div>
       </div>
 

@@ -53,6 +53,11 @@ export default function Footer() {
             </h3>
             <ul className="space-y-3">
               <li>
+                <Link href="/about" className="text-gray-400 hover:text-primary transition-colors">
+                  About Us
+                </Link>
+              </li>
+              <li>
                 <Link href="/services" className="text-gray-400 hover:text-primary transition-colors">
                   Our Services
                 </Link>
@@ -62,11 +67,7 @@ export default function Footer() {
                   Gallery
                 </Link>
               </li>
-              <li>
-                <Link href="/about" className="text-gray-400 hover:text-primary transition-colors">
-                  About Us
-                </Link>
-              </li>
+              
               <li>
                 <Link href="/contact" className="text-gray-400 hover:text-primary transition-colors">
                   Contact

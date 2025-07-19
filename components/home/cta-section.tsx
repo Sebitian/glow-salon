@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import LocationMap from "@/components/home/location-map"
+import ContactForm from "@/components/contact/contact-form"
 
 export default function CTASection() {
   return (
@@ -14,7 +14,7 @@ export default function CTASection() {
         </div>
 
         <div className="mb-12">
-          <LocationMap />
+          <ContactForm />
         </div>
 
         <div className="text-center">
@@ -25,7 +25,7 @@ export default function CTASection() {
           <Button
             asChild
             size="lg"
-            className="bg-yellow-400 animate-pulse duration-2500 text-secondary-foreground hover:bg-secondary/90 rounded-full shadow-md"
+            className="bg-yellow-400 animate-bounce text-secondary-foreground hover:bg-secondary/90 rounded-full shadow-md"
           >
             <Link href="/booking">Book Your Appointment Now</Link>
           </Button>

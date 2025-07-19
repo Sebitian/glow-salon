@@ -9,9 +9,9 @@ import Image from "next/image"
 
 const navItems = [
   { name: "Home", href: "/" },
-  { name: "Services", href: "/services" },
-  { name: "Gallery", href: "/gallery" },
   { name: "About", href: "/about" },
+  { name: "Services", href: "/services" },
+  { name: "Gallery", href: "/gallery" }, 
   { name: "Contact", href: "/contact" },
 ]
 
@@ -34,15 +34,25 @@ export default function Header() {
     >
       <div className="container-custom">
         <div className="flex items-center justify-between">
-          <Link href="/" className="flex items-center space-x-3 transition-transform hover:scale-105">
-            <div className="w-20 h-14 relative">
-              <Image src="/images/venegas-logo.jpeg" alt="Venegas Salon & Spa Logo" fill className="object-contain" />
+          <Link href="/" className="flex items-center space-x-5 transition-transform hover:scale-105">
+            <div className="w-20 h-20 relative rounded-full overflow-hidden border-2 border-amber-400">
+              <Image src="/images/venegas-logo.jpeg" alt="Venegas Salon & Spa Logo" fill className="object-cover" />
             </div>
-            <span className={`text-lg font-bold transition-colors ${
-              isScrolled ? "text-white" : "text-white drop-shadow-md"
-            } text-transparent bg-clip-text bg-gradient-to-r from-amber-500 via-amber-200 to-amber-500 border-2 border-amber-400 px-2 py-1 rounded`}>
+            <span className="text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-500 via-amber-200 to-amber-500">
               Venegas Salon & Spa
             </span>
+            <div className="flex flex-col space-y-1">
+              <div className="cursor-pointer flex items-center" onClick={() => window.open('https://maps.google.com?q=297+Peterson+Rd,+Libertyville,+IL+60048', '_blank')}>
+                <span className="text-sm font-bold text-white">
+                  297 Peterson Rd, Libertyville
+                </span>
+              </div>
+              <div className="cursor-pointer flex items-center">
+                <span className="text-sm font-bold text-white">
+                  (224) 504-2113
+                </span>
+              </div>
+            </div>
           </Link>
 
           <nav className="hidden lg:flex items-center space-x-1">
@@ -61,14 +71,19 @@ export default function Header() {
                 {item.name}
               </Link>
             ))}
-            <Button className="ml-8 bg-black text-yellow-400 border-yellow-400 border-2 shadow-md hover:bg-yellow-400 hover:text-black hover:shadow-lg rounded-sm transition-all duration-300">
-              <Link href="/booking">Book Now</Link>
-            </Button>
+            <div className="ml-8 p-0.5 rounded-lg bg-gradient-to-r from-amber-500 via-amber-300 to-amber-500">
+              <Button className="relative overflow-hidden bg-white hover:bg-gray-100 shadow-md hover:shadow-lg rounded-lg transition-all duration-300 border-0 group">
+                <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
+                <Link href="/booking" className="relative text-transparent bg-clip-text bg-gradient-to-r from-amber-500 via-amber-300 to-amber-500 font-bold">
+                  Book Now
+                </Link>
+              </Button>
+            </div>
           </nav>
 
           <Button
             size="icon"
-            className="lg:hidden bg-black text-yellow-400 border-2 border-yellow-400 hover:bg-yellow-400 hover:text-black transition-all duration-300"
+            className="lg:hidden bg-black text-yellow-400 border-2 border-yellow-400 hover:bg-yellow-400 hover:text-black transition-all duration-300 h-10 w-10"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >

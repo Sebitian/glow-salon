@@ -11,8 +11,9 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <div className="bg-black from-primary to-primary-light py-20 mb-12">
-        <div className="container-custom">
+      <div className="relative py-20 mb-12 bg-cover bg-no-repeat" style={{backgroundImage: 'url(/images/all2.jpg)', backgroundPosition: 'center 25%'}}>
+        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="container-custom relative z-10">
           <h1 className="heading-xl text-white text-center mb-4">About <span className="text-yellow-400 animate-fadeIn hover:animate-none transition-all bg-gradient-to-r from-yellow-400 via-amber-200 to-yellow-500 bg-clip-text" >Venegas Salon & Spa </span> </h1>
           <p className="text-xl text-white/90 text-center max-w-2xl mx-auto">
             Discover our story, our passion for beauty, and our commitment to excellence.
