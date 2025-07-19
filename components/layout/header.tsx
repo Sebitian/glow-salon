@@ -29,7 +29,7 @@ export default function Header() {
   return (
     <header
       className={`fixed w-full z-50 transition-all duration-300 animate-fadeIn ${
-        isScrolled ? "bg-black/95 backdrop-blur-md shadow-md py-2" : "bg-transparent py-4"
+        isScrolled ? "bg-black shadow-md py-2" : "bg-black py-4"
       }`}
     >
       <div className="container-custom">

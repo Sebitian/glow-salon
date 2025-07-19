@@ -354,7 +354,7 @@ const staffData = {
           description: "Expert women's haircut with consultation and styling",
           price: 60,
           duration: "1h",
-          images: ["/images/womens-cut.jpeg"]
+          images: ["/images/haircut-1.jpeg"]
         },
         {
           id: "h3",
