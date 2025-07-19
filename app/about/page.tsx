@@ -157,7 +157,7 @@ export default function AboutPage() {
 
             <div className="group bg-gradient-to-br from-yellow-400 via-yellow-300 to-yellow-500 text-center p-6 border-2 border-black rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 hover:rotate-1">
               <div className="relative w-40 h-40 rounded-full overflow-hidden mx-auto mb-4 border-4 border-black shadow-xl group-hover:border-white transition-all duration-300">
-                <Image src="/images/izzy.jpeg" alt="Izzy - Hair Stylist" fill className="object-cover group-hover:scale-110 transition-transform duration-300" />
+                <Image src="/images/izzy.JPEG" alt="Izzy - Hair Stylist" fill className="object-cover group-hover:scale-110 transition-transform duration-300" />
               </div>
               <h3 className="text-xl font-bold mb-2 text-black group-hover:text-white transition-colors duration-300">Izzy</h3>
               <p className="text-black/80 mb-1 font-medium group-hover:text-white/90 transition-colors duration-300">Hair Stylist</p>
@@ -181,7 +181,7 @@ export default function AboutPage() {
 
             <div className="group bg-gradient-to-br from-black via-gray-800 to-gray-900 text-center p-6 border-2 border-yellow-400 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 hover:-rotate-1">
               <div className="relative w-40 h-40 rounded-full overflow-hidden mx-auto mb-4 border-4 border-yellow-400 shadow-xl group-hover:border-white transition-all duration-300">
-                <Image src="images/ahtziri.jpeg" alt="Ahtziri Gonzalez - Hair Stylist" fill className="object-cover group-hover:scale-110 transition-transform duration-300" />
+                <Image src="images/ahtziri.JPEG" alt="Ahtziri Gonzalez - Hair Stylist" fill className="object-cover group-hover:scale-110 transition-transform duration-300" />
               </div>
               <h3 className="text-xl font-bold mb-2 text-yellow-400 group-hover:text-white transition-colors duration-300">Ahtziri Gonzalez</h3>
               <p className="text-yellow-400/80 mb-1 font-medium group-hover:text-white/90 transition-colors duration-300">Hair Stylist</p>
@@ -205,7 +205,7 @@ export default function AboutPage() {
 
             <div className="group bg-gradient-to-br from-yellow-400 via-yellow-300 to-yellow-500 text-center p-6 border-2 border-black rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 hover:rotate-1">
               <div className="relative w-40 h-40 rounded-full overflow-hidden mx-auto mb-4 border-4 border-black shadow-xl group-hover:border-white transition-all duration-300">
-                <Image src="images/lyzzet.jpeg" alt="Lyzzet Nunez - Hair Stylist" fill className="object-cover group-hover:scale-110 transition-transform duration-300" />
+                <Image src="images/lyzzet.JPEG" alt="Lyzzet Nunez - Hair Stylist" fill className="object-cover group-hover:scale-110 transition-transform duration-300" />
               </div>
               <h3 className="text-xl font-bold mb-2 text-black group-hover:text-white transition-colors duration-300">Lyzzet Nunez</h3>
               <p className="text-black/80 mb-1 font-medium group-hover:text-white/90 transition-colors duration-300">Hair Stylist</p>
@@ -217,7 +217,7 @@ export default function AboutPage() {
 
             <div className="group bg-gradient-to-br from-black via-gray-800 to-gray-900 text-center p-6 border-2 border-yellow-400 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 hover:-rotate-1">
               <div className="relative w-40 h-40 rounded-full overflow-hidden mx-auto mb-4 border-4 border-yellow-400 shadow-xl group-hover:border-white transition-all duration-300">
-                <Image src="images/diana.png" alt="Diana Escobar - Hair Stylist" fill className="object-cover group-hover:scale-110 transition-transform duration-300" />
+                <Image src="images/diana.PNG" alt="Diana Escobar - Hair Stylist" fill className="object-cover group-hover:scale-110 transition-transform duration-300" />
               </div>
               <h3 className="text-xl font-bold mb-2 text-yellow-400 group-hover:text-white transition-colors duration-300">Diana Escobar</h3>
               <p className="text-yellow-400/80 mb-1 font-medium group-hover:text-white/90 transition-colors duration-300">Hair Stylist</p>
