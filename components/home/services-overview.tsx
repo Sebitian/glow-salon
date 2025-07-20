@@ -63,7 +63,7 @@ export default function ServicesOverview() {
       
       <div className="container-custom relative z-10">
         <div className="text-center mb-16">
-          <h2 className="heading-lg mb-4 text-transparent bg-clip-text bg-gradient-to-r from-amber-500 via-amber-200 to-amber-500">Our <span className="text-amber-400 font-bold drop-shadow-[0_0_15px_rgba(251,191,36,0.8)]">Premium</span> Services</h2>
+          <h2 className="heading-lg mb-4 text-transparent bg-clip-text bg-gradient-to-r from-amber-500 via-amber-200 to-amber-500">Our <span className="text-amber-400 font-bold drop-shadow-[0_0_15px_rgba(251,191,36,0.8)] animate-pulse">Premium</span> Services</h2>
           <p className="text-xl text-gray-200 max-w-3xl mx-auto">
             Indulge in our wide range of luxury beauty treatments, tailored to enhance your unique style.
           </p>
