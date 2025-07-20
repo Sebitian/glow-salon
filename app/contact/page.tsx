@@ -24,10 +24,6 @@ export default function ContactPage() {
           <ContactInfo />
           <ContactForm />
         </div>
-        <div className="mt-20">
-          <h2 className="heading-md mb-6">Find Us</h2>
-          <LocationMap />
-        </div>
       </div>
     </>
   )

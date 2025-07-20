@@ -44,7 +44,7 @@ export default function ContactInfo() {
             <h3 className="font-semibold mb-1">Business Hours</h3>
             <div className="text-gray-600 space-y-1">
               <p>Monday - Friday: 9:00 AM - 7:00 PM</p>
-              <p>Saturday: 9:00 AM - 6:00 PM</p>
+              <p>Saturday: 9:00 AM - 4:00 PM</p>
               <p>Sunday: Closed</p>
             </div>
           </div>
@@ -71,6 +71,15 @@ export default function ContactInfo() {
             aria-label="Linktree"
           >
             <img src="/images/linktree.png" alt="Linktree" className="h-5 w-5" />
+          </a>
+          <a
+            href="https://linktr.ee/venegassalonnspa?utm_source=linktree_admin_share&fbclid=PAZXh0bgNhZW0CMTEAAacMAXslrw4GF2lYztAu4K_gbvYKmgUnfzhopGzIMfwcpSyGwYD-KHNczJqjMg_aem_2djK2MogFLrIrjffXZxoQA"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-gray-100 p-2 rounded-full hover:bg-green-500 hover:text-white transition-colors"
+            aria-label="Linktree"
+          >
+            <img src="/images/booksy_logo.png" alt="Linktree" className="h-5 w-5" />
           </a>
           <a
             href="https://www.facebook.com/profile.php?id=61576609551054"
