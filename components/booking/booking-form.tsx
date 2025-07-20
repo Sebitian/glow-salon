@@ -6,73 +6,91 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Calendar, Clock, User, ExternalLink, Phone, MapPin, Instagram, Facebook, Video, Globe, Link } from "lucide-react"
+import Image from "next/image"
 
-// Staff data organized by categories with real Booksy URLs
-const staffCategories = [
+// Updated team data to match About page structure
+const teamMembers = [
   {
-    label: "Barbers",
-    staff: [
-      {
-        name: "David",
-        title: "Owner & Barber",
-        image: "/images/david.png",
-        booksyUrl: "https://booksy.com/en-us/481608_ds-cuts_barber-shop_18695_libertyville?do=invite&_branch_match_id=1410311065173934361&utm_medium=invite_from_share_profile&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FVdzLJLg5yzw8uDEyyrytKTUstKsrMS49PKsovL04tsnXOKMrPTQUANPssMTwAAAA%3D",
-        specialties: ["Men's Cuts", "Beard Styling", "Classic Cuts"],
-        description: "15+ years of unmatched customer satisfaction"
-      },
-      {
-        name: "Luis (Pumba)",
-        title: "Barber", 
-        image: "/images/pumba2.png",
-        booksyUrl: "https://booksy.com/en-us/1409092_pumba-cuts_barber-shop_18695_libertyville?do=invite&_branch_match_id=1410311065173934361&utm_medium=profile_share_from_profile&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FV9zF1igjJNki0DEyyrytKTUstKsrMS49PKsovL04tsnXOKMrPTQUAIQzrHjwAAAA%3D",
-        specialties: ["Fades", "Modern Styles", "Contemporary Cuts"],
-        description: "Specializing in fades and modern styles"
-      },
-      {
-        name: "Alex",
-        title: "Barber",
-        image: "/images/ig3.png",
-        booksyUrl: "https://booksy.com/en-us/1404532_ar-fadez_barber-shop_18695_libertyville?do=invite&_branch_match_id=1410311065173934361&utm_medium=profile_share_from_profile&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FVLy5w8vIzLXcsDUyyrytKTUstKsrMS49PKsovL04tsnXOKMrPTQUAhomW8TwAAAA%3D",
-        specialties: ["Classic Cuts", "Contemporary Cuts", "Styling"],
-        description: "Master of classic and contemporary cuts"
-      }
-    ]
+    id: "david",
+    name: "David",
+    title: "Owner & Barber",
+    image: "/images/david.png",
+    services: ["Haircuts", "Fades", "Beards", "Eyebrows"],
+    bookingUrl: "https://booksy.com/en-us/481608_ds-cuts_barber-shop_18695_libertyville?do=invite&_branch_match_id=1410311065173934361&utm_medium=invite_from_share_profile&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FVdzLJLg5yzw8uDEyyrytKTUstKsrMS49PKsovL04tsnXOKMrPTQUANPssMTwAAAA%3D",
+    available: true,
+    category: "Barbers"
   },
   {
-    label: "Hair Stylists",
-    staff: [
-      {
-        name: "Bita",
-        title: "Hair Stylist",
-        image: "/images/bita.jpg",
-        booksyUrl: "https://booksy.com/en-us/1500556_venegas-salon-spa_hair-salon_18695_libertyville?do=invite&_branch_match_id=1410311065173934361&utm_medium=invite_from_share_profile&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FVL64wMwqrMgz1CUmyrytKTUstKsrMS49PKsovL04tsnXOKMrPTQUAixInkzwAAAA%3D",
-        specialties: ["Hair Color", "Styling", "Color Correction"],
-        description: "Expert in coloring and styling"
-      },
-      {
-        name: "Izzy",
-        title: "Hair Stylist",
-        image: "/images/izzy.jpeg",
-        booksyUrl: "https://booksy.com/en-us/1500556_venegas-salon-spa_hair-salon_18695_libertyville?do=invite&_branch_match_id=1410311065173934361&utm_medium=invite_from_share_profile&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FVL64wMwqrMgz1CUmyrytKTUstKsrMS49PKsovL04tsnXOKMrPTQUAixInkzwAAAA%3D",
-        specialties: ["Cuts", "Treatments", "Styling"],
-        description: "Specializing in cuts and treatments"
-      }
-    ]
+    id: "luis",
+    name: "Luis (Pumba)",
+    title: "Barber",
+    image: "/images/pumba3.JPEG",
+    services: ["Haircuts", "Fades", "Beards", "Eyebrows"],
+    bookingUrl: "https://booksy.com/en-us/1409092_pumba-cuts_barber-shop_18695_libertyville?do=invite&_branch_match_id=1410311065173934361&utm_medium=profile_share_from_profile&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FV9zF1igjJNki0DEyyrytKTUstKsrMS49PKsovL04tsnXOKMrPTQUAIQzrHjwAAAA%3D",
+    available: true,
+    category: "Barbers"
   },
   {
-    label: "Spa Services",
-    staff: [
-      {
-        name: "Ashley",
-        title: "Spa Specialist",
-        image: "/images/ashley.jpg",
-        booksyUrl: "https://ashleysanchez6.glossgenius.com/",
-        specialties: ["Facials", "Skincare", "Spa Treatments"],
-        description: "Expert in skincare and spa treatments"
-      }
-    ]
+    id: "alex",
+    name: "Alex",
+    title: "Barber",
+    image: "/images/ig3.png",
+    services: ["Haircuts", "Fades", "Beards", "Eyebrows"],
+    bookingUrl: "https://booksy.com/en-us/1404532_ar-fadez_barber-shop_18695_libertyville?do=invite&_branch_match_id=1410311065173934361&utm_medium=profile_share_from_profile&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FVLy5w8vIzLXcsDUyyrytKTUstKsrMS49PKsovL04tsnXOKMrPTQUAhomW8TwAAAA%3D",
+    available: true,
+    category: "Barbers"
+  },
+  {
+    id: "bita",
+    name: "Bita",
+    title: "Hair Stylist",
+    image: "/images/bita.jpg",
+    services: ["Hair Color", "Treatments", "Styling", "Haircuts"],
+    bookingUrl: "https://booksy.com/en-us/1500556_venegas-salon-spa_hair-salon_18695_libertyville?do=invite&_branch_match_id=1410311065173934361&utm_medium=invite_from_share_profile&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FVL64wMwqrMgz1CUmyrytKTUstKsrMS49PKsovL04tsnXOKMrPTQUAixInkzwAAAA%3D",
+    available: true,
+    category: "Hair Stylists"
+  },
+  {
+    id: "izzy",
+    name: "Izzy",
+    title: "Hair Stylist",
+    image: "/images/izzy.JPEG",
+    services: ["Hair Color", "Treatments", "Styling", "Haircuts"],
+    bookingUrl: "https://booksy.com/en-us/1500556_venegas-salon-spa_hair-salon_18695_libertyville?do=invite&_branch_match_id=1410311065173934361&utm_medium=invite_from_share_profile&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FVL64wMwqrMgz1CUmyrytKTUstKsrMS49PKsovL04tsnXOKMrPTQUAixInkzwAAAA%3D",
+    available: true,
+    category: "Hair Stylists"
+  },
+  {
+    id: "ahtziri",
+    name: "Ahtziri Gonzalez",
+    title: "Hair Stylist",
+    image: "/images/ahtziri.JPEG",
+    services: ["Hair Color", "Treatments", "Styling", "Haircuts"],
+    bookingUrl: "https://booksy.com/en-us/1500556_venegas-salon-spa_hair-salon_18695_libertyville?do=invite&_branch_match_id=1410311065173934361&utm_medium=invite_from_share_profile&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FVL64wMwqrMgz1CUmyrytKTUstKsrMS49PKsovL04tsnXOKMrPTQUAixInkzwAAAA%3D",
+    available: true,
+    category: "Hair Stylists"
+  },
+  {
+    id: "ashley",
+    name: "Ashley",
+    title: "Spa Specialist",
+    image: "/images/ashley.jpg",
+    services: ["Facials", "Wax"],
+    bookingUrl: "https://ashleysanchez6.glossgenius.com/",
+    available: true,
+    category: "Spa Services"
   }
 ]
+
+// Group team members by category
+const staffCategories = teamMembers.reduce((acc, member) => {
+  const category = member.category
+  if (!acc[category]) {
+    acc[category] = []
+  }
+  acc[category].push(member)
+  return acc
+}, {} as Record<string, typeof teamMembers>)
 
 const contactInfo = {
   phone: "(224) 504-2113",
@@ -86,11 +104,8 @@ const contactInfo = {
 }
 
 export default function BookingForm() {
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
-
   const handleBookNow = (staff: any) => {
-    // Open Booksy/GlossGenius in new tab
-    window.open(staff.booksyUrl, '_blank')
+    window.open(staff.bookingUrl, '_blank')
   }
 
   const handleCallNow = () => {
@@ -103,11 +118,11 @@ export default function BookingForm() {
   }
 
   return (
-    <div className="max-w-4xl mx-auto space-y-6">
+    <div className="max-w-6xl mx-auto space-y-6 bg-white min-h-screen pt-24 pb-12">
       {/* Header Card */}
       <Card className="shadow-salon border-0 hover:shadow-lg transition-all duration-300">
         <CardHeader className="bg-gradient-to-r from-amber-400 primary to-yellow-400/80 text-white rounded-t-lg text-center">
-          <CardTitle className="text-2xl md:text-3xl ">Venegas Salon & Spa</CardTitle>
+          <CardTitle className="text-2xl md:text-3xl">Venegas Salon & Spa</CardTitle>
           <CardDescription className="text-white/90 text-lg">
             Book with our professional team
           </CardDescription>
@@ -139,7 +154,7 @@ export default function BookingForm() {
             </Button>
           </div>
 
-          {/* Social Links with Icon Badges */}
+          {/* Social Links */}
           <div className="flex justify-center gap-3 mb-6">
             <Badge 
               onClick={() => window.open(contactInfo.socialLinks.instagram, '_blank')}
@@ -173,81 +188,78 @@ export default function BookingForm() {
         </CardContent>
       </Card>
 
-      {/* Staff Categories */}
-      {staffCategories.map((category) => (
-        <Card key={category.label} className="shadow-salon border-0 hover:shadow-lg transition-all duration-300">
-          <CardHeader className="bg-gradient-to-r from-secondary to-secondary/80 text-secondary-foreground">
-            <CardTitle className="text-xl">{category.label}</CardTitle>
-          </CardHeader>
-          <CardContent className="p-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {category.staff.map((staff) => (
-                <Card key={staff.name} className="border border-gray-200 hover:shadow-md transition-all duration-300 h-full">
-                  <CardContent className="p-4 h-full">
-                    <div className="flex flex-col items-center text-center h-full">
-                      {/* Staff Image */}
-                      <div className="w-20 h-20 rounded-full overflow-hidden bg-gray-100 mb-3">
-                        <img 
-                          src={staff.image} 
-                          alt={staff.name}
-                          className="w-full h-full object-cover"
-                          onError={(e) => {
-                            e.currentTarget.src = '/images/placeholder-user.jpg'
-                          }}
-                        />
-                      </div>
-                      
-                      {/* Staff Info - Flexible area */}
-                      <div className="flex-grow flex flex-col justify-between">
-                        <div>
-                          <h3 className="font-semibold text-lg mb-1">{staff.name}</h3>
-                          <p className="text-sm text-gray-600 mb-2">{staff.title}</p>
-                          <p className="text-xs text-gray-500 mb-3">{staff.description}</p>
-                          
-                          {/* Specialties */}
-                          <div className="flex flex-wrap justify-center gap-1 mb-4 min-h-[2.5rem]">
-                            {staff.specialties.map((specialty) => (
-                              <Badge key={specialty} variant="secondary" className="text-xs">
-                                {specialty}
-                              </Badge>
-                            ))}
-                          </div>
-                        </div>
-
-                        {/* Book Now Button - Always at bottom */}
-                        <Button 
-                          onClick={() => handleBookNow(staff)}
-                          className="w-full bg-black text-yellow-400 border-4 border-yellow-400"
-                        >
-                          <Calendar className="h-4 w-4" />
-                          Book with {staff.name.split(' ')[0]}
-                          <ExternalLink className="h-3 w-3" />
-                        </Button>
-                      </div>
+      {/* Team Members by Category */}
+      {Object.entries(staffCategories).map(([categoryName, members]) => (
+        <div key={categoryName} className="px-8">
+          <h2 className="text-2xl font-bold text-center mb-8 text-white">{categoryName}</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {members.map((member) => (
+              <div key={member.id} className="p-0.5 rounded-xl shadow-xl">
+                <div className="group bg-white text-center p-6 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 hover:rotate-1 h-full">
+                  <div className="relative w-40 h-40 rounded-full overflow-hidden mx-auto mb-4 border-4 border-amber-400 shadow-xl group-hover:border-amber-500 transition-all duration-300">
+                    <Image 
+                      src={member.image} 
+                      alt={`${member.name} - ${member.title}`} 
+                      fill 
+                      className="object-cover group-hover:scale-110 transition-transform duration-300" 
+                    />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2 text-black">{member.name}</h3>
+                  <p className="text-black/80 mb-3 font-medium">{member.title}</p>
+                  <div className="flex flex-wrap justify-center gap-2 mb-4">
+                    {member.services.map((service, index) => (
+                      <span
+                        key={index}
+                        className="px-3 py-1 bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500 text-black text-sm font-medium rounded-full shadow-sm"
+                      >
+                        {service}
+                      </span>
+                    ))}
+                  </div>
+                  
+                  {member.available ? (
+                    <button 
+                      onClick={() => handleBookNow(member)}
+                      className="inline-flex items-center justify-center px-4 py-2 bg-yellow-400 hover:bg-yellow-500 text-black font-medium rounded-lg transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105"
+                    >
+                      <Image 
+                        src="/images/booksy_logo.png" 
+                        alt="Booksy" 
+                        width={20} 
+                        height={20} 
+                        className="mr-2"
+                      />
+                      Book with {member.name.split(' ')[0]}
+                    </button>
+                  ) : (
+                    <div className="inline-flex items-center justify-center px-4 py-2 bg-gray-600 text-white font-medium rounded-lg border-2 border-gray-500 shadow-md">
+                      <span className="text-sm font-bold">Coming Soon</span>
                     </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </CardContent>
-        </Card>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       ))}
 
       {/* General Booking Option */}
-      <Card className="shadow-salon border-0 hover:shadow-lg transition-all duration-300">
-        <CardContent className="p-6 text-center">
-          <h3 className="text-lg font-semibold mb-2">Not sure who to book with?</h3>
-          <p className="text-gray-600 mb-4">Call us and we'll help you find the perfect stylist for your needs</p>
-          <Button 
-            onClick={handleCallNow}
-            variant="outline"
-            className="rounded-full px-8 py-3"
-          >
-            <Phone className="h-4 w-4 mr-2" />
-            Call for Consultation
-          </Button>
-        </CardContent>
-      </Card>
+      <div className="px-8">
+        <Card className="shadow-salon border-0 hover:shadow-lg transition-all duration-300">
+          <CardContent className="p-6 text-center">
+            <h3 className="text-lg font-semibold mb-2">Not sure who to book with?</h3>
+            <p className="text-gray-600 mb-4">Call us and we'll help you find the perfect stylist for your needs</p>
+            <Button 
+              onClick={handleCallNow}
+              variant="outline"
+              className="rounded-full px-8 py-3"
+            >
+              <Phone className="h-4 w-4 mr-2" />
+              Call for Consultation
+            </Button>
+          </CardContent>
+        </Card>
+      </div>
     </div>
   )
 }
