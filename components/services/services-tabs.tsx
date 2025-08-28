@@ -51,12 +51,12 @@ const staffInfo = {
     phoneNumber: "+12245042113",
     booksyUrl: "https://booksy.com/en-us/1500556_venegas-salon-spa_hair-salon_18695_libertyville?do=invite&_branch_match_id=1410311065173934361&utm_medium=invite_from_share_profile&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FVL64wMwqrMgz1CUmyrytKTUstKsrMS49PKsovL04tsnXOKMrPTQUAixInkzwAAAA%3D"
   },
-  ashley: {
-    name: "Ashley",
+  andrea: {
+    name: "Andrea",
     title: "Spa Specialist",
-    image: "/images/ashley.jpg",
+    image: "/images/andrea.jpg",
     phoneNumber: "+12245042113",
-    booksyUrl: "https://ashleysanchez6.glossgenius.com/"
+    booksyUrl: "https://booksy.com/en-us/1500556_venegas-salon-spa_hair-salon_18695_libertyville/staffer/1478262#ba_s=seo"
   }
 }
 
@@ -355,40 +355,49 @@ const serviceCategories = {
     description: "Professional facial treatments for healthy, glowing skin",
     services: [
       {
-        id: "basic-facial",
-        name: "Basic Facial",
-        description: "A relaxing facial using cleansers, an exfoliant w/steam, a masque and dermal layering targeted towards your skin type. This service includes hand and facial massage techniques.",
-        price: 65,
+        id: "glow-getter",
+        name: "Glow Getter",
+        description: "Glow in a flash. Excludes steam & massage. Perfect for those on-the-go.",
+        price: 40,
+        duration: "20min",
+        images: [], // Removed images
+        staff: ["andrea"]
+      },
+      {
+        id: "golden-hour",
+        name: "Golden Hour",
+        description: "Relaxing signature facial. Comes with steam under exfoliation & 7 min massage. Declotte included/optional.",
+        price: 60,
         duration: "60min",
         images: [], // Removed images
-        staff: ["ashley"]
+        staff: ["andrea"]
       },
       {
-        id: "advanced-facial",
-        name: "Advanced Facial",
-        description: "Similar to the signature facial but better this facial includes extractions, deeper exfoliation and high frequency all while targeting your skin needs. This service includes hand and facial massage techniques.",
-        price: 75,
-        duration: "70min",
-        images: [], // Removed images
-        staff: ["ashley"]
-      },
-      {
-        id: "clarifying-facial",
-        name: "Clarifying Facial",
-        description: "Targeted for oily and acneic skin types this facial uses specified products to help minimize pores, reduce blemishes and redness, while brightening the skin to help minimize premature signs of aging. This service includes hand and facial massage techniques.",
-        price: 75,
-        duration: "60min",
-        images: [], // Removed images
-        staff: ["ashley"]
-      },
-      {
-        id: "honey-glow-facial",
-        name: "Honey Glow Facial",
-        description: "The signature, honey glow facial works with key ingredients like turmeric, Manuka honey and lemon to soothe hydrate and brighten the skin. These ingredients carry antibacterial and anti-inflammatory properties to give the skin that smooth and glowing effect.",
+        id: "luxe-therapy",
+        name: "Luxe Therapy",
+        description: "LED light therapy 1h facial. Color picked based off skin concerns. Targets collagen production, acneic skin, or even rosacea.",
         price: 80,
-        duration: "70min",
+        duration: "60min",
         images: [], // Removed images
-        staff: ["ashley"]
+        staff: ["andrea"]
+      },
+      {
+        id: "exfoli-yes",
+        name: "Exfoli-yes !",
+        description: "Microdermabrasion exfoliation facial. Uses diamond tip suction gliding onto the skin to exfoliate up to 7 layers of dead skin.",
+        price: 100,
+        duration: "80min",
+        images: [], // Removed images
+        staff: ["andrea"]
+      },
+      {
+        id: "ultrasonic",
+        name: "Ultrasonic",
+        description: "Ultrasonic facial sound waves. Uses to exfoliate dead skin cells, unclog pores & boost collagen production. All without irritation.",
+        price: 85,
+        duration: "75min",
+        images: [], // Removed images
+        staff: ["andrea"]
       }
     ]
   },
@@ -398,59 +407,23 @@ const serviceCategories = {
     description: "Professional waxing services for smooth, hair-free skin",
     services: [
       {
-        id: "eyebrow-wax",
-        name: "Eyebrow Wax",
-        description: "Professional eyebrow shaping and grooming",
+        id: "brow-boss",
+        name: "Brow Boss",
+        description: "Clean up of the eyebrow using hard wax  ",
         price: 10,
-        duration: "15min",
+        duration: "20min",
         images: [], // Removed images
-        staff: ["ashley"]
+        staff: ["andrea"]
       },
       {
-        id: "upper-lip-chin-wax",
-        name: "Upper Lip Or Chin Wax",
-        description: "Quick and precise upper lip or chin hair removal",
-        price: 10,
-        duration: "10min",
-        images: [], // Removed images
-        staff: ["ashley"]
-      },
-      {
-        id: "underarm-wax",
-        name: "Underarm Wax",
-        description: "Professional underarm hair removal",
+        id: "underarm-glow",
+        name: "Underarm Glow",
+        description: "Smooth underarm wax using hard wax",
         price: 25,
         duration: "20min",
         images: [], // Removed images
-        staff: ["ashley"]
+        staff: ["andrea"]
       },
-      {
-        id: "arm-wax",
-        name: "Arm Wax",
-        description: "Professional arm hair removal with 2 options available",
-        price: "20+",
-        duration: "20+ min",
-        images: [], // Removed images
-        staff: ["ashley"]
-      },
-      {
-        id: "leg-wax",
-        name: "Leg Wax",
-        description: "Professional leg hair removal with 2 options available",
-        price: "25+",
-        duration: "20+ min",
-        images: [], // Removed images
-        staff: ["ashley"]
-      },
-      {
-        id: "brazilian-wax",
-        name: "Brazilian Wax",
-        description: "Professional Brazilian wax with 2 options available",
-        price: "25+",
-        duration: "10+ min",
-        images: [], // Removed images
-        staff: ["ashley"]
-      }
     ]
   }
 }

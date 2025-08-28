@@ -35,7 +35,7 @@ export default function Header() {
       <div className="container-custom">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-5 transition-transform hover:scale-105">
-            <div className="w-20 h-20 relative rounded-full overflow-hidden border-2 border-amber-400">
+            <div className="w-20 h-20 relative rounded-full overflow-hidden border-4 border-amber-400">
               <Image src="/images/venegas-logo.jpeg" alt="Venegas Salon & Spa Logo" fill className="object-cover" />
             </div>
             <span className="text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-500 via-amber-200 to-amber-500">
@@ -71,7 +71,7 @@ export default function Header() {
                 {item.name}
               </Link>
             ))}
-            <div className="ml-8 p-0.5 rounded-lg bg-gradient-to-r from-amber-500 via-amber-300 to-amber-500">
+            <div className="p-0.5 rounded-lg bg-gradient-to-r from-amber-500 via-amber-300 to-amber-500">
               <Button className="relative overflow-hidden bg-white hover:bg-gray-100 shadow-md hover:shadow-lg rounded-lg transition-all duration-300 border-0 group">
                 <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
                 <Link href="/booking" className="relative text-transparent bg-clip-text bg-gradient-to-r from-amber-500 via-amber-300 to-amber-500 font-bold">
@@ -83,7 +83,7 @@ export default function Header() {
 
           <Button
             size="icon"
-            className="lg:hidden bg-black text-yellow-400 border-2 border-yellow-400 hover:bg-yellow-400 hover:text-black transition-all duration-300 h-10 w-10"
+            className="lg:hidden bg-white text-yellow-400 border-2 border-yellow-400 hover:bg-yellow-400 hover:text-black transition-all duration-300 h-10 w-10"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -108,7 +108,7 @@ export default function Header() {
                 {item.name}
               </Link>
             ))}
-            <Button className="w-full mt-4 text-yellow-400 border-yellow-400 border-2 shadow-md hover:bg-yellow-400 hover:text-black hover:shadow-lg rounded-sm transition-all duration-300">
+            <Button className="w-full mt-4 bg-white text-yellow-400 border-yellow-400 border-2 shadow-md hover:bg-yellow-400 hover:text-black hover:shadow-lg rounded-sm transition-all duration-300">
               <Link href="/booking">Book Now</Link>
             </Button>
           </div>

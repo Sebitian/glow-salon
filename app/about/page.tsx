@@ -42,7 +42,7 @@ const teamMembers = [
     title: "Hair Stylist",
     image: "/images/bita.jpg",
     services: ["Hair Color", "Treatments", "Styling", "Haircuts"],
-    bookingUrl: "https://booksy.com/en-us/1500556_venegas-salon-spa_hair-salon_18695_libertyville?do=invite&_branch_match_id=1410311065173934361&utm_medium=invite_from_share_profile&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FVL64wMwqrMgz1CUmyrytKTUstKsrMS49PKsovL04tsnXOKMrPTQUAixInkzwAAAA%3D",
+    bookingUrl: "https://booksy.com/en-us/1500556_venegas-salon-spa_hair-salon_18695_libertyville/staffer/1425005#ba_s=dl_1",
     available: true
   },
   {
@@ -51,16 +51,16 @@ const teamMembers = [
     title: "Hair Stylist",
     image: "/images/izzy.JPEG",
     services: ["Hair Color", "Treatments", "Styling", "Haircuts"],
-    bookingUrl: "https://booksy.com/en-us/1500556_venegas-salon-spa_hair-salon_18695_libertyville?do=invite&_branch_match_id=1410311065173934361&utm_medium=invite_from_share_profile&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FVL64wMwqrMgz1CUmyrytKTUstKsrMS49PKsovL04tsnXOKMrPTQUAixInkzwAAAA%3D",
+    bookingUrl: "https://booksy.com/en-us/1500556_venegas-salon-spa_hair-salon_18695_libertyville/staffer/1432902#ba_s=seo",
     available: true
   },
   {
     id: "ahtziri",
-    name: "Ahtziri Gonzalez",
+    name: "Ahtziri",
     title: "Hair Stylist",
     image: "/images/ahtziri.JPEG",
     services: ["Hair Color", "Treatments", "Styling", "Haircuts"],
-    bookingUrl: "https://booksy.com/en-us/1500556_venegas-salon-spa_hair-salon_18695_libertyville?do=invite&_branch_match_id=1410311065173934361&utm_medium=invite_from_share_profile&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FVL64wMwqrMgz1CUmyrytKTUstKsrMS49PKsovL04tsnXOKMrPTQUAixInkzwAAAA%3D",
+    bookingUrl: "https://booksy.com/en-us/1500556_venegas-salon-spa_hair-salon_18695_libertyville/staffer/1457245#ba_s=seo",
     available: true
   },
   {
@@ -82,12 +82,12 @@ const teamMembers = [
     available: false
   },
   {
-    id: "ashley",
-    name: "Ashley",
+    id: "andrea",
+    name: "Andrea",
     title: "Spa Specialist",
-    image: "/images/ashley.jpg",
+    image: "/images/andrea.jpg",
     services: ["Facials", "Wax"],
-    bookingUrl: "https://ashleysanchez6.glossgenius.com/",
+    bookingUrl: "https://booksy.com/en-us/1500556_venegas-salon-spa_hair-salon_18695_libertyville/staffer/1478262#ba_s=seo",
     available: true
   }
 ]
@@ -155,7 +155,7 @@ export default function AboutPage() {
           <h2 className="heading-lg text-center mb-12 text-white">Meet Our Team</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {teamMembers.map((member) => (
-              <div key={member.id} className="p-0.5 rounded-xl  shadow-xl">
+              <div key={member.id} className="p-0.5 rounded-xl shadow-xl">
                 <div className="group bg-white text-center p-6 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 hover:rotate-1 h-full">
                   <div className="relative w-40 h-40 rounded-full overflow-hidden mx-auto mb-4 border-4 border-amber-400 shadow-xl group-hover:border-amber-500 transition-all duration-300">
                     <Image 
@@ -171,7 +171,7 @@ export default function AboutPage() {
                     {member.services.map((service, index) => (
                       <span
                         key={index}
-                        className="px-3 py-1 bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500 text-black text-sm font-medium rounded-full shadow-sm"
+                        className="px-2 py-1 border border-yellow-400 text-yellow-400 text-sm font-bold rounded-full shadow-sm"
                       >
                         {service}
                       </span>

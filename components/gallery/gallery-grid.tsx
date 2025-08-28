@@ -271,20 +271,20 @@ export default function GalleryGrid() {
     <>
       <Tabs defaultValue="all" className="w-full">
         <div className="flex justify-center mb-8">
-          <TabsList className="bg-white/90 backdrop-blur-sm shadow-md border">
-            <TabsTrigger value="all" className="flex items-center gap-2 data-[state=active]:bg-black te data-[state=active]:text-yellow-400">
+          <TabsList className="bg-white shadow-md border border-gray-200">
+            <TabsTrigger value="all" className="flex items-center gap-2 bg-gray-50 hover:bg-yellow-100 data-[state=active]:bg-yellow-400 data-[state=active]:text-white rounded-md px-4 py-2 text-sm font-medium transition-all duration-200">
               <Users className="h-4 w-4" />
               <span>All</span>
             </TabsTrigger>
-            <TabsTrigger value="hair" className="flex items-center gap-2 data-[state=active]:bg-black data-[state=active]:text-yellow-400">
+            <TabsTrigger value="hair" className="flex items-center gap-2 bg-gray-50 hover:bg-yellow-100 data-[state=active]:bg-yellow-400 data-[state=active]:text-white rounded-md px-4 py-2 text-sm font-medium transition-all duration-200">
               <Scissors className="h-4 w-4" />
               <span>Hair Services</span>
             </TabsTrigger>
-            <TabsTrigger value="spa" className="flex items-center gap-2 data-[state=active]:bg-black data-[state=active]:text-yellow-400">
+            <TabsTrigger value="spa" className="flex items-center gap-2 bg-gray-50 hover:bg-yellow-100 data-[state=active]:bg-yellow-400 data-[state=active]:text-white rounded-md px-4 py-2 text-sm font-medium transition-all duration-200">
               <Sparkles className="h-4 w-4" />
               <span>Spa</span>
             </TabsTrigger>
-            <TabsTrigger value="salon" className="flex items-center gap-2 data-[state=active]:bg-black data-[state=active]:text-yellow-400">
+            <TabsTrigger value="salon" className="flex items-center gap-2 bg-gray-50 hover:bg-yellow-100 data-[state=active]:bg-yellow-400 data-[state=active]:text-white rounded-md px-4 py-2 text-sm font-medium transition-all duration-200">
               <Palette className="h-4 w-4" />
               <span>Our Salon</span>
             </TabsTrigger>

@@ -136,7 +136,7 @@ export default function ServicesOverview() {
             asChild
           >
             <a 
-              href="#" 
+              href="https://linktr.ee/venegassalonnspa?utm_source=linktree_profile_share&ltsid=f6bbb454-2f4e-4807-9d0a-75af89fe10fc" 
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center space-x-3"
@@ -148,7 +148,7 @@ export default function ServicesOverview() {
                 height={24}
                 className="object-contain"
               />
-              <span>Book Now</span>
+              <span>Linktree</span>
             </a>
           </Button>
         </div>

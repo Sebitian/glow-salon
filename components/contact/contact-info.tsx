@@ -4,7 +4,7 @@ export default function ContactInfo() {
   return (
     <div className="salon-card p-8 shadow-salon">
       <h2 className="heading-md mb-6 flex items-center">
-        <span className="w-8 h-0.5 bg-primary mr-2"></span>
+        <span className="w-8 h-0.5 bg-yellow-400 mr-2"></span>
         Get In Touch
       </h2>
 
