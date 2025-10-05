@@ -6,7 +6,7 @@ import Header from "@/components/layout/header"
 import Footer from "@/components/layout/footer"
 import WhatsAppWidget from "@/components/widgets/whatsapp-widget"
 import GoogleAnalytics from "@/components/analytics/google-analytics"
-
+import { Analytics } from "@vercel/analytics/next"
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
@@ -38,6 +38,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${poppins.variable} font-sans`}>
         <GoogleAnalytics />
+        <Analytics />
         <Header />
         <main>{children}</main>
         <Footer />
