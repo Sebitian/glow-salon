@@ -37,15 +37,6 @@ const teamMembers = [
     available: true
   },
   {
-    id: "bita",
-    name: "Bita",
-    title: "Hair Stylist",
-    image: "/images/bita.jpg",
-    services: ["Hair Color", "Treatments", "Styling", "Haircuts"],
-    bookingUrl: "https://booksy.com/en-us/1500556_venegas-salon-spa_hair-salon_18695_libertyville/staffer/1425005#ba_s=dl_1",
-    available: true
-  },
-  {
     id: "izzy",
     name: "Izzy",
     title: "Hair Stylist",
@@ -68,9 +59,9 @@ const teamMembers = [
     name: "Lyzzet Nunez",
     title: "Hair Stylist",
     image: "/images/lyzzet.JPEG",
-    services: ["Hair Color", "Treatments", "Styling", "Haircuts"],
-    bookingUrl: "",
-    available: false
+    services: ["Haircuts", "Hair Color", "Treatments", "Styling", "Haircuts"],
+    bookingUrl: "https://booksy.com/en-us/1500556_venegas-salon-spa_hair-salon_18695_libertyville/staffer/1508689#ba_s=seo",
+    available: true
   },
   {
     id: "diana",
@@ -98,7 +89,7 @@ export default function AboutPage() {
       <div className="relative py-20 bg-cover bg-no-repeat" style={{backgroundImage: 'url(/images/all2.jpg)', backgroundPosition: 'center 25%'}}>
         <div className="absolute inset-0 bg-black/60"></div>
         <div className="container-custom relative z-10 pt-16">
-          <h1 className="heading-xl text-white text-center mb-4">About <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 via-amber-200 to-amber-500 font-bold">Venegas Salon & Spa</span> </h1>
+          <h1 className="heading-xl text-white text-center pt-24 mb-4">About <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 via-amber-200 to-amber-500 font-bold">Venegas Salon & Spa</span> </h1>
           <p className="text-xl text-white/90 text-center max-w-2xl mx-auto">
             Discover our story, our passion for beauty, and our commitment to excellence.
           </p>

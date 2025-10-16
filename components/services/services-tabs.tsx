@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import { useSearchParams } from "next/navigation"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Scissors, Palette, Sparkles, User, ExternalLink, Phone, Clock, Heart, Waves } from "lucide-react"
+import { Scissors, Palette, Sparkles, User, ExternalLink, Phone, Clock, Heart, Waves, Link } from "lucide-react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 
@@ -30,19 +30,19 @@ const staffInfo = {
     phoneNumber: "+12245042113",
     booksyUrl: "https://booksy.com/en-us/1404532_ar-fadez_barber-shop_18695_libertyville?do=invite&_branch_match_id=1410311065173934361&utm_medium=profile_share_from_profile&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FVLy5w8vIzLXcsDUyyrytKTUstKsrMS49PKsovL04tsnXOKMrPTQUAhomW8TwAAAA%3D"
   },
-  bita: {
-    name: "Bita",
-    title: "Hair Stylist",
-    image: "/images/bita.jpg",
-    phoneNumber: "+12245042113",
-    booksyUrl: "https://booksy.com/en-us/1500556_venegas-salon-spa_hair-salon_18695_libertyville/staffer/1425005#ba_s=dl_1"
-  },
   izzy: {
     name: "Izzy",
     title: "Hair Stylist",
     image: "/images/izzy.JPEG",
     phoneNumber: "+12245042113",
     booksyUrl: "https://booksy.com/en-us/1500556_venegas-salon-spa_hair-salon_18695_libertyville/staffer/1432902#ba_s=dl_1"
+  },
+  lyzzet: {
+    name: "Lyzzet Nunez",
+    title: "Hair Stylist",
+    image: "/images/lyzzet.JPEG",
+    phoneNumber: "+12246887650",
+    booksyUrl: "https://booksy.com/en-us/1500556_venegas-salon-spa_hair-salon_18695_libertyville/staffer/1508689#ba_s=seo",
   },
   ahtziri: {
     name: "Ahtziri Gonzalez",
@@ -83,7 +83,7 @@ const serviceCategories = {
         price: 60,
         duration: "1h",
         images: ["/images/services2.jpeg", "/images/bob-highlights.jpeg"],
-        staff: ["bita", "izzy", "ahtziri"]
+        staff: ["izzy", "ahtziri", "lyzzet",]
       },
       {
         id: "haircut-beard",
@@ -101,7 +101,7 @@ const serviceCategories = {
         price: "30+",
         duration: "30-45min",
         images: ["images/services13.jpeg", "images/services14.jpeg", "/images/haircut-4.jpeg", "images/services3.jpeg"],
-        staff: ["david", "luis", "alex", "bita", "izzy", "ahtziri"]
+        staff: ["david", "luis", "alex", "izzy", "ahtziri"]
       },
       {
         id: "shave",
@@ -144,7 +144,7 @@ const serviceCategories = {
         price: "100+",
         duration: "2h",
         images: ["/images/all-over-color-1.jpeg", "/images/all-over-color-2.jpeg", "images/services4.jpeg"],
-        staff: ["bita", "izzy", "ahtziri"]
+        staff: ["izzy", "ahtziri"]
       },
       {
         id: "root-touch-up",
@@ -153,7 +153,7 @@ const serviceCategories = {
         price: 65,
         duration: "1h 30min",
         images: ["/images/root-touch-up-1.jpeg"],
-        staff: ["bita", "izzy", "ahtziri"]
+        staff: ["izzy", "ahtziri"]
       },
       {
         id: "balayage",
@@ -162,7 +162,7 @@ const serviceCategories = {
         price: "150+",
         duration: "2h",
         images: ["/images/balayage-1.jpeg"],
-        staff: ["bita", "izzy", "ahtziri"]
+        staff: ["izzy", "ahtziri"]
       },
       {
         id: "fashion-color",
@@ -171,7 +171,7 @@ const serviceCategories = {
         price: "50+",
         duration: "1h 30min",
         images: ["/images/fashion-color-1.jpeg", "/images/fashion-color-2.jpeg"],
-        staff: ["bita", "izzy", "ahtziri"]
+        staff: [ "izzy", "ahtziri"]
       },
       {
         id: "toner-gloss",
@@ -180,7 +180,7 @@ const serviceCategories = {
         price: "50+",
         duration: "1h 30min",
         images: ["images/services5.jpg"],
-        staff: ["bita", "ahtziri"]
+        staff: ["ahtziri"]
       },
       {
         id: "color-correction",
@@ -189,7 +189,7 @@ const serviceCategories = {
         price: "100+",
         duration: "1h 30min",
         images: ["images/services6.jpg"],
-        staff: ["bita", "ahtziri"]
+        staff: ["ahtziri"]
       },
     ]
   },
@@ -205,7 +205,7 @@ const serviceCategories = {
         price: "300+",
         duration: "2h 30min",
         images: ["/images/keratin-treatment-before-after.jpeg"],
-        staff: ["bita", "izzy", "ahtziri"]
+        staff: ["izzy", "ahtziri"]
       },
       {
         id: "deep-conditioning",
@@ -214,7 +214,7 @@ const serviceCategories = {
         price: 25,
         duration: "30min",
         images: ["/images/deep-conditioning-treatment.png"],
-        staff: ["bita", "izzy", "ahtziri"]
+        staff: ["izzy", "ahtziri"]
       },
       {
         id: "scalp-treatment",
@@ -223,7 +223,7 @@ const serviceCategories = {
         price: 20,
         duration: "30min",
         images: ["/images/services17.png"],
-        staff: ["bita", "izzy", "ahtziri"]
+        staff: ["izzy", "ahtziri"]
       }
     ]
   },
@@ -239,7 +239,7 @@ const serviceCategories = {
         price: 40,
         duration: "1h",
         images: ["/images/womens-cut.jpeg"],
-        staff: ["bita", "izzy", "ahtziri"]
+        staff: ["izzy", "ahtziri"]
       },
       {
         id: "blow-out-xl",
@@ -248,7 +248,7 @@ const serviceCategories = {
         price: 55,
         duration: "1h 30min",
         images: ["/images/womens-cut.jpeg"],
-        staff: ["bita", "izzy", "ahtziri"]
+        staff: ["izzy", "ahtziri"]
       },
       {
         id: "updo",
@@ -257,7 +257,7 @@ const serviceCategories = {
         price: 60,
         duration: "1h",
         images: ["images/services18.jpeg", "images/services19.jpeg", "/images/updo-styling.jpeg"],
-        staff: ["bita", "izzy", "ahtziri"]
+        staff: ["izzy", "ahtziri"]
       },
       {
         id: "silk-press",
@@ -266,7 +266,7 @@ const serviceCategories = {
         price: 80,
         duration: "1h",
         images: ["/images/services20.jpeg"],
-        staff: ["bita", "izzy", "ahtziri"]
+        staff: ["izzy", "ahtziri"]
       },
       {
         id: "wig-braid-down",

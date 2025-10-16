@@ -26,13 +26,11 @@ export default function ServicesPage() {
   return (
     <>
       <ServicesBanner />
-      <div className="py-16">
-        <div className="container-custom">
+        {/* <div className="container-custom"> */}
           <Suspense fallback={<ServicesTabsFallback />}>
             <ServicesTabs />
           </Suspense>
-        </div>
-      </div>
+        {/* </div> */}
     </>
   )
 }
