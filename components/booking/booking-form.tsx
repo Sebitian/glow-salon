@@ -65,7 +65,7 @@ const teamMembers = [
     name: "Lyzzet Nunez",
     title: "Hair Stylist",
     image: "/images/lyzzet.JPEG",
-    services: ["Haircuts", "Hair Color", "Treatments", "Styling", "Haircuts"],
+    services: ["Haircuts", "Hair Color", "Styling", "Hair Treatments"],
     bookingUrl: "https://booksy.com/en-us/1500556_venegas-salon-spa_hair-salon_18695_libertyville/staffer/1508689#ba_s=seo",
     available: true,
     category: "Hair Stylists"

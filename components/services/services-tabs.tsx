@@ -10,7 +10,7 @@ import { Button } from "@/components/ui/button"
 // Staff information
 const staffInfo = {
   david: {
-    name: "David",
+    name: "David Venegas",
     title: "Owner & Barber",
     image: "/images/david.png",
     phoneNumber: "+12245042113",
@@ -52,11 +52,18 @@ const staffInfo = {
     booksyUrl: "https://booksy.com/en-us/1500556_venegas-salon-spa_hair-salon_18695_libertyville?do=invite&_branch_match_id=1410311065173934361&utm_medium=invite_from_share_profile&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FVL64wMwqrMgz1CUmyrytKTUstKsrMS49PKsovL04tsnXOKMrPTQUAixInkzwAAAA%3D"
   },
   andrea: {
-    name: "Andrea",
+    name: "Andrea Delgado",
     title: "Spa Specialist",
     image: "/images/andrea.jpg",
     phoneNumber: "+12245042113",
     booksyUrl: "https://booksy.com/en-us/1500556_venegas-salon-spa_hair-salon_18695_libertyville/staffer/1478262#ba_s=seo"
+  },
+  diana: {
+    name: "Diana Escobar",
+    title: "Hair Stylist",
+    image: "/images/andrea.jpg",
+    phoneNumber: "+12246887650",
+    booksyUrl: "https://booksy.com/en-us/1500556_venegas-salon-spa_hair-salon_18695_libertyville/staffer/1532292#ba_s=seo"
   }
 }
 
@@ -83,7 +90,7 @@ const serviceCategories = {
         price: 60,
         duration: "1h",
         images: ["/images/services2.jpeg", "/images/bob-highlights.jpeg"],
-        staff: ["izzy", "ahtziri", "lyzzet",]
+        staff: ["izzy", "ahtziri", "lyzzet", "diana"]
       },
       {
         id: "haircut-beard",
@@ -144,7 +151,7 @@ const serviceCategories = {
         price: "100+",
         duration: "2h",
         images: ["/images/all-over-color-1.jpeg", "/images/all-over-color-2.jpeg", "images/services4.jpeg"],
-        staff: ["izzy", "ahtziri"]
+        staff: ["izzy", "ahtziri", "izzy", "diana"]
       },
       {
         id: "root-touch-up",
@@ -153,7 +160,7 @@ const serviceCategories = {
         price: 65,
         duration: "1h 30min",
         images: ["/images/root-touch-up-1.jpeg"],
-        staff: ["izzy", "ahtziri"]
+        staff: ["izzy", "ahtziri", "izzy", "diana"]
       },
       {
         id: "balayage",
@@ -162,7 +169,7 @@ const serviceCategories = {
         price: "150+",
         duration: "2h",
         images: ["/images/balayage-1.jpeg"],
-        staff: ["izzy", "ahtziri"]
+        staff: ["izzy", "ahtziri", "izzy", "diana"]
       },
       {
         id: "fashion-color",
@@ -171,7 +178,7 @@ const serviceCategories = {
         price: "50+",
         duration: "1h 30min",
         images: ["/images/fashion-color-1.jpeg", "/images/fashion-color-2.jpeg"],
-        staff: [ "izzy", "ahtziri"]
+        staff: [ "izzy", "ahtziri", "izzy", "diana"]
       },
       {
         id: "toner-gloss",
@@ -521,62 +528,7 @@ function ServiceCard({ service }: { service: any }) {
         <p className="text-gray-600 text-sm leading-relaxed">{service.description}</p>
       </div>
 
-      {/* Staff Members */}
-      <div className="p-4">
-        <h4 className="text-xs font-semibold text-gray-700 mb-2">Available with:</h4>
-        <div className="space-y-2">
-          {service.staff.map((staffId: string) => {
-            const staff = staffInfo[staffId as keyof typeof staffInfo]
-            return (
-              <div key={staffId} className="flex items-center justify-between p-2 bg-gray-50 rounded-lg hover:bg-yellow-50 transition-colors">
-                <div className="flex items-center space-x-2">
-                  <div className="w-8 h-8 rounded-full overflow-hidden bg-gray-200">
-                    <Image
-                      src={staff.image}
-                      alt={staff.name}
-                      width={32}
-                      height={32}
-                      className="w-full h-full object-cover"
-                      onError={(e) => {
-                        e.currentTarget.src = '/images/placeholder-user.jpg'
-                      }}
-                    />
-                  </div>
-                  <div>
-                    <p className="font-medium text-gray-900 text-sm">{staff.name}</p>
-                    <p className="text-xs text-gray-500">{staff.title}</p>
-                  </div>
-                </div>
-                
-                <div className="flex gap-1">
-                  <Button 
-                    asChild
-                    size="sm"
-                    className="bg-[#00b3a4] text-white hover:bg-yellow-500 transition-all duration-300 font-medium text-xs px-2 py-1 h-auto"
-                  >
-                    <a
-                      href={staff.booksyUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-1"
-                    >
-                      <Image 
-                        src="/images/booksy_logo.png" 
-                        alt="Booksy" 
-                        width={12} 
-                        height={12} 
-                        className="object-contain"
-                      />
-                      Book
-                      <ExternalLink className="h-2 w-2" />
-                    </a>
-                  </Button>
-                </div>
-              </div>
-            )
-          })}
-        </div>
-      </div>
+     
     </div>
   )
 }

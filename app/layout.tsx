@@ -4,8 +4,6 @@ import { Poppins } from "next/font/google"
 import "./globals.css"
 import Header from "@/components/layout/header"
 import Footer from "@/components/layout/footer"
-import WhatsAppWidget from "@/components/widgets/whatsapp-widget"
-import GoogleAnalytics from "@/components/analytics/google-analytics"
 import { Analytics } from "@vercel/analytics/next"
 const poppins = Poppins({
   subsets: ["latin"],
@@ -14,19 +12,31 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: "Venegas Salon & Spa",
+  title: "Professional Salon & Spa Services in Libertyville | Venegas Salon & Spa",
   description:
-    "Premier salon in Libertyville, IL offering haircuts, styling, nail care, beauty treatments, and makeup services for men and women.",
-  keywords: "unisex salon, beauty salon India, haircuts, hairstyling, nail care, beauty treatments, makeup services",
-  openGraph: {
-    title: "Venegas Salon & Spa",
-    description:
-      "Premier salon in Libertyville, IL offering haircuts, styling, hair care, beauty treatments, and other services for men and women.",
-    images: ["/images/og-image.jpg"],
-    type: "website",
-    locale: "en_IN",
+    "Discover premium salon services in Libertyville, IL. Expert haircuts, styling, coloring, and spa treatments for men and women. Book your appointment today!",
+  keywords: "salon Libertyville IL, spa services, haircuts, hair coloring, styling, beauty treatments, Venegas Salon, Peterson Rd salon",
+  icons: {
+    icon: [
+      { url: "/images/venegas-logo.jpeg" },
+      { url: "/images/venegas-logo.jpeg", type: "image/jpeg", sizes: "32x32" }
+    ],
+    apple: "/images/venegas-logo.jpeg",
   },
-    generator: 'v0.dev'
+  openGraph: {
+    title: "Professional Salon & Spa Services in Libertyville | Venegas Salon & Spa",
+    description: "Discover premium salon services in Libertyville, IL. Expert haircuts, styling, coloring, and spa treatments for men and women.",
+    images: [
+      {
+        url: "/images/venegas-logo.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Venegas Salon & Spa Logo",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
 }
 
 export default function RootLayout({
@@ -37,7 +47,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.variable} font-sans`}>
-        <GoogleAnalytics />
+        {/* <GoogleAnalytics /> */}
         <Analytics />
         <Header />
         <main>{children}</main>

@@ -31,6 +31,11 @@ const barbers = {
     name: "Alex",
     title: "Barber",
     booksyUrl: "https://booksy.com/en-us/481608_ds-cuts_barber-shop_18695_libertyville?do=invite&_branch_match_id=1410311065173934361&utm_medium=invite_from_share_profile&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FVdzLJLg5yzw8uDEyyrytKTUstKsrMS49PKsovL04tsnXOKMrPTQUANPssMTwAAAA%3D"
+  },
+  diana: {
+    name: "Diana",
+    title: "Hair stylist",
+    booksyUrl: "https://booksy.com/en-us/1500556_venegas-salon-spa_hair-salon_18695_libertyville/staffer/1532292#ba_s=seo"
   }
 }
 

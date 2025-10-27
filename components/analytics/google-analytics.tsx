@@ -8,8 +8,8 @@ export default function GoogleAnalytics() {
   const pathname = usePathname()
 
   useEffect(() => {
-    if (pathname && window.gtag) {
-      window.gtag("config", "G-MEASUREMENT_ID", {
+    if (pathname && typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag("config", "G-MEASUREMENT_ID", {
         page_path: pathname,
       })
     }

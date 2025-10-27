@@ -89,18 +89,20 @@ export default function Header() {
             </div>
           </nav>
 
-          <Button
-            size="icon"
-            className={`lg:hidden transition-all duration-300 h-10 w-10 ${
-              isScrolled 
-                ? "bg-white text-yellow-400 border-2 border-yellow-400 hover:bg-yellow-400 hover:text-black"
-                : "bg-white/90 text-yellow-400 border-2 border-yellow-400 hover:bg-yellow-400 hover:text-black"
-            }`}
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </Button>
+          <div className="lg:hidden animate-pulse p-0.5 rounded-lg bg-gradient-to-r from-amber-500 via-amber-300 to-amber-500 animate-gradient">
+            <Button
+              size="icon"
+              className={`transition-all duration-300 h-10 w-10 ${
+                isScrolled 
+                  ? "bg-black text-yellow-400 hover:bg-yellow-400 hover:text-black"
+                  : "bg-black/90 text-yellow-400 hover:bg-yellow-400 hover:text-black"
+              }`}
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </Button>
+          </div>
         </div>
 
         {/* Mobile menu */}

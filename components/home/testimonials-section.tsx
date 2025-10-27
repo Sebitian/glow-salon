@@ -91,10 +91,10 @@ export default function TestimonialsSection() {
           <div className="flex items-center justify-center space-x-4 text-lg mb-2">
             <div className="flex items-center">
               <span className="text-yellow-400 mr-2 text-2xl">★★★★★</span>
-              <span className="font-semibold text-gray-200">5.0/5 stars</span>
+              <span className="font-semibold text-gray-200">5/5 stars on Booksy</span>
             </div>
-            <span className="text-gray-400">•</span>
-            <span className="text-gray-400">500+ reviews across platforms</span>
+            {/* <span className="text-gray-400">•</span> */}
+            {/* <span className="text-gray-400">500+ reviews across platforms</span> */}
            </div>
         </div>
 

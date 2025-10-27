@@ -1,4 +1,7 @@
+"use client"
+
 import Image from "next/image"
+import { Button } from "../ui/button"
 
 export default function ServicesBanner() {
   return (
@@ -20,10 +23,17 @@ export default function ServicesBanner() {
       </div>
 
       {/* Content */}
-      <div className="absolute inset-0 z-20 flex items-center justify-center">
-        <h1 className="text-6xl md:text-7xl font-light text-white tracking-[0.2em] uppercase font-sans">
+      <div className="absolute inset-0 z-20 flex flex-col items-center justify-center gap-6">
+        <h1 className="text-6xl md:text-7xl font-light text-white tracking-[0.2em] uppercase font-montserrat">
           Services
         </h1>
+
+        <Button 
+          onClick={() => window.open('https://linktr.ee/venegassalonnspa?utm_source=linktree_admin_share&fbclid=PAZXh0bgNhZW0CMTEAAacMAXslrw4GF2lYztAu4K_gbvYKmgUnfzhopGzIMfwcpSyGwYD-KHNczJqjMg_aem_2djK2MogFLrIrjffXZxoQA', '_blank')}
+            className="rounded-lg text-black animate-bounce bg-gradient-to-r from-amber-500 via-amber-300 to-amber-500"
+        >
+          Book Now
+        </Button>
       </div>
 
       {/* Subtle gradient overlay at bottom */}
