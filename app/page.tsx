@@ -7,9 +7,9 @@ import InstagramSection from "@/components/home/instagram-section"
 import CTASection from "@/components/home/cta-section"
 
 export const metadata: Metadata = {
-  title: "Venegas Salon & Spa",
+  title: "Professional Salon & Spa Services in Libertyville | Venegas Salon & Spa",
   description:
-    "Premier salon in Libertyville, IL offering haircuts, styling, hair treatments, and other services for men and women.",
+    "Discover premium salon services in Libertyville, IL. Expert haircuts, styling, coloring, and spa treatments for men and women. Book your appointment today!",
 }
 
 export default function Home() {

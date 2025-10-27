@@ -41,16 +41,6 @@ const teamMembers = [
     category: "Barbers"
   },
   {
-    id: "bita",
-    name: "Bita",
-    title: "Hair Stylist",
-    image: "/images/bita.jpg",
-    services: ["Hair Color", "Treatments", "Styling", "Haircuts"],
-    bookingUrl: "https://booksy.com/en-us/1500556_venegas-salon-spa_hair-salon_18695_libertyville?do=invite&_branch_match_id=1410311065173934361&utm_medium=invite_from_share_profile&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FVL64wMwqrMgz1CUmyrytKTUstKsrMS49PKsovL04tsnXOKMrPTQUAixInkzwAAAA%3D",
-    available: true,
-    category: "Hair Stylists"
-  },
-  {
     id: "izzy",
     name: "Izzy",
     title: "Hair Stylist",
@@ -71,16 +61,38 @@ const teamMembers = [
     category: "Hair Stylists"
   },
   {
-    id: "ashley",
-    name: "Ashley",
-    title: "Spa Specialist",
-    image: "/images/ashley.jpg",
-    services: ["Facials", "Wax"],
-    bookingUrl: "https://ashleysanchez6.glossgenius.com/",
+    id: "lyzzet",
+    name: "Lyzzet Nunez",
+    title: "Hair Stylist",
+    image: "/images/lyzzet.JPEG",
+    services: ["Haircuts", "Hair Color", "Treatments", "Styling", "Haircuts"],
+    bookingUrl: "https://booksy.com/en-us/1500556_venegas-salon-spa_hair-salon_18695_libertyville/staffer/1508689#ba_s=seo",
     available: true,
-    category: "Spa Services"
+    category: "Hair Stylists"
+  },
+  {
+    id: "diana",
+    name: "Diana Escobar",
+    title: "Hair Stylist",
+    image: "/images/diana.PNG",
+    services: ["Hair Color", "Treatments", "Styling", "Haircuts"],
+    bookingUrl: "",
+    available: true,
+    category: "Hair Stylists"
+  },
+  {
+    id: "andrea",
+    name: "Andrea",
+    title: "Spa Specialist",
+    image: "/images/andrea.jpg",
+    services: ["Facials", "Wax"],
+    bookingUrl: "https://booksy.com/en-us/1500556_venegas-salon-spa_hair-salon_18695_libertyville/staffer/1478262#ba_s=seo",
+    available: true,
+    category: "Spa"
   }
 ]
+
+
 
 // Group team members by category
 const staffCategories = teamMembers.reduce((acc, member) => {
