@@ -40,26 +40,26 @@ const teamMembers = [
     available: true,
     category: "Barbers"
   },
-  {
-    id: "izzy",
-    name: "Izzy",
-    title: "Hair Stylist",
-    image: "/images/izzy.JPEG",
-    services: ["Hair Color", "Treatments", "Styling", "Haircuts"],
-    bookingUrl: "https://booksy.com/en-us/1500556_venegas-salon-spa_hair-salon_18695_libertyville?do=invite&_branch_match_id=1410311065173934361&utm_medium=invite_from_share_profile&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FVL64wMwqrMgz1CUmyrytKTUstKsrMS49PKsovL04tsnXOKMrPTQUAixInkzwAAAA%3D",
-    available: true,
-    category: "Hair Stylists"
-  },
-  {
-    id: "ahtziri",
-    name: "Ahtziri Gonzalez",
-    title: "Hair Stylist",
-    image: "/images/ahtziri.JPEG",
-    services: ["Hair Color", "Treatments", "Styling", "Haircuts"],
-    bookingUrl: "https://booksy.com/en-us/1500556_venegas-salon-spa_hair-salon_18695_libertyville?do=invite&_branch_match_id=1410311065173934361&utm_medium=invite_from_share_profile&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FVL64wMwqrMgz1CUmyrytKTUstKsrMS49PKsovL04tsnXOKMrPTQUAixInkzwAAAA%3D",
-    available: true,
-    category: "Hair Stylists"
-  },
+  // {
+  //   id: "izzy",
+  //   name: "Izzy",
+  //   title: "Hair Stylist",
+  //   image: "/images/izzy.JPEG",
+  //   services: ["Hair Color", "Treatments", "Styling", "Haircuts"],
+  //   bookingUrl: "https://booksy.com/en-us/1500556_venegas-salon-spa_hair-salon_18695_libertyville?do=invite&_branch_match_id=1410311065173934361&utm_medium=invite_from_share_profile&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FVL64wMwqrMgz1CUmyrytKTUstKsrMS49PKsovL04tsnXOKMrPTQUAixInkzwAAAA%3D",
+  //   available: true,
+  //   category: "Hair Stylists"
+  // },
+  // {
+  //   id: "ahtziri",
+  //   name: "Ahtziri Gonzalez",
+  //   title: "Hair Stylist",
+  //   image: "/images/ahtziri.JPEG",
+  //   services: ["Hair Color", "Treatments", "Styling", "Haircuts"],
+  //   bookingUrl: "https://booksy.com/en-us/1500556_venegas-salon-spa_hair-salon_18695_libertyville?do=invite&_branch_match_id=1410311065173934361&utm_medium=invite_from_share_profile&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FVL64wMwqrMgz1CUmyrytKTUstKsrMS49PKsovL04tsnXOKMrPTQUAixInkzwAAAA%3D",
+  //   available: true,
+  //   category: "Hair Stylists"
+  // },
   {
     id: "lyzzet",
     name: "Lyzzet Nunez",
