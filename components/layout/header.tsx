@@ -29,18 +29,18 @@ export default function Header() {
   return (
     <header
       className={`fixed w-full z-50 transition-all duration-300 animate-fadeIn ${
-        isScrolled ? "bg-black shadow-md py-2" : "bg-black/30 backdrop-blur-sm py-4"
+        isScrolled ? "bg-[#1A1C20] shadow-md py-2" : "bg-[#1A1C20]/30 backdrop-blur-sm py-4"
       }`}
     >
       <div className="container-custom">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-5 transition-transform hover:scale-105">
-            <div className="w-20 h-20 relative rounded-full overflow-hidden border-4 border-amber-400">
+            <div className="w-20 h-20 relative rounded-full overflow-hidden border-4 border-primary">
               <Image src="/images/venegas-logo.jpeg" alt="Venegas Salon & Spa Logo" fill className="object-cover" />
             </div>
             <span className={`text-lg font-bold transition-colors duration-300 ${
               isScrolled 
-                ? "text-transparent bg-clip-text bg-gradient-to-r from-amber-500 via-amber-200 to-amber-500"
+                ? "text-transparent bg-clip-text bg-gradient-to-r from-accent via-primary to-accent"
                 : "text-white drop-shadow-lg"
             }`}>
               Venegas Salon & Spa
@@ -70,32 +70,32 @@ export default function Header() {
                 href={item.href}
                 className={`px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 hover:scale-105 transform ${
                   pathname === item.href
-                    ? "text-yellow-400 font-bold"
+                    ? "text-primary font-bold"
                     : isScrolled 
-                      ? "text-white hover:text-yellow-400"
-                      : "text-white drop-shadow-lg hover:text-yellow-300"
+                      ? "text-white hover:text-primary"
+                      : "text-white drop-shadow-lg hover:text-primary"
                 }`}
               >
                 {item.name}
               </Link>
             ))}
-            <div className="p-0.5 rounded-lg bg-gradient-to-r from-amber-500 via-amber-300 to-amber-500">
+            <div className="p-0.5 rounded-lg bg-gradient-to-r from-accent via-primary to-accent">
               <Button className="relative overflow-hidden bg-white hover:bg-gray-100 shadow-md hover:shadow-lg rounded-lg transition-all duration-300 border-0 group">
                 <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
-                <Link href="/booking" className="relative text-transparent bg-clip-text bg-gradient-to-r from-amber-500 via-amber-300 to-amber-500 font-bold">
+                <Link href="/booking" className="relative text-transparent bg-clip-text bg-gradient-to-r from-accent via-primary to-accent font-bold">
                   Book Now
                 </Link>
               </Button>
             </div>
           </nav>
 
-          <div className="lg:hidden animate-pulse p-0.5 rounded-lg bg-gradient-to-r from-amber-500 via-amber-300 to-amber-500 animate-gradient">
+          <div className="lg:hidden animate-pulse p-0.5 rounded-lg bg-gradient-to-r from-accent via-primary to-accent">
             <Button
               size="icon"
               className={`transition-all duration-300 h-10 w-10 ${
                 isScrolled 
-                  ? "bg-black text-yellow-400 hover:bg-yellow-400 hover:text-black"
-                  : "bg-black/90 text-yellow-400 hover:bg-yellow-400 hover:text-black"
+                  ? "bg-[#1A1C20] text-primary hover:bg-primary hover:text-[#1A1C20]"
+                  : "bg-[#1A1C20]/90 text-primary hover:bg-primary hover:text-[#1A1C20]"
               }`}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle menu"
@@ -114,15 +114,15 @@ export default function Header() {
                 href={item.href}
                 className={`block px-4 py-3 rounded-full text-base font-semibold mb-2 transition-all duration-300 ${
                   pathname === item.href
-                    ? "text-yellow-400 font-bold"
-                    : "text-black hover:text-yellow-400"
+                    ? "text-primary font-bold"
+                    : "text-black hover:text-primary"
                 }`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item.name}
               </Link>
             ))}
-            <Button className="w-full mt-4 bg-white text-yellow-400 border-yellow-400 border-2 shadow-md hover:bg-yellow-400 hover:text-black hover:shadow-lg rounded-sm transition-all duration-300">
+            <Button className="w-full mt-4 bg-white text-primary border-primary border-2 shadow-md hover:bg-primary hover:text-[#1A1C20] hover:shadow-lg rounded-sm transition-all duration-300">
               <Link href="/booking">Book Now</Link>
             </Button>
           </div>

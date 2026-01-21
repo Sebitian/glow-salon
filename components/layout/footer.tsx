@@ -4,7 +4,7 @@ import Image from "next/image"
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white pt-20 pb-10">
+    <footer className="bg-[#1A1C20] text-white pt-20 pb-10">
       <div className="container-custom">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* About Venegas Salon & Spa */}
@@ -48,7 +48,7 @@ export default function Footer() {
           {/* Quick Links */}
           <div>
             <h3 className="text-lg font-semibold mb-6 flex items-center">
-              <span className="w-8 h-0.5 bg-primary bg-yellow-400 mr-3"></span>
+              <span className="w-8 h-0.5 bg-primary mr-3"></span>
               Quick Links
             </h3>
             <ul className="space-y-3">
@@ -84,12 +84,12 @@ export default function Footer() {
           {/* Contact Information */}
           <div>
             <h3 className="text-lg font-semibold mb-6 flex items-center">
-              <span className="w-8 h-0.5 bg-primary mr-3 bg-yellow-400"></span>
+              <span className="w-8 h-0.5 bg-primary mr-3"></span>
               Contact Us
             </h3>
             <ul className="space-y-4">
               <li className="flex items-start">
-                <MapPin className="h-6 w-6 text-yellow-400  shrink-0 mt-0.5 mr-3" />
+                <MapPin className="h-6 w-6 text-primary shrink-0 mt-0.5 mr-3" />
                 <span className="text-gray-400">297 Peterson Rd, Libertyville, IL 60048</span>
               </li>
               <li className="flex items-center">
@@ -106,19 +106,19 @@ export default function Footer() {
           {/* Business Hours */}
           <div>
             <h3 className="text-lg font-semibold mb-6 flex items-center">
-              <span className="w-8 h-0.5 bg-yellow-400 mr-3"></span>
+              <span className="w-8 h-0.5 bg-primary mr-3"></span>
               Business Hours
             </h3>
             <ul className="space-y-3">
               <li className="flex items-start">
-                <Clock className="h-6 w-6 text-yellow-400 shrink-0 mt-0.5 mr-3" />
+                <Clock className="h-6 w-6 text-primary shrink-0 mt-0.5 mr-3" />
                 <div>
                   <p className="text-gray-400">Monday - Saturday:</p>
                   <p className="font-semibold text-white">9:00 AM - 7:00 PM</p>
                 </div>
               </li>
               <li className="flex items-start">
-                <Clock className="h-6 w-6 text-yellow-400 shrink-0 mt-0.5 mr-3" />
+                <Clock className="h-6 w-6 text-primary shrink-0 mt-0.5 mr-3" />
                 <div>
                   <p className="text-gray-400">Sunday:</p>
                   <p className="font-semibold text-white">By Appointment Only</p>
@@ -134,7 +134,7 @@ export default function Footer() {
             <h3 className="text-xl font-semibold mb-4">Stay Connected</h3>
             <p className="text-gray-400 mb-6">Follow us on social media for the latest styles and updates.</p>
             <div className="flex justify-center space-x-4">
-              <span className="text-yellow-400 text-2xl">★★★★★</span>
+              <span className="text-primary text-2xl">★★★★★</span>
               <span className="text-white">5.0/5 stars on Booksy</span>
             </div>
           </div>
