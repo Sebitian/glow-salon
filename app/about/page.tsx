@@ -36,24 +36,24 @@ const teamMembers = [
     bookingUrl: "https://booksy.com/en-us/1404532_ar-fadez_barber-shop_18695_libertyville?do=invite&_branch_match_id=1410311065173934361&utm_medium=profile_share_from_profile&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FVLy5w8vIzLXcsDUyyrytKTUstKsrMS49PKsovL04tsnXOKMrPTQUAhomW8TwAAAA%3D",
     available: true
   },
-  {
-    id: "izzy",
-    name: "Izzy",
-    title: "Hair Stylist",
-    image: "/images/izzy.JPEG",
-    services: ["Hair Color", "Treatments", "Styling", "Haircuts"],
-    bookingUrl: "https://booksy.com/en-us/1500556_venegas-salon-spa_hair-salon_18695_libertyville/staffer/1432902#ba_s=seo",
-    available: true
-  },
-  {
-    id: "ahtziri",
-    name: "Ahtziri",
-    title: "Hair Stylist",
-    image: "/images/ahtziri.JPEG",
-    services: ["Hair Color", "Treatments", "Styling", "Haircuts"],
-    bookingUrl: "https://booksy.com/en-us/1500556_venegas-salon-spa_hair-salon_18695_libertyville/staffer/1457245#ba_s=seo",
-    available: true
-  },
+  // {
+  //   id: "izzy",
+  //   name: "Izzy",
+  //   title: "Hair Stylist",
+  //   image: "/images/izzy.JPEG",
+  //   services: ["Hair Color", "Treatments", "Styling", "Haircuts"],
+  //   bookingUrl: "https://booksy.com/en-us/1500556_venegas-salon-spa_hair-salon_18695_libertyville/staffer/1432902#ba_s=seo",
+  //   available: true
+  // },
+  // {
+  //   id: "ahtziri",
+  //   name: "Ahtziri",
+  //   title: "Hair Stylist",
+  //   image: "/images/ahtziri.JPEG",
+  //   services: ["Hair Color", "Treatments", "Styling", "Haircuts"],
+  //   bookingUrl: "https://booksy.com/en-us/1500556_venegas-salon-spa_hair-salon_18695_libertyville/staffer/1457245#ba_s=seo",
+  //   available: true
+  // },
   {
     id: "lyzzet",
     name: "Lyzzet Nunez",
@@ -69,8 +69,8 @@ const teamMembers = [
     title: "Hair Stylist",
     image: "/images/diana.PNG",
     services: ["Hair Color", "Treatments", "Styling", "Haircuts"],
-    bookingUrl: "",
-    available: false
+    bookingUrl: "https://booksy.com/en-us/1500556_venegas-salon-spa_hair-salon_18695_libertyville/staffer/1532292#ba_s=seo",
+    available: true
   },
   {
     id: "andrea",
