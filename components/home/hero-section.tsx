@@ -2,48 +2,10 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { useEffect, useState } from "react"
-declare global {
-  interface Window {
-    instgrm?: {
-      Embeds: {
-        process: () => void
-      }
-    }
-  }
-}
+import InstagramLinks from "./instagram-links"
 
 
 export default function HeroSection() {
-  const [isEmbedLoaded, setIsEmbedLoaded] = useState(false)
-
-  useEffect(() => {
-    // Function to process Instagram embeds
-    const processInstagramEmbeds = () => {
-      if (window.instgrm) {
-        window.instgrm.Embeds.process()
-        // Wait a bit for Instagram to render, then show
-        setTimeout(() => setIsEmbedLoaded(true), 500)
-      }
-    }
-
-    // Check if script is already loaded
-    if (window.instgrm) {
-      // Script already loaded, just process embeds
-      processInstagramEmbeds()
-    } else {
-      // Load Instagram embed script if not already loaded
-      const existingScript = document.querySelector('script[src="https://www.instagram.com/embed.js"]')
-      
-      if (!existingScript) {
-        const script = document.createElement('script')
-        script.src = 'https://www.instagram.com/embed.js'
-        script.async = true
-        script.onload = processInstagramEmbeds
-        document.body.appendChild(script)
-      }
-    }
-  }, [])
 
   return (
     <section className="relative min-h-screen flex items-center pt-16 overflow-hidden">
@@ -88,7 +50,13 @@ export default function HeroSection() {
               </div>
             </div>
           </div>
- 
+
+          {/* Right side - Instagram links */}
+          <div className="flex justify-center lg:justify-end">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg shadow-2xl p-6 max-w-md w-full">
+              <InstagramLinks />
+            </div>
+          </div>
         </div> 
       </div>
 
